@@ -1,8 +1,6 @@
 class HomeController < ApplicationController
   def index
-  end
-  
-  def map 
-  end
-  
+    flash[:notice] = "Logged in successfully."
+    flash[:alert] = "Invalid email or password."
+  end 
 end
