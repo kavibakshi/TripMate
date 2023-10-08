@@ -1,0 +1,33 @@
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <div class="container-fluid">
+    <%= link_to "TripMate", root_path, class:"navbar-brand"%>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNavDropdown">
+      <ul class="navbar-nav">
+        <li class="nav-item">
+          <%= link_to "About", about_path, class:"nav-link"%>
+        </li>
+      </ul>
+
+      <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+        <% if Current.user %>
+        <li class="nav-item">
+            <span class="navbar-text"><%= Current.user.email %><span>
+        </li>
+        <li class="nav-item">
+            <%= button_to "Logout", logout_path, method: :delete, class:"nav-link" %>
+        </li>
+        <% else %>
+        <li class="nav-item">
+            <%= link_to "Sign Up", sign_up_path, class:"nav-link"%>
+        </li>
+        <li class="nav-item">
+            <%= link_to "Log In", sign_in_path, class:"nav-link"%>
+        </li>
+        <% end %>
+      </ul>
+    </div>
+  </div>
+</nav>
