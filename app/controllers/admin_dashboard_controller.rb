@@ -1,0 +1,2 @@
+class AdminDashboardController < ApplicationController
+end

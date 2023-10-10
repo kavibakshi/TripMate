@@ -9,6 +9,9 @@ Rails.application.routes.draw do
   get "sign_in", to: "sessions#new"
   post "sign_in", to: "sessions#create"
 
+  get '/admin/dashboard', to: 'admin_dashboard#index', as: 'admin_dashboard'
+
+
   delete "logout", to: "sessions#destroy"
 
   root to: "home#index"
