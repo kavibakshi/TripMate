@@ -232,11 +232,7 @@ DEPENDENCIES
   bootsnap
   capybara
   debug
-<<<<<<< Updated upstream
   devise
-=======
-  devise (~> 4.9)
->>>>>>> Stashed changes
   importmap-rails
   jbuilder
   puma (~> 5.0)
