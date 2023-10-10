@@ -2,5 +2,6 @@
 <ul>
   <% @users.each do |user| %>
     <li><%= user.email %></li>
+    <li><%= user.password_digest %></li>
   <% end %>
 </ul>

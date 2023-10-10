@@ -24,8 +24,6 @@
         <% if current_user && current_user.admin? %>
           <li><%= link_to "View All Users", view_all_users_path %></li>
         <% end %>
-
-        <li><%= link_to "Sign Out", logout_path %></li>
       </ul>
     </nav>
   </body>
