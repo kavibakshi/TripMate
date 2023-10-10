@@ -11,6 +11,8 @@ Rails.application.routes.draw do
 
   get '/admin/dashboard', to: 'admin_dashboard#index', as: 'admin_dashboard'
 
+  get '/admin/view_all_users', to: 'admin_dashboard#view_all_users', as: 'view_all_users'
+
 
   delete "logout", to: "sessions#destroy"
 
