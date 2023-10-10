@@ -11,11 +11,20 @@
   </head>
   
   <body>
+<<<<<<< Updated upstream
     Header HEre...<br/><br/>
     <p class="notice"><%= notice %></p>
     <p class="alert"><%= alert %></p>
     <%= yield %>
     <br/><br/>
     Footer Here...
+=======
+    <%= render partial: "shared/navbar" %>
+    <div class="container">
+      <%= yield %>
+      <br/><br/>
+    </div>
+    
+>>>>>>> Stashed changes
   </body>
 </html>
