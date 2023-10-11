@@ -1,7 +1,7 @@
 databases:
   - name: tripmate
     databaseName: tripmate_db
-    user: postgres
+    user: tripmate-Prod
 
 services:
   - type: web
