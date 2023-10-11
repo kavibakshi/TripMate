@@ -11,6 +11,6 @@ TripMate: Our travel planning software, will be an all-in-one tool to help users
 ## Deploying 
 All the code in main is automatically deployed using Render. Website: https://tripmate-ayrp.onrender.com
 
-##Credentials to test Admin view
+## Credentials to test Admin view
 Email: admin@tripmate.com
 Password: admin
