@@ -2717,3 +2717,341 @@ Processing by SessionsController#create as TURBO_STREAM
 Completed 422 Unprocessable Entity in 19ms (Views: 11.9ms | ActiveRecord: 0.3ms | Allocations: 5608)
 
 
+Started GET "/" for 127.0.0.1 at 2023-10-10 19:06:48 -0700
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 2.4ms | Allocations: 329)
+  Rendered shared/_navbar.html.erb (Duration: 4.5ms | Allocations: 972)
+  Rendered layout layouts/application.html.erb (Duration: 148.4ms | Allocations: 36492)
+Completed 200 OK in 188ms (Views: 159.2ms | ActiveRecord: 0.0ms | Allocations: 41336)
+
+
+  [1m[35m (0.7ms)[0m  [1m[35mCREATE DATABASE "tripmate_development" ENCODING = 'unicode'[0m
+  [1m[35m (202.6ms)[0m  [1m[35mCREATE DATABASE "tripmate_test" ENCODING = 'unicode'[0m
+  [1m[35m (13.2ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" character varying NOT NULL PRIMARY KEY)[0m
+  [1m[35m (6.2ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" character varying NOT NULL PRIMARY KEY, "value" character varying, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT pg_try_advisory_lock(1914711888339706680)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (1.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreateUsers (20231007201447)
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (10.5ms)[0m  [1m[35mCREATE TABLE "users" ("id" bigserial primary key, "email" character varying NOT NULL, "password_digest" character varying, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.7ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20231007201447"]]
+  [1m[36mTRANSACTION (0.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (1.0ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mActiveRecord::InternalMetadata Create (0.8ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "key"[0m  [["key", "environment"], ["value", "development"], ["created_at", "2023-10-11 03:43:42.568752"], ["updated_at", "2023-10-11 03:43:42.568752"]]
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT pg_advisory_unlock(1914711888339706680)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (1.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Started GET "/" for 127.0.0.1 at 2023-10-10 20:46:49 -0700
+  [1m[36mActiveRecord::SchemaMigration Pluck (1.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 2.0ms | Allocations: 330)
+  Rendered shared/_navbar.html.erb (Duration: 3.8ms | Allocations: 972)
+  Rendered layout layouts/application.html.erb (Duration: 114.7ms | Allocations: 36630)
+Completed 200 OK in 162ms (Views: 126.9ms | ActiveRecord: 0.0ms | Allocations: 41480)
+
+
+Started GET "/about-page" for 127.0.0.1 at 2023-10-10 20:47:46 -0700
+Processing by AboutController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering about/index.html.erb within layouts/application
+  Rendered about/index.html.erb within layouts/application (Duration: 0.8ms | Allocations: 110)
+  Rendered shared/_navbar.html.erb (Duration: 0.2ms | Allocations: 202)
+  Rendered layout layouts/application.html.erb (Duration: 10.0ms | Allocations: 2652)
+Completed 200 OK in 19ms (Views: 14.8ms | ActiveRecord: 0.0ms | Allocations: 3505)
+
+
+Started GET "/" for 127.0.0.1 at 2023-10-10 20:47:47 -0700
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 0.0ms | Allocations: 7)
+  Rendered shared/_navbar.html.erb (Duration: 0.2ms | Allocations: 170)
+  Rendered layout layouts/application.html.erb (Duration: 7.3ms | Allocations: 2420)
+Completed 200 OK in 11ms (Views: 8.5ms | ActiveRecord: 0.0ms | Allocations: 2917)
+
+
+Started GET "/sign_up" for 127.0.0.1 at 2023-10-10 20:47:49 -0700
+Processing by RegistrationsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering registrations/new.html.erb within layouts/application
+  Rendered registrations/new.html.erb within layouts/application (Duration: 8.1ms | Allocations: 2484)
+  Rendered shared/_navbar.html.erb (Duration: 0.2ms | Allocations: 177)
+  Rendered layout layouts/application.html.erb (Duration: 17.4ms | Allocations: 5017)
+Completed 200 OK in 50ms (Views: 21.8ms | ActiveRecord: 6.0ms | Allocations: 10948)
+
+
+Started GET "/sign_in" for 127.0.0.1 at 2023-10-10 20:47:50 -0700
+Processing by SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (Duration: 3.1ms | Allocations: 2545)
+  Rendered shared/_navbar.html.erb (Duration: 0.2ms | Allocations: 175)
+  Rendered layout layouts/application.html.erb (Duration: 12.0ms | Allocations: 5039)
+Completed 200 OK in 21ms (Views: 17.1ms | ActiveRecord: 0.0ms | Allocations: 5888)
+
+
+Started GET "/sign_up" for 127.0.0.1 at 2023-10-10 20:47:50 -0700
+Processing by RegistrationsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering registrations/new.html.erb within layouts/application
+  Rendered registrations/new.html.erb within layouts/application (Duration: 1.4ms | Allocations: 953)
+  Rendered shared/_navbar.html.erb (Duration: 0.2ms | Allocations: 161)
+  Rendered layout layouts/application.html.erb (Duration: 11.8ms | Allocations: 3359)
+Completed 200 OK in 17ms (Views: 13.3ms | ActiveRecord: 0.0ms | Allocations: 3848)
+
+
+Started GET "/sign_in" for 127.0.0.1 at 2023-10-10 20:47:56 -0700
+Processing by SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (Duration: 2.0ms | Allocations: 2234)
+  Rendered shared/_navbar.html.erb (Duration: 0.2ms | Allocations: 159)
+  Rendered layout layouts/application.html.erb (Duration: 10.8ms | Allocations: 4635)
+Completed 200 OK in 15ms (Views: 12.1ms | ActiveRecord: 0.0ms | Allocations: 5086)
+
+
+Started POST "/sign_in" for 127.0.0.1 at 2023-10-10 20:47:59 -0700
+Processing by SessionsController#create as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "email"=>"kbakshi@sfu.ca", "password"=>"[FILTERED]", "commit"=>"Sign In"}
+  [1m[36mUser Load (1.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "kbakshi@sfu.ca"], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:6:in `create'
+  Rendering layout layouts/application.html.erb
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (Duration: 1.4ms | Allocations: 2152)
+  Rendered shared/_navbar.html.erb (Duration: 0.2ms | Allocations: 159)
+  Rendered layout layouts/application.html.erb (Duration: 10.8ms | Allocations: 4591)
+Completed 422 Unprocessable Entity in 24ms (Views: 12.2ms | ActiveRecord: 1.9ms | Allocations: 7298)
+
+
+Started GET "/sign_up" for 127.0.0.1 at 2023-10-10 20:48:00 -0700
+Processing by RegistrationsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering registrations/new.html.erb within layouts/application
+  Rendered registrations/new.html.erb within layouts/application (Duration: 1.7ms | Allocations: 953)
+  Rendered shared/_navbar.html.erb (Duration: 0.2ms | Allocations: 159)
+  Rendered layout layouts/application.html.erb (Duration: 11.4ms | Allocations: 3354)
+Completed 200 OK in 16ms (Views: 12.9ms | ActiveRecord: 0.0ms | Allocations: 3839)
+
+
+Started POST "/sign_up" for 127.0.0.1 at 2023-10-10 20:48:04 -0700
+Processing by RegistrationsController#create as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "user"=>{"email"=>"kbakshi@sfu.ca", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Sign Up"}
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/registrations_controller.rb:8:in `create'
+  [1m[36mUser Create (1.0ms)[0m  [1m[32mINSERT INTO "users" ("email", "password_digest", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["email", "kbakshi@sfu.ca"], ["password_digest", "[FILTERED]"], ["created_at", "2023-10-11 03:48:04.439081"], ["updated_at", "2023-10-11 03:48:04.439081"]]
+  ↳ app/controllers/registrations_controller.rb:8:in `create'
+  [1m[36mTRANSACTION (1.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/registrations_controller.rb:8:in `create'
+Redirected to http://127.0.0.1:3000/
+Completed 302 Found in 258ms (ActiveRecord: 2.3ms | Allocations: 3686)
+
+
+Started GET "/" for 127.0.0.1 at 2023-10-10 20:48:04 -0700
+Processing by HomeController#index as TURBO_STREAM
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:6:in `set_current_user'
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 0.1ms | Allocations: 7)
+  Rendered shared/_navbar.html.erb (Duration: 0.5ms | Allocations: 345)
+  Rendered layout layouts/application.html.erb (Duration: 9.1ms | Allocations: 2600)
+Completed 200 OK in 17ms (Views: 10.5ms | ActiveRecord: 0.3ms | Allocations: 4205)
+
+
+Started DELETE "/logout" for 127.0.0.1 at 2023-10-10 20:48:05 -0700
+Processing by SessionsController#destroy as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:6:in `set_current_user'
+Redirected to http://127.0.0.1:3000/
+Completed 302 Found in 6ms (ActiveRecord: 0.3ms | Allocations: 943)
+
+
+Started GET "/" for 127.0.0.1 at 2023-10-10 20:48:05 -0700
+Processing by HomeController#index as TURBO_STREAM
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 0.0ms | Allocations: 7)
+  Rendered shared/_navbar.html.erb (Duration: 0.2ms | Allocations: 168)
+  Rendered layout layouts/application.html.erb (Duration: 7.9ms | Allocations: 2423)
+Completed 200 OK in 12ms (Views: 9.4ms | ActiveRecord: 0.0ms | Allocations: 2876)
+
+
+Started GET "/sign_in" for 127.0.0.1 at 2023-10-10 20:48:07 -0700
+Processing by SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (Duration: 1.1ms | Allocations: 2234)
+  Rendered shared/_navbar.html.erb (Duration: 0.4ms | Allocations: 159)
+  Rendered layout layouts/application.html.erb (Duration: 9.5ms | Allocations: 4635)
+Completed 200 OK in 13ms (Views: 10.8ms | ActiveRecord: 0.0ms | Allocations: 5101)
+
+
+Started POST "/sign_in" for 127.0.0.1 at 2023-10-10 20:48:12 -0700
+Processing by SessionsController#create as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "email"=>"kbakshi@sfu.ca", "password"=>"[FILTERED]", "commit"=>"Sign In"}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "kbakshi@sfu.ca"], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:6:in `create'
+Redirected to http://127.0.0.1:3000/
+Completed 302 Found in 258ms (ActiveRecord: 0.6ms | Allocations: 949)
+
+
+Started GET "/" for 127.0.0.1 at 2023-10-10 20:48:13 -0700
+Processing by HomeController#index as TURBO_STREAM
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:6:in `set_current_user'
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 0.1ms | Allocations: 7)
+  Rendered shared/_navbar.html.erb (Duration: 0.4ms | Allocations: 318)
+  Rendered layout layouts/application.html.erb (Duration: 8.3ms | Allocations: 2573)
+Completed 200 OK in 16ms (Views: 9.5ms | ActiveRecord: 0.5ms | Allocations: 3564)
+
+
+Started DELETE "/logout" for 127.0.0.1 at 2023-10-10 20:48:14 -0700
+Processing by SessionsController#destroy as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:6:in `set_current_user'
+Redirected to http://127.0.0.1:3000/
+Completed 302 Found in 6ms (ActiveRecord: 0.3ms | Allocations: 910)
+
+
+Started GET "/" for 127.0.0.1 at 2023-10-10 20:48:14 -0700
+Processing by HomeController#index as TURBO_STREAM
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 0.1ms | Allocations: 7)
+  Rendered shared/_navbar.html.erb (Duration: 0.2ms | Allocations: 168)
+  Rendered layout layouts/application.html.erb (Duration: 8.8ms | Allocations: 2423)
+Completed 200 OK in 13ms (Views: 10.4ms | ActiveRecord: 0.0ms | Allocations: 2897)
+
+
+Started GET "/sign_in" for 127.0.0.1 at 2023-10-10 20:53:44 -0700
+Processing by SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (Duration: 1.4ms | Allocations: 2234)
+  Rendered shared/_navbar.html.erb (Duration: 0.3ms | Allocations: 159)
+  Rendered layout layouts/application.html.erb (Duration: 11.4ms | Allocations: 4635)
+Completed 200 OK in 15ms (Views: 12.6ms | ActiveRecord: 0.0ms | Allocations: 5080)
+
+
+Started POST "/sign_in" for 127.0.0.1 at 2023-10-10 20:53:47 -0700
+Processing by SessionsController#create as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "email"=>"kbakshi@sfu.ca", "password"=>"[FILTERED]", "commit"=>"Sign In"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "kbakshi@sfu.ca"], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:6:in `create'
+Redirected to http://127.0.0.1:3000/
+Completed 302 Found in 256ms (ActiveRecord: 0.4ms | Allocations: 936)
+
+
+Started GET "/" for 127.0.0.1 at 2023-10-10 20:53:47 -0700
+Processing by HomeController#index as TURBO_STREAM
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:6:in `set_current_user'
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 0.0ms | Allocations: 7)
+  Rendered shared/_navbar.html.erb (Duration: 0.7ms | Allocations: 318)
+  Rendered layout layouts/application.html.erb (Duration: 9.2ms | Allocations: 2607)
+Completed 200 OK in 16ms (Views: 11.1ms | ActiveRecord: 0.4ms | Allocations: 3594)
+
+
+Started DELETE "/logout" for 127.0.0.1 at 2023-10-10 20:53:49 -0700
+Processing by SessionsController#destroy as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:6:in `set_current_user'
+Redirected to http://127.0.0.1:3000/
+Completed 302 Found in 6ms (ActiveRecord: 0.3ms | Allocations: 912)
+
+
+Started GET "/" for 127.0.0.1 at 2023-10-10 20:53:49 -0700
+Processing by HomeController#index as TURBO_STREAM
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 0.0ms | Allocations: 7)
+  Rendered shared/_navbar.html.erb (Duration: 0.2ms | Allocations: 168)
+  Rendered layout layouts/application.html.erb (Duration: 9.8ms | Allocations: 2447)
+Completed 200 OK in 13ms (Views: 10.8ms | ActiveRecord: 0.0ms | Allocations: 2928)
+
+
+Started GET "/" for 127.0.0.1 at 2023-10-10 20:54:08 -0700
+  [1m[36mActiveRecord::SchemaMigration Pluck (1.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 3.3ms | Allocations: 330)
+  Rendered shared/_navbar.html.erb (Duration: 3.5ms | Allocations: 972)
+  Rendered layout layouts/application.html.erb (Duration: 117.8ms | Allocations: 36593)
+Completed 200 OK in 158ms (Views: 129.1ms | ActiveRecord: 0.0ms | Allocations: 41435)
+
+
+Started GET "/sign_in" for 127.0.0.1 at 2023-10-10 20:54:10 -0700
+Processing by SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (Duration: 7.3ms | Allocations: 3185)
+  Rendered shared/_navbar.html.erb (Duration: 0.2ms | Allocations: 177)
+  Rendered layout layouts/application.html.erb (Duration: 18.5ms | Allocations: 5683)
+Completed 200 OK in 28ms (Views: 24.4ms | ActiveRecord: 0.0ms | Allocations: 6534)
+
+
+Started POST "/sign_in" for 127.0.0.1 at 2023-10-10 20:54:13 -0700
+Processing by SessionsController#create as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "email"=>"kbakshi@sfu.ca", "password"=>"[FILTERED]", "commit"=>"Sign In"}
+  [1m[36mUser Load (1.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "kbakshi@sfu.ca"], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:6:in `create'
+Redirected to http://127.0.0.1:3000/
+Completed 302 Found in 276ms (ActiveRecord: 9.4ms | Allocations: 7713)
+
+
+Started GET "/" for 127.0.0.1 at 2023-10-10 20:54:13 -0700
+Processing by HomeController#index as TURBO_STREAM
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:6:in `set_current_user'
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 0.1ms | Allocations: 7)
+  Rendered shared/_navbar.html.erb (Duration: 0.5ms | Allocations: 342)
+  Rendered layout layouts/application.html.erb (Duration: 8.4ms | Allocations: 2638)
+Completed 200 OK in 15ms (Views: 9.8ms | ActiveRecord: 0.3ms | Allocations: 4266)
+
+
+Started DELETE "/logout" for 127.0.0.1 at 2023-10-10 20:54:15 -0700
+Processing by SessionsController#destroy as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:6:in `set_current_user'
+Redirected to http://127.0.0.1:3000/
+Completed 302 Found in 6ms (ActiveRecord: 0.3ms | Allocations: 925)
+
+
+Started GET "/" for 127.0.0.1 at 2023-10-10 20:54:15 -0700
+Processing by HomeController#index as TURBO_STREAM
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 0.0ms | Allocations: 7)
+  Rendered shared/_navbar.html.erb (Duration: 0.7ms | Allocations: 168)
+  Rendered layout layouts/application.html.erb (Duration: 8.5ms | Allocations: 2425)
+Completed 200 OK in 12ms (Views: 9.9ms | ActiveRecord: 0.0ms | Allocations: 2902)
+
+
+Started GET "/" for 127.0.0.1 at 2023-10-10 22:02:22 -0700
+  [1m[36mActiveRecord::SchemaMigration Pluck (1.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 18.1ms | Allocations: 330)
+  Rendered shared/_navbar.html.erb (Duration: 40.0ms | Allocations: 972)
+  Rendered layout layouts/application.html.erb (Duration: 539.6ms | Allocations: 36471)
+Completed 200 OK in 739ms (Views: 577.9ms | ActiveRecord: 0.0ms | Allocations: 41298)
+
+
