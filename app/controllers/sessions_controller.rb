@@ -13,7 +13,7 @@ class SessionsController < ApplicationController
           redirect_to admin_dashboard_path, notice: "Logged in as admin"
         else
           # Redirect to the root path for non-admin users
-          redirect_to root_path, notice: "Logged in successfully"
+          redirect_to lists_path, notice: "Logged in successfully"
         end
       else
         flash[:alert] = "Invalid email or password"
