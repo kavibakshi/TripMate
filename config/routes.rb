@@ -1,6 +1,7 @@
 # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
 
 Rails.application.routes.draw do
+  resources :lists
   get "about-page", to:"about#index", as: :about
 
   get "sign_up", to: "registrations#new"
