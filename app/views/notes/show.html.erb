@@ -1,10 +1,42 @@
+<style>
+    hr {
+    height: 2px;
+    background-color: #000000;
+    border: none;
+    }
+</style>
+
 <section class="section">
     <div class="container">
         <h1 class="title">
             <%= @note.title %>
         </h1>
+
         <div class="content">
             <%= @note.content %>
         </div>
+
+        <hr />
+        <nav class="level">
+            <!-- left side -->
+            <div class="level-left">
+                <p class="level-item">
+                    <strong></strong>
+                </p>
+            </div>
+
+            <!-- right side -->
+            <div class="level-right">
+                <p class="level-item">
+                    <%= link_to "Edit", edit_note_path(@note), class: "button" %>
+                </p>
+                <p class="level-item">
+                    <a class="button is-danger">Delete</a>
+                </p>
+            </div>
+        </nav>
+
     </div>
 </section>
+
+<section class="comments"></section>
