@@ -11579,3 +11579,663 @@ Processing by NotesController#show as HTML
 Completed 200 OK in 137ms (Views: 112.8ms | ActiveRecord: 7.3ms | Allocations: 28442)
 
 
+Started GET "/notes/3" for 127.0.0.1 at 2023-10-29 00:08:44 -0700
+Processing by NotesController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mNote Load (0.9ms)[0m  [1m[34mSELECT "notes".* FROM "notes" WHERE "notes"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/notes_controller.rb:51:in `set_list'
+  Rendering layout layouts/application.html.erb
+  Rendering notes/show.html.erb within layouts/application
+  Rendered notes/show.html.erb within layouts/application (Duration: 1.8ms | Allocations: 396)
+  Rendered shared/_navbar.html.erb (Duration: 1.4ms | Allocations: 628)
+  Rendered layout layouts/application.html.erb (Duration: 113.4ms | Allocations: 24679)
+Completed 200 OK in 210ms (Views: 123.1ms | ActiveRecord: 11.4ms | Allocations: 31839)
+
+
+Started GET "/notes/3/edit" for 127.0.0.1 at 2023-10-29 00:08:48 -0700
+Processing by NotesController#edit as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mNote Load (0.6ms)[0m  [1m[34mSELECT "notes".* FROM "notes" WHERE "notes"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/notes_controller.rb:51:in `set_list'
+  Rendering layout layouts/application.html.erb
+  Rendering notes/edit.html.erb within layouts/application
+  Rendered notes/edit.html.erb within layouts/application (Duration: 3.8ms | Allocations: 1928)
+  Rendered shared/_navbar.html.erb (Duration: 0.3ms | Allocations: 235)
+  Rendered layout layouts/application.html.erb (Duration: 75.5ms | Allocations: 13095)
+Completed 200 OK in 86ms (Views: 76.6ms | ActiveRecord: 0.6ms | Allocations: 14130)
+
+
+Started PATCH "/notes/3" for 127.0.0.1 at 2023-10-29 00:08:50 -0700
+Processing by NotesController#update as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "note"=>{"title"=>"third note now", "content"=>"note numero trois ok now"}, "commit"=>"Update Note", "id"=>"3"}
+  [1m[36mNote Load (0.5ms)[0m  [1m[34mSELECT "notes".* FROM "notes" WHERE "notes"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/notes_controller.rb:51:in `set_list'
+Redirected to http://127.0.0.1:3000/notes/3
+Completed 302 Found in 9ms (ActiveRecord: 0.5ms | Allocations: 1177)
+
+
+Started GET "/notes/3" for 127.0.0.1 at 2023-10-29 00:08:50 -0700
+Processing by NotesController#show as TURBO_STREAM
+  Parameters: {"id"=>"3"}
+  [1m[36mNote Load (0.6ms)[0m  [1m[34mSELECT "notes".* FROM "notes" WHERE "notes"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/notes_controller.rb:51:in `set_list'
+  Rendering layout layouts/application.html.erb
+  Rendering notes/show.html.erb within layouts/application
+  Rendered notes/show.html.erb within layouts/application (Duration: 0.3ms | Allocations: 122)
+  Rendered shared/_navbar.html.erb (Duration: 0.3ms | Allocations: 235)
+  Rendered layout layouts/application.html.erb (Duration: 72.2ms | Allocations: 11517)
+Completed 200 OK in 81ms (Views: 73.5ms | ActiveRecord: 0.6ms | Allocations: 12536)
+
+
+Started GET "/notes" for 127.0.0.1 at 2023-10-29 00:08:51 -0700
+Processing by NotesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering notes/index.html.erb within layouts/application
+  [1m[36mNote Load (0.8ms)[0m  [1m[34mSELECT "notes".* FROM "notes" ORDER BY created_at DESC[0m
+  ↳ app/views/notes/index.html.erb:24
+  Rendered notes/index.html.erb within layouts/application (Duration: 4.8ms | Allocations: 1120)
+  Rendered shared/_navbar.html.erb (Duration: 0.3ms | Allocations: 235)
+  Rendered layout layouts/application.html.erb (Duration: 74.5ms | Allocations: 12458)
+Completed 200 OK in 82ms (Views: 74.8ms | ActiveRecord: 0.8ms | Allocations: 12997)
+
+
+Started GET "/lists" for 127.0.0.1 at 2023-10-29 00:08:52 -0700
+Processing by ListsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering lists/index.html.erb within layouts/application
+  [1m[36mList Load (1.0ms)[0m  [1m[34mSELECT "lists".* FROM "lists"[0m
+  ↳ app/views/lists/index.html.erb:15
+  Rendered lists/index.html.erb within layouts/application (Duration: 5.0ms | Allocations: 1241)
+  Rendered shared/_navbar.html.erb (Duration: 0.3ms | Allocations: 255)
+  Rendered layout layouts/application.html.erb (Duration: 74.7ms | Allocations: 12532)
+Completed 200 OK in 93ms (Views: 82.6ms | ActiveRecord: 1.0ms | Allocations: 13829)
+
+
+Started GET "/lists/new" for 127.0.0.1 at 2023-10-29 00:08:53 -0700
+Processing by ListsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering lists/new.html.erb within layouts/application
+  Rendered lists/_form.html.erb (Duration: 2.5ms | Allocations: 1273)
+  Rendered lists/new.html.erb within layouts/application (Duration: 6.8ms | Allocations: 1573)
+  Rendered shared/_navbar.html.erb (Duration: 0.2ms | Allocations: 234)
+  Rendered layout layouts/application.html.erb (Duration: 78.1ms | Allocations: 12748)
+Completed 200 OK in 96ms (Views: 79.3ms | ActiveRecord: 7.6ms | Allocations: 14722)
+
+
+Started POST "/lists" for 127.0.0.1 at 2023-10-29 00:08:54 -0700
+Processing by ListsController#create as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "list"=>{"description"=>"as", "completed"=>"0"}, "commit"=>"Create List"}
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/lists_controller.rb:27:in `block in create'
+  [1m[36mList Create (0.9ms)[0m  [1m[32mINSERT INTO "lists" ("description", "completed", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["description", "as"], ["completed", false], ["created_at", "2023-10-29 07:08:55.067203"], ["updated_at", "2023-10-29 07:08:55.067203"]]
+  ↳ app/controllers/lists_controller.rb:27:in `block in create'
+  [1m[36mTRANSACTION (1.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/lists_controller.rb:27:in `block in create'
+Redirected to http://127.0.0.1:3000/lists
+Completed 302 Found in 14ms (ActiveRecord: 2.3ms | Allocations: 2435)
+
+
+Started GET "/lists" for 127.0.0.1 at 2023-10-29 00:08:55 -0700
+Processing by ListsController#index as TURBO_STREAM
+  Rendering layout layouts/application.html.erb
+  Rendering lists/index.html.erb within layouts/application
+  [1m[36mList Load (0.4ms)[0m  [1m[34mSELECT "lists".* FROM "lists"[0m
+  ↳ app/views/lists/index.html.erb:15
+  Rendered lists/index.html.erb within layouts/application (Duration: 3.8ms | Allocations: 1335)
+  Rendered shared/_navbar.html.erb (Duration: 0.2ms | Allocations: 235)
+  Rendered layout layouts/application.html.erb (Duration: 75.7ms | Allocations: 12723)
+Completed 200 OK in 82ms (Views: 76.8ms | ActiveRecord: 0.4ms | Allocations: 13195)
+
+
+Started GET "/lists/5" for 127.0.0.1 at 2023-10-29 00:08:57 -0700
+Processing by ListsController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mList Load (0.4ms)[0m  [1m[34mSELECT "lists".* FROM "lists" WHERE "lists"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/lists_controller.rb:63:in `set_list'
+  Rendering layout layouts/application.html.erb
+  Rendering lists/show.html.erb within layouts/application
+  Rendered lists/_list.html.erb (Duration: 1.0ms | Allocations: 184)
+  Rendered lists/show.html.erb within layouts/application (Duration: 5.7ms | Allocations: 905)
+  Rendered shared/_navbar.html.erb (Duration: 0.3ms | Allocations: 234)
+  Rendered layout layouts/application.html.erb (Duration: 76.0ms | Allocations: 12255)
+Completed 200 OK in 87ms (Views: 77.0ms | ActiveRecord: 0.4ms | Allocations: 13887)
+
+
+Started DELETE "/lists/5" for 127.0.0.1 at 2023-10-29 00:08:58 -0700
+Processing by ListsController#destroy as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "id"=>"5"}
+  [1m[36mList Load (0.4ms)[0m  [1m[34mSELECT "lists".* FROM "lists" WHERE "lists"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/lists_controller.rb:63:in `set_list'
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/lists_controller.rb:52:in `destroy'
+  [1m[36mList Destroy (0.9ms)[0m  [1m[31mDELETE FROM "lists" WHERE "lists"."id" = $1[0m  [["id", 5]]
+  ↳ app/controllers/lists_controller.rb:52:in `destroy'
+  [1m[36mTRANSACTION (0.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/lists_controller.rb:52:in `destroy'
+Redirected to http://127.0.0.1:3000/lists
+Completed 302 Found in 15ms (ActiveRecord: 2.3ms | Allocations: 2445)
+
+
+Started GET "/lists" for 127.0.0.1 at 2023-10-29 00:08:58 -0700
+Processing by ListsController#index as TURBO_STREAM
+  Rendering layout layouts/application.html.erb
+  Rendering lists/index.html.erb within layouts/application
+  [1m[36mList Load (0.4ms)[0m  [1m[34mSELECT "lists".* FROM "lists"[0m
+  ↳ app/views/lists/index.html.erb:15
+  Rendered lists/index.html.erb within layouts/application (Duration: 2.7ms | Allocations: 612)
+  Rendered shared/_navbar.html.erb (Duration: 0.2ms | Allocations: 235)
+  Rendered layout layouts/application.html.erb (Duration: 71.5ms | Allocations: 11795)
+Completed 200 OK in 77ms (Views: 72.6ms | ActiveRecord: 0.4ms | Allocations: 12303)
+
+
+Started GET "/notes" for 127.0.0.1 at 2023-10-29 00:09:04 -0700
+Processing by NotesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering notes/index.html.erb within layouts/application
+  [1m[36mNote Load (0.7ms)[0m  [1m[34mSELECT "notes".* FROM "notes" ORDER BY created_at DESC[0m
+  ↳ app/views/notes/index.html.erb:24
+  Rendered notes/index.html.erb within layouts/application (Duration: 3.3ms | Allocations: 846)
+  Rendered shared/_navbar.html.erb (Duration: 0.3ms | Allocations: 235)
+  Rendered layout layouts/application.html.erb (Duration: 72.5ms | Allocations: 12021)
+Completed 200 OK in 80ms (Views: 73.3ms | ActiveRecord: 0.7ms | Allocations: 12483)
+
+
+Started GET "/notes/3" for 127.0.0.1 at 2023-10-29 00:09:32 -0700
+Processing by NotesController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mNote Load (0.5ms)[0m  [1m[34mSELECT "notes".* FROM "notes" WHERE "notes"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/notes_controller.rb:51:in `set_list'
+  Rendering layout layouts/application.html.erb
+  Rendering notes/show.html.erb within layouts/application
+  Rendered notes/show.html.erb within layouts/application (Duration: 0.4ms | Allocations: 166)
+  Rendered shared/_navbar.html.erb (Duration: 0.3ms | Allocations: 256)
+  Rendered layout layouts/application.html.erb (Duration: 109.3ms | Allocations: 24479)
+Completed 200 OK in 134ms (Views: 111.6ms | ActiveRecord: 6.1ms | Allocations: 28493)
+
+
+Started GET "/notes/3" for 127.0.0.1 at 2023-10-29 00:09:35 -0700
+Processing by NotesController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mNote Load (0.4ms)[0m  [1m[34mSELECT "notes".* FROM "notes" WHERE "notes"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/notes_controller.rb:51:in `set_list'
+  Rendering layout layouts/application.html.erb
+  Rendering notes/show.html.erb within layouts/application
+  Rendered notes/show.html.erb within layouts/application (Duration: 0.3ms | Allocations: 122)
+  Rendered shared/_navbar.html.erb (Duration: 0.3ms | Allocations: 235)
+  Rendered layout layouts/application.html.erb (Duration: 72.5ms | Allocations: 11324)
+Completed 200 OK in 81ms (Views: 73.7ms | ActiveRecord: 0.4ms | Allocations: 12305)
+
+
+Started GET "/notes/3" for 127.0.0.1 at 2023-10-29 00:12:04 -0700
+Processing by NotesController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mNote Load (0.3ms)[0m  [1m[34mSELECT "notes".* FROM "notes" WHERE "notes"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/notes_controller.rb:51:in `set_list'
+  Rendering layout layouts/application.html.erb
+  Rendering notes/show.html.erb within layouts/application
+  Rendered notes/show.html.erb within layouts/application (Duration: 1.9ms | Allocations: 720)
+  Rendered shared/_navbar.html.erb (Duration: 1.7ms | Allocations: 628)
+  Rendered layout layouts/application.html.erb (Duration: 86.0ms | Allocations: 12748)
+Completed 200 OK in 107ms (Views: 97.5ms | ActiveRecord: 0.3ms | Allocations: 14266)
+
+
+Started DELETE "/notes/3" for 127.0.0.1 at 2023-10-29 00:12:06 -0700
+Processing by NotesController#destroy as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "commit"=>"Delete", "id"=>"3"}
+  [1m[36mNote Load (0.4ms)[0m  [1m[34mSELECT "notes".* FROM "notes" WHERE "notes"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/notes_controller.rb:51:in `set_list'
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/notes_controller.rb:44:in `destroy'
+  [1m[36mNote Destroy (0.6ms)[0m  [1m[31mDELETE FROM "notes" WHERE "notes"."id" = $1[0m  [["id", 3]]
+  ↳ app/controllers/notes_controller.rb:44:in `destroy'
+  [1m[36mTRANSACTION (0.8ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/notes_controller.rb:44:in `destroy'
+Redirected to http://127.0.0.1:3000/notes
+Completed 302 Found in 18ms (ActiveRecord: 2.1ms | Allocations: 2447)
+
+
+Started GET "/notes" for 127.0.0.1 at 2023-10-29 00:12:06 -0700
+Processing by NotesController#index as TURBO_STREAM
+  Rendering layout layouts/application.html.erb
+  Rendering notes/index.html.erb within layouts/application
+  [1m[36mNote Load (0.6ms)[0m  [1m[34mSELECT "notes".* FROM "notes" ORDER BY created_at DESC[0m
+  ↳ app/views/notes/index.html.erb:24
+  Rendered notes/index.html.erb within layouts/application (Duration: 4.8ms | Allocations: 1053)
+  Rendered shared/_navbar.html.erb (Duration: 0.3ms | Allocations: 235)
+  Rendered layout layouts/application.html.erb (Duration: 73.9ms | Allocations: 12528)
+Completed 200 OK in 82ms (Views: 74.9ms | ActiveRecord: 0.6ms | Allocations: 13114)
+
+
+Started GET "/notes/2" for 127.0.0.1 at 2023-10-29 00:12:10 -0700
+Processing by NotesController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mNote Load (0.4ms)[0m  [1m[34mSELECT "notes".* FROM "notes" WHERE "notes"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/notes_controller.rb:51:in `set_list'
+  Rendering layout layouts/application.html.erb
+  Rendering notes/show.html.erb within layouts/application
+  Rendered notes/show.html.erb within layouts/application (Duration: 0.6ms | Allocations: 375)
+  Rendered shared/_navbar.html.erb (Duration: 0.3ms | Allocations: 235)
+  Rendered layout layouts/application.html.erb (Duration: 69.0ms | Allocations: 11710)
+Completed 200 OK in 77ms (Views: 70.2ms | ActiveRecord: 0.4ms | Allocations: 12698)
+
+
+Started GET "/notes/2" for 127.0.0.1 at 2023-10-29 00:12:37 -0700
+Processing by NotesController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mNote Load (0.4ms)[0m  [1m[34mSELECT "notes".* FROM "notes" WHERE "notes"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/notes_controller.rb:51:in `set_list'
+  Rendering layout layouts/application.html.erb
+  Rendering notes/show.html.erb within layouts/application
+  Rendered notes/show.html.erb within layouts/application (Duration: 3.0ms | Allocations: 1084)
+  Rendered shared/_navbar.html.erb (Duration: 1.8ms | Allocations: 628)
+  Rendered layout layouts/application.html.erb (Duration: 86.5ms | Allocations: 13113)
+Completed 200 OK in 107ms (Views: 97.3ms | ActiveRecord: 0.4ms | Allocations: 14637)
+
+
+Started DELETE "/notes/2" for 127.0.0.1 at 2023-10-29 00:12:41 -0700
+Processing by NotesController#destroy as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "commit"=>"Delete", "id"=>"2"}
+  [1m[36mNote Load (0.3ms)[0m  [1m[34mSELECT "notes".* FROM "notes" WHERE "notes"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/notes_controller.rb:51:in `set_list'
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/notes_controller.rb:44:in `destroy'
+  [1m[36mNote Destroy (0.7ms)[0m  [1m[31mDELETE FROM "notes" WHERE "notes"."id" = $1[0m  [["id", 2]]
+  ↳ app/controllers/notes_controller.rb:44:in `destroy'
+  [1m[36mTRANSACTION (0.9ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/notes_controller.rb:44:in `destroy'
+Redirected to http://127.0.0.1:3000/notes
+Completed 302 Found in 15ms (ActiveRecord: 2.3ms | Allocations: 2380)
+
+
+Started GET "/notes" for 127.0.0.1 at 2023-10-29 00:12:41 -0700
+Processing by NotesController#index as TURBO_STREAM
+  Rendering layout layouts/application.html.erb
+  Rendering notes/index.html.erb within layouts/application
+  [1m[36mNote Load (0.6ms)[0m  [1m[34mSELECT "notes".* FROM "notes" ORDER BY created_at DESC[0m
+  ↳ app/views/notes/index.html.erb:24
+  Rendered notes/index.html.erb within layouts/application (Duration: 5.1ms | Allocations: 960)
+  Rendered shared/_navbar.html.erb (Duration: 0.3ms | Allocations: 235)
+  Rendered layout layouts/application.html.erb (Duration: 77.7ms | Allocations: 12353)
+Completed 200 OK in 86ms (Views: 78.3ms | ActiveRecord: 0.6ms | Allocations: 12911)
+
+
+Started GET "/notes/1" for 127.0.0.1 at 2023-10-29 00:12:43 -0700
+Processing by NotesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mNote Load (0.4ms)[0m  [1m[34mSELECT "notes".* FROM "notes" WHERE "notes"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/notes_controller.rb:51:in `set_list'
+  Rendering layout layouts/application.html.erb
+  Rendering notes/show.html.erb within layouts/application
+  Rendered notes/show.html.erb within layouts/application (Duration: 1.2ms | Allocations: 688)
+  Rendered shared/_navbar.html.erb (Duration: 0.3ms | Allocations: 235)
+  Rendered layout layouts/application.html.erb (Duration: 71.7ms | Allocations: 12107)
+Completed 200 OK in 81ms (Views: 73.0ms | ActiveRecord: 0.4ms | Allocations: 13089)
+
+
+Started GET "/notes/1" for 127.0.0.1 at 2023-10-29 00:12:57 -0700
+Processing by NotesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mNote Load (0.3ms)[0m  [1m[34mSELECT "notes".* FROM "notes" WHERE "notes"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/notes_controller.rb:51:in `set_list'
+  Rendering layout layouts/application.html.erb
+  Rendering notes/show.html.erb within layouts/application
+  Rendered notes/show.html.erb within layouts/application (Duration: 1.9ms | Allocations: 707)
+  Rendered shared/_navbar.html.erb (Duration: 2.0ms | Allocations: 628)
+  Rendered layout layouts/application.html.erb (Duration: 111.8ms | Allocations: 12735)
+Completed 200 OK in 131ms (Views: 122.0ms | ActiveRecord: 0.3ms | Allocations: 14265)
+
+
+Started DELETE "/notes/1" for 127.0.0.1 at 2023-10-29 00:12:58 -0700
+Processing by NotesController#destroy as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "commit"=>"Delete", "id"=>"1"}
+  [1m[36mNote Load (0.4ms)[0m  [1m[34mSELECT "notes".* FROM "notes" WHERE "notes"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/notes_controller.rb:51:in `set_list'
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/notes_controller.rb:44:in `destroy'
+  [1m[36mNote Destroy (0.5ms)[0m  [1m[31mDELETE FROM "notes" WHERE "notes"."id" = $1[0m  [["id", 1]]
+  ↳ app/controllers/notes_controller.rb:44:in `destroy'
+  [1m[36mTRANSACTION (0.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/notes_controller.rb:44:in `destroy'
+Redirected to http://127.0.0.1:3000/notes
+Completed 302 Found in 14ms (ActiveRecord: 1.8ms | Allocations: 2392)
+
+
+Started GET "/notes" for 127.0.0.1 at 2023-10-29 00:12:58 -0700
+Processing by NotesController#index as TURBO_STREAM
+  Rendering layout layouts/application.html.erb
+  Rendering notes/index.html.erb within layouts/application
+  [1m[36mNote Load (0.7ms)[0m  [1m[34mSELECT "notes".* FROM "notes" ORDER BY created_at DESC[0m
+  ↳ app/views/notes/index.html.erb:24
+  Rendered notes/index.html.erb within layouts/application (Duration: 4.5ms | Allocations: 878)
+  Rendered shared/_navbar.html.erb (Duration: 0.2ms | Allocations: 235)
+  Rendered layout layouts/application.html.erb (Duration: 72.4ms | Allocations: 12135)
+Completed 200 OK in 81ms (Views: 73.1ms | ActiveRecord: 0.7ms | Allocations: 12696)
+
+
+Started GET "/notes/new" for 127.0.0.1 at 2023-10-29 00:12:59 -0700
+Processing by NotesController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering notes/new.html.erb within layouts/application
+  Rendered notes/new.html.erb within layouts/application (Duration: 5.8ms | Allocations: 1855)
+  Rendered shared/_navbar.html.erb (Duration: 0.3ms | Allocations: 235)
+  Rendered layout layouts/application.html.erb (Duration: 78.9ms | Allocations: 13285)
+Completed 200 OK in 86ms (Views: 80.1ms | ActiveRecord: 0.0ms | Allocations: 13801)
+
+
+Started POST "/notes" for 127.0.0.1 at 2023-10-29 00:13:07 -0700
+Processing by NotesController#create as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "note"=>{"title"=>"a new note", "content"=>"bruh finally"}, "commit"=>"Create new note"}
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/notes_controller.rb:18:in `create'
+  [1m[36mNote Create (0.8ms)[0m  [1m[32mINSERT INTO "notes" ("title", "content", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["title", "a new note"], ["content", "bruh finally"], ["created_at", "2023-10-29 07:13:07.238927"], ["updated_at", "2023-10-29 07:13:07.238927"]]
+  ↳ app/controllers/notes_controller.rb:18:in `create'
+  [1m[36mTRANSACTION (0.7ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/notes_controller.rb:18:in `create'
+Redirected to http://127.0.0.1:3000/notes/4
+Completed 302 Found in 14ms (ActiveRecord: 1.9ms | Allocations: 2343)
+
+
+Started GET "/notes/4" for 127.0.0.1 at 2023-10-29 00:13:07 -0700
+Processing by NotesController#show as TURBO_STREAM
+  Parameters: {"id"=>"4"}
+  [1m[36mNote Load (0.5ms)[0m  [1m[34mSELECT "notes".* FROM "notes" WHERE "notes"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/notes_controller.rb:51:in `set_list'
+  Rendering layout layouts/application.html.erb
+  Rendering notes/show.html.erb within layouts/application
+  Rendered notes/show.html.erb within layouts/application (Duration: 0.8ms | Allocations: 374)
+  Rendered shared/_navbar.html.erb (Duration: 0.4ms | Allocations: 235)
+  Rendered layout layouts/application.html.erb (Duration: 75.3ms | Allocations: 11780)
+Completed 200 OK in 84ms (Views: 76.6ms | ActiveRecord: 0.5ms | Allocations: 12772)
+
+
+Started GET "/notes/4/edit" for 127.0.0.1 at 2023-10-29 00:13:09 -0700
+Processing by NotesController#edit as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mNote Load (0.4ms)[0m  [1m[34mSELECT "notes".* FROM "notes" WHERE "notes"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/notes_controller.rb:51:in `set_list'
+  Rendering layout layouts/application.html.erb
+  Rendering notes/edit.html.erb within layouts/application
+  Rendered notes/edit.html.erb within layouts/application (Duration: 3.8ms | Allocations: 1707)
+  Rendered shared/_navbar.html.erb (Duration: 0.3ms | Allocations: 235)
+  Rendered layout layouts/application.html.erb (Duration: 72.8ms | Allocations: 12910)
+Completed 200 OK in 83ms (Views: 74.0ms | ActiveRecord: 0.4ms | Allocations: 13942)
+
+
+Started PATCH "/notes/4" for 127.0.0.1 at 2023-10-29 00:13:13 -0700
+Processing by NotesController#update as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "note"=>{"title"=>"a new note", "content"=>"bruh finally i can change it"}, "commit"=>"Update Note", "id"=>"4"}
+  [1m[36mNote Load (0.4ms)[0m  [1m[34mSELECT "notes".* FROM "notes" WHERE "notes"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/notes_controller.rb:51:in `set_list'
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/notes_controller.rb:31:in `update'
+  [1m[36mNote Update (0.8ms)[0m  [1m[33mUPDATE "notes" SET "content" = $1, "updated_at" = $2 WHERE "notes"."id" = $3[0m  [["content", "bruh finally i can change it"], ["updated_at", "2023-10-29 07:13:13.993326"], ["id", 4]]
+  ↳ app/controllers/notes_controller.rb:31:in `update'
+  [1m[36mTRANSACTION (3.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/notes_controller.rb:31:in `update'
+Redirected to http://127.0.0.1:3000/notes/4
+Completed 302 Found in 19ms (ActiveRecord: 4.7ms | Allocations: 2787)
+
+
+Started GET "/notes/4" for 127.0.0.1 at 2023-10-29 00:13:14 -0700
+Processing by NotesController#show as TURBO_STREAM
+  Parameters: {"id"=>"4"}
+  [1m[36mNote Load (0.4ms)[0m  [1m[34mSELECT "notes".* FROM "notes" WHERE "notes"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/notes_controller.rb:51:in `set_list'
+  Rendering layout layouts/application.html.erb
+  Rendering notes/show.html.erb within layouts/application
+  Rendered notes/show.html.erb within layouts/application (Duration: 0.6ms | Allocations: 375)
+  Rendered shared/_navbar.html.erb (Duration: 0.2ms | Allocations: 235)
+  Rendered layout layouts/application.html.erb (Duration: 71.1ms | Allocations: 11760)
+Completed 200 OK in 79ms (Views: 72.2ms | ActiveRecord: 0.4ms | Allocations: 12733)
+
+
+Started GET "/notes" for 127.0.0.1 at 2023-10-29 00:13:15 -0700
+Processing by NotesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering notes/index.html.erb within layouts/application
+  [1m[36mNote Load (0.6ms)[0m  [1m[34mSELECT "notes".* FROM "notes" ORDER BY created_at DESC[0m
+  ↳ app/views/notes/index.html.erb:24
+  Rendered notes/index.html.erb within layouts/application (Duration: 2.9ms | Allocations: 712)
+  Rendered shared/_navbar.html.erb (Duration: 0.3ms | Allocations: 235)
+  Rendered layout layouts/application.html.erb (Duration: 71.8ms | Allocations: 12133)
+Completed 200 OK in 78ms (Views: 72.7ms | ActiveRecord: 0.6ms | Allocations: 12612)
+
+
+Started GET "/notes/4" for 127.0.0.1 at 2023-10-29 00:13:17 -0700
+Processing by NotesController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mNote Load (0.3ms)[0m  [1m[34mSELECT "notes".* FROM "notes" WHERE "notes"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/notes_controller.rb:51:in `set_list'
+  Rendering layout layouts/application.html.erb
+  Rendering notes/show.html.erb within layouts/application
+  Rendered notes/show.html.erb within layouts/application (Duration: 0.7ms | Allocations: 375)
+  Rendered shared/_navbar.html.erb (Duration: 0.3ms | Allocations: 235)
+  Rendered layout layouts/application.html.erb (Duration: 72.3ms | Allocations: 11577)
+Completed 200 OK in 80ms (Views: 73.5ms | ActiveRecord: 0.3ms | Allocations: 12531)
+
+
+Started GET "/notes" for 127.0.0.1 at 2023-10-29 00:13:17 -0700
+Processing by NotesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering notes/index.html.erb within layouts/application
+  [1m[36mNote Load (0.5ms)[0m  [1m[34mSELECT "notes".* FROM "notes" ORDER BY created_at DESC[0m
+  ↳ app/views/notes/index.html.erb:24
+  Rendered notes/index.html.erb within layouts/application (Duration: 3.0ms | Allocations: 708)
+  Rendered shared/_navbar.html.erb (Duration: 0.3ms | Allocations: 235)
+  Rendered layout layouts/application.html.erb (Duration: 77.8ms | Allocations: 11919)
+Completed 200 OK in 84ms (Views: 78.4ms | ActiveRecord: 0.5ms | Allocations: 12394)
+
+
+Started GET "/notes/new" for 127.0.0.1 at 2023-10-29 00:13:18 -0700
+Processing by NotesController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering notes/new.html.erb within layouts/application
+  Rendered notes/new.html.erb within layouts/application (Duration: 2.0ms | Allocations: 1406)
+  Rendered shared/_navbar.html.erb (Duration: 0.3ms | Allocations: 235)
+  Rendered layout layouts/application.html.erb (Duration: 73.9ms | Allocations: 12695)
+Completed 200 OK in 80ms (Views: 75.4ms | ActiveRecord: 0.0ms | Allocations: 13155)
+
+
+Started GET "/notes" for 127.0.0.1 at 2023-10-29 00:13:19 -0700
+Processing by NotesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering notes/index.html.erb within layouts/application
+  [1m[36mNote Load (0.7ms)[0m  [1m[34mSELECT "notes".* FROM "notes" ORDER BY created_at DESC[0m
+  ↳ app/views/notes/index.html.erb:24
+  Rendered notes/index.html.erb within layouts/application (Duration: 3.6ms | Allocations: 708)
+  Rendered shared/_navbar.html.erb (Duration: 0.3ms | Allocations: 235)
+  Rendered layout layouts/application.html.erb (Duration: 75.8ms | Allocations: 12121)
+Completed 200 OK in 82ms (Views: 76.4ms | ActiveRecord: 0.7ms | Allocations: 12590)
+
+
+Started GET "/notes/4" for 127.0.0.1 at 2023-10-29 00:13:20 -0700
+Processing by NotesController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mNote Load (0.3ms)[0m  [1m[34mSELECT "notes".* FROM "notes" WHERE "notes"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/notes_controller.rb:51:in `set_list'
+  Rendering layout layouts/application.html.erb
+  Rendering notes/show.html.erb within layouts/application
+  Rendered notes/show.html.erb within layouts/application (Duration: 0.6ms | Allocations: 375)
+  Rendered shared/_navbar.html.erb (Duration: 0.3ms | Allocations: 235)
+  Rendered layout layouts/application.html.erb (Duration: 78.3ms | Allocations: 11589)
+Completed 200 OK in 86ms (Views: 79.4ms | ActiveRecord: 0.3ms | Allocations: 12574)
+
+
+Started DELETE "/notes/4" for 127.0.0.1 at 2023-10-29 00:13:22 -0700
+Processing by NotesController#destroy as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "commit"=>"Delete", "id"=>"4"}
+  [1m[36mNote Load (0.4ms)[0m  [1m[34mSELECT "notes".* FROM "notes" WHERE "notes"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/notes_controller.rb:51:in `set_list'
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/notes_controller.rb:44:in `destroy'
+  [1m[36mNote Destroy (0.5ms)[0m  [1m[31mDELETE FROM "notes" WHERE "notes"."id" = $1[0m  [["id", 4]]
+  ↳ app/controllers/notes_controller.rb:44:in `destroy'
+  [1m[36mTRANSACTION (0.8ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/notes_controller.rb:44:in `destroy'
+Redirected to http://127.0.0.1:3000/notes
+Completed 302 Found in 14ms (ActiveRecord: 2.1ms | Allocations: 2362)
+
+
+Started GET "/notes" for 127.0.0.1 at 2023-10-29 00:13:22 -0700
+Processing by NotesController#index as TURBO_STREAM
+  Rendering layout layouts/application.html.erb
+  Rendering notes/index.html.erb within layouts/application
+  [1m[36mNote Load (0.7ms)[0m  [1m[34mSELECT "notes".* FROM "notes" ORDER BY created_at DESC[0m
+  ↳ app/views/notes/index.html.erb:24
+  Rendered notes/index.html.erb within layouts/application (Duration: 2.6ms | Allocations: 632)
+  Rendered shared/_navbar.html.erb (Duration: 0.3ms | Allocations: 235)
+  Rendered layout layouts/application.html.erb (Duration: 74.4ms | Allocations: 11850)
+Completed 200 OK in 80ms (Views: 74.9ms | ActiveRecord: 0.7ms | Allocations: 12332)
+
+
+  [1m[36mNote Load (0.9ms)[0m  [1m[34mSELECT "notes".* FROM "notes"[0m
+Started GET "/notes" for 127.0.0.1 at 2023-10-29 00:14:25 -0700
+  [1m[36mActiveRecord::SchemaMigration Pluck (1.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by NotesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering notes/index.html.erb within layouts/application
+  [1m[36mNote Load (1.6ms)[0m  [1m[34mSELECT "notes".* FROM "notes" ORDER BY created_at DESC[0m
+  ↳ app/views/notes/index.html.erb:24
+  Rendered notes/index.html.erb within layouts/application (Duration: 8.7ms | Allocations: 1445)
+  Rendered shared/_navbar.html.erb (Duration: 1.6ms | Allocations: 668)
+  Rendered layout layouts/application.html.erb (Duration: 1039.9ms | Allocations: 96749)
+Completed 200 OK in 1119ms (Views: 1056.1ms | ActiveRecord: 1.6ms | Allocations: 102690)
+
+
+Started GET "/notes/new" for 127.0.0.1 at 2023-10-29 00:14:28 -0700
+Processing by NotesController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering notes/new.html.erb within layouts/application
+  Rendered notes/new.html.erb within layouts/application (Duration: 105.8ms | Allocations: 9700)
+  Rendered shared/_navbar.html.erb (Duration: 0.2ms | Allocations: 235)
+  Rendered layout layouts/application.html.erb (Duration: 173.1ms | Allocations: 20913)
+Completed 200 OK in 199ms (Views: 174.7ms | ActiveRecord: 5.7ms | Allocations: 25483)
+
+
+Started POST "/notes" for 127.0.0.1 at 2023-10-29 00:14:40 -0700
+Processing by NotesController#create as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "note"=>{"title"=>"my first note", "content"=>"here are some notes"}, "commit"=>"Create new note"}
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/notes_controller.rb:18:in `create'
+  [1m[36mNote Create (1.0ms)[0m  [1m[32mINSERT INTO "notes" ("title", "content", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["title", "my first note"], ["content", "here are some notes"], ["created_at", "2023-10-29 07:14:40.101096"], ["updated_at", "2023-10-29 07:14:40.101096"]]
+  ↳ app/controllers/notes_controller.rb:18:in `create'
+  [1m[36mTRANSACTION (1.0ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/notes_controller.rb:18:in `create'
+Redirected to http://127.0.0.1:3000/notes/5
+Completed 302 Found in 16ms (ActiveRecord: 2.4ms | Allocations: 3682)
+
+
+Started GET "/notes/5" for 127.0.0.1 at 2023-10-29 00:14:40 -0700
+Processing by NotesController#show as TURBO_STREAM
+  Parameters: {"id"=>"5"}
+  [1m[36mNote Load (0.4ms)[0m  [1m[34mSELECT "notes".* FROM "notes" WHERE "notes"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/notes_controller.rb:51:in `set_list'
+  Rendering layout layouts/application.html.erb
+  Rendering notes/show.html.erb within layouts/application
+  Rendered notes/show.html.erb within layouts/application (Duration: 2.2ms | Allocations: 683)
+  Rendered shared/_navbar.html.erb (Duration: 0.2ms | Allocations: 235)
+  Rendered layout layouts/application.html.erb (Duration: 80.9ms | Allocations: 12139)
+Completed 200 OK in 97ms (Views: 82.2ms | ActiveRecord: 0.7ms | Allocations: 14985)
+
+
+Started GET "/notes" for 127.0.0.1 at 2023-10-29 00:14:43 -0700
+Processing by NotesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering notes/index.html.erb within layouts/application
+  [1m[36mNote Load (0.5ms)[0m  [1m[34mSELECT "notes".* FROM "notes" ORDER BY created_at DESC[0m
+  ↳ app/views/notes/index.html.erb:24
+  Rendered notes/index.html.erb within layouts/application (Duration: 2.8ms | Allocations: 728)
+  Rendered shared/_navbar.html.erb (Duration: 0.3ms | Allocations: 235)
+  Rendered layout layouts/application.html.erb (Duration: 76.7ms | Allocations: 11980)
+Completed 200 OK in 82ms (Views: 77.2ms | ActiveRecord: 0.5ms | Allocations: 12454)
+
+
+Started GET "/notes/new" for 127.0.0.1 at 2023-10-29 00:14:44 -0700
+Processing by NotesController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering notes/new.html.erb within layouts/application
+  Rendered notes/new.html.erb within layouts/application (Duration: 1.8ms | Allocations: 1401)
+  Rendered shared/_navbar.html.erb (Duration: 0.2ms | Allocations: 235)
+  Rendered layout layouts/application.html.erb (Duration: 69.3ms | Allocations: 12613)
+Completed 200 OK in 75ms (Views: 70.7ms | ActiveRecord: 0.0ms | Allocations: 13080)
+
+
+Started POST "/notes" for 127.0.0.1 at 2023-10-29 00:14:53 -0700
+Processing by NotesController#create as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "note"=>{"title"=>"second note", "content"=>"numero dos"}, "commit"=>"Create new note"}
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/notes_controller.rb:18:in `create'
+  [1m[36mNote Create (0.6ms)[0m  [1m[32mINSERT INTO "notes" ("title", "content", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["title", "second note"], ["content", "numero dos"], ["created_at", "2023-10-29 07:14:53.808805"], ["updated_at", "2023-10-29 07:14:53.808805"]]
+  ↳ app/controllers/notes_controller.rb:18:in `create'
+  [1m[36mTRANSACTION (0.9ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/notes_controller.rb:18:in `create'
+Redirected to http://127.0.0.1:3000/notes/6
+Completed 302 Found in 14ms (ActiveRecord: 1.7ms | Allocations: 2216)
+
+
+Started GET "/notes/6" for 127.0.0.1 at 2023-10-29 00:14:53 -0700
+Processing by NotesController#show as TURBO_STREAM
+  Parameters: {"id"=>"6"}
+  [1m[36mNote Load (0.5ms)[0m  [1m[34mSELECT "notes".* FROM "notes" WHERE "notes"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/notes_controller.rb:51:in `set_list'
+  Rendering layout layouts/application.html.erb
+  Rendering notes/show.html.erb within layouts/application
+  Rendered notes/show.html.erb within layouts/application (Duration: 0.6ms | Allocations: 374)
+  Rendered shared/_navbar.html.erb (Duration: 0.2ms | Allocations: 235)
+  Rendered layout layouts/application.html.erb (Duration: 73.5ms | Allocations: 11583)
+Completed 200 OK in 82ms (Views: 74.7ms | ActiveRecord: 0.5ms | Allocations: 12568)
+
+
+Started GET "/notes" for 127.0.0.1 at 2023-10-29 00:14:55 -0700
+Processing by NotesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering notes/index.html.erb within layouts/application
+  [1m[36mNote Load (0.5ms)[0m  [1m[34mSELECT "notes".* FROM "notes" ORDER BY created_at DESC[0m
+  ↳ app/views/notes/index.html.erb:24
+  Rendered notes/index.html.erb within layouts/application (Duration: 2.9ms | Allocations: 778)
+  Rendered shared/_navbar.html.erb (Duration: 0.3ms | Allocations: 235)
+  Rendered layout layouts/application.html.erb (Duration: 72.3ms | Allocations: 12163)
+Completed 200 OK in 79ms (Views: 73.4ms | ActiveRecord: 0.5ms | Allocations: 12635)
+
+
+Started GET "/notes/5" for 127.0.0.1 at 2023-10-29 00:14:56 -0700
+Processing by NotesController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mNote Load (0.5ms)[0m  [1m[34mSELECT "notes".* FROM "notes" WHERE "notes"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/notes_controller.rb:51:in `set_list'
+  Rendering layout layouts/application.html.erb
+  Rendering notes/show.html.erb within layouts/application
+  Rendered notes/show.html.erb within layouts/application (Duration: 0.7ms | Allocations: 374)
+  Rendered shared/_navbar.html.erb (Duration: 0.2ms | Allocations: 235)
+  Rendered layout layouts/application.html.erb (Duration: 71.2ms | Allocations: 11687)
+Completed 200 OK in 80ms (Views: 72.3ms | ActiveRecord: 0.5ms | Allocations: 12653)
+
+
+Started DELETE "/notes/5" for 127.0.0.1 at 2023-10-29 00:14:57 -0700
+Processing by NotesController#destroy as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "commit"=>"Delete", "id"=>"5"}
+  [1m[36mNote Load (0.4ms)[0m  [1m[34mSELECT "notes".* FROM "notes" WHERE "notes"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/notes_controller.rb:51:in `set_list'
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/notes_controller.rb:44:in `destroy'
+  [1m[36mNote Destroy (1.7ms)[0m  [1m[31mDELETE FROM "notes" WHERE "notes"."id" = $1[0m  [["id", 5]]
+  ↳ app/controllers/notes_controller.rb:44:in `destroy'
+  [1m[36mTRANSACTION (0.7ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/notes_controller.rb:44:in `destroy'
+Redirected to http://127.0.0.1:3000/notes
+Completed 302 Found in 16ms (ActiveRecord: 3.1ms | Allocations: 2477)
+
+
+Started GET "/notes" for 127.0.0.1 at 2023-10-29 00:14:57 -0700
+Processing by NotesController#index as TURBO_STREAM
+  Rendering layout layouts/application.html.erb
+  Rendering notes/index.html.erb within layouts/application
+  [1m[36mNote Load (0.7ms)[0m  [1m[34mSELECT "notes".* FROM "notes" ORDER BY created_at DESC[0m
+  ↳ app/views/notes/index.html.erb:24
+  Rendered notes/index.html.erb within layouts/application (Duration: 3.2ms | Allocations: 707)
+  Rendered shared/_navbar.html.erb (Duration: 0.3ms | Allocations: 235)
+  Rendered layout layouts/application.html.erb (Duration: 73.4ms | Allocations: 11924)
+Completed 200 OK in 79ms (Views: 73.9ms | ActiveRecord: 0.7ms | Allocations: 12397)
+
+
+  [1m[36mNote Load (0.9ms)[0m  [1m[34mSELECT "notes".* FROM "notes"[0m

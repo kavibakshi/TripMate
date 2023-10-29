@@ -31,7 +31,9 @@
                     <%= link_to "Edit", edit_note_path(@note), class: "button" %>
                 </p>
                 <p class="level-item">
-                    <%= link_to "Delete", note_path(@note), method: :delete, class: "button is-danger" %>
+                    <%= form_for(@note, method: :delete, url: note_path(@note)) do |f| %>
+                    <%= f.submit "Delete", class: "button is-danger" %>
+                    <% end %>
                 </p>
             </div>
         </nav>
