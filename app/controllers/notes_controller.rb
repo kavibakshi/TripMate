@@ -1,7 +1,7 @@
 class NotesController < ApplicationController
 
     def index
-        @note = Note.all
+        @notes = Note.all.order("created_at DESC")
     end
 
     def new
@@ -21,7 +21,7 @@ class NotesController < ApplicationController
     def show
         @note = Note.find(params[:id])
     end
-    
+
     private
 
     def note_params
