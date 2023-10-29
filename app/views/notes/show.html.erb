@@ -31,12 +31,10 @@
                     <%= link_to "Edit", edit_note_path(@note), class: "button" %>
                 </p>
                 <p class="level-item">
-                    <a class="button is-danger">Delete</a>
+                    <%= link_to "Delete", note_path(@note), method: :delete, class: "button is-danger" %>
                 </p>
             </div>
         </nav>
 
     </div>
 </section>
-
-<section class="comments"></section>
