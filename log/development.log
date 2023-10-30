@@ -12758,3 +12758,894 @@ Processing by ItinerariesController#index as HTML
 Completed 200 OK in 128ms (Views: 120.9ms | ActiveRecord: 0.6ms | Allocations: 12474)
 
 
+Started GET "/" for 127.0.0.1 at 2023-10-30 03:12:10 -0700
+  [1m[36mActiveRecord::SchemaMigration Pluck (2.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by ItinerariesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering itineraries/index.html.erb within layouts/application
+  [1m[36mItinerary Load (1.9ms)[0m  [1m[34mSELECT "itineraries".* FROM "itineraries"[0m
+  ↳ app/views/itineraries/index.html.erb:6
+  Rendered itineraries/index.html.erb within layouts/application (Duration: 95.4ms | Allocations: 1809)
+  Rendered shared/_navbar.html.erb (Duration: 1.9ms | Allocations: 658)
+  Rendered layout layouts/application.html.erb (Duration: 575.0ms | Allocations: 74385)
+Completed 200 OK in 648ms (Views: 589.4ms | ActiveRecord: 1.9ms | Allocations: 80317)
+
+
+Started GET "/itineraries/new" for 127.0.0.1 at 2023-10-30 03:12:18 -0700
+Processing by ItinerariesController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering itineraries/new.html.erb within layouts/application
+  Rendered itineraries/_form.html.erb (Duration: 18.0ms | Allocations: 2686)
+  Rendered itineraries/new.html.erb within layouts/application (Duration: 21.9ms | Allocations: 2987)
+  Rendered shared/_navbar.html.erb (Duration: 0.3ms | Allocations: 234)
+  Rendered layout layouts/application.html.erb (Duration: 90.5ms | Allocations: 14386)
+Completed 200 OK in 123ms (Views: 91.9ms | ActiveRecord: 8.7ms | Allocations: 19464)
+
+
+Started POST "/itineraries" for 127.0.0.1 at 2023-10-30 03:13:18 -0700
+Processing by ItinerariesController#create as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "itinerary"=>{"description"=>"Go to class", "location"=>"SFU", "datetime"=>"2023-10-31T15:00"}, "commit"=>"Create Itinerary"}
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/itineraries_controller.rb:27:in `block in create'
+  [1m[36mItinerary Create (2.5ms)[0m  [1m[32mINSERT INTO "itineraries" ("description", "location", "datetime", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["description", "Go to class"], ["location", "SFU"], ["datetime", "2023-10-31 15:00:00"], ["created_at", "2023-10-30 10:13:18.379145"], ["updated_at", "2023-10-30 10:13:18.379145"]]
+  ↳ app/controllers/itineraries_controller.rb:27:in `block in create'
+  [1m[36mTRANSACTION (1.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/itineraries_controller.rb:27:in `block in create'
+Redirected to http://127.0.0.1:3000/itineraries/1
+Completed 302 Found in 20ms (ActiveRecord: 4.0ms | Allocations: 3860)
+
+
+Started GET "/itineraries/1" for 127.0.0.1 at 2023-10-30 03:13:18 -0700
+Processing by ItinerariesController#show as TURBO_STREAM
+  Parameters: {"id"=>"1"}
+  [1m[36mItinerary Load (0.3ms)[0m  [1m[34mSELECT "itineraries".* FROM "itineraries" WHERE "itineraries"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/itineraries_controller.rb:63:in `set_itinerary'
+  Rendering layout layouts/application.html.erb
+  Rendering itineraries/show.html.erb within layouts/application
+  Rendered itineraries/_itinerary.html.erb (Duration: 1.3ms | Allocations: 234)
+  Rendered itineraries/show.html.erb within layouts/application (Duration: 9.3ms | Allocations: 1183)
+  Rendered shared/_navbar.html.erb (Duration: 0.3ms | Allocations: 234)
+  Rendered layout layouts/application.html.erb (Duration: 119.2ms | Allocations: 12574)
+Completed 200 OK in 134ms (Views: 120.0ms | ActiveRecord: 0.5ms | Allocations: 15491)
+
+
+Started GET "/itineraries" for 127.0.0.1 at 2023-10-30 03:13:22 -0700
+Processing by ItinerariesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering itineraries/index.html.erb within layouts/application
+  [1m[36mItinerary Load (0.5ms)[0m  [1m[34mSELECT "itineraries".* FROM "itineraries"[0m
+  ↳ app/views/itineraries/index.html.erb:6
+  Rendered itineraries/_itinerary.html.erb (Duration: 0.3ms | Allocations: 32)
+  Rendered itineraries/index.html.erb within layouts/application (Duration: 18.4ms | Allocations: 2255)
+  Rendered layout layouts/application.html.erb (Duration: 19.3ms | Allocations: 2336)
+Completed 500 Internal Server Error in 25ms (ActiveRecord: 0.5ms | Allocations: 2783)
+
+
+  
+ActionView::Template::Error (undefined method `completed' for #<Itinerary id: 1, description: "Go to class", location: "SFU", datetime: "2023-10-31 15:00:00.000000000 +0000", created_at: "2023-10-30 10:13:18.379145000 +0000", updated_at: "2023-10-30 10:13:18.379145000 +0000">):
+    27:   </thead>
+    28:   <tbody>
+    29:     <% @itineraries.each do |itinerary| %>
+    30:       <% if itinerary.completed %>
+    31:         <tr class="table-secondary">
+    32:           <td class="striker"><%= link_to itinerary.description, edit_itinerary_path(itinerary) %></td>
+    33:           <td>
+  
+app/views/itineraries/index.html.erb:30
+app/views/itineraries/index.html.erb:29
+Started GET "/itineraries/1" for 127.0.0.1 at 2023-10-30 03:13:31 -0700
+Processing by ItinerariesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mItinerary Load (0.5ms)[0m  [1m[34mSELECT "itineraries".* FROM "itineraries" WHERE "itineraries"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/itineraries_controller.rb:63:in `set_itinerary'
+  Rendering layout layouts/application.html.erb
+  Rendering itineraries/show.html.erb within layouts/application
+  Rendered itineraries/_itinerary.html.erb (Duration: 0.2ms | Allocations: 32)
+  Rendered itineraries/show.html.erb within layouts/application (Duration: 2.0ms | Allocations: 409)
+  Rendered shared/_navbar.html.erb (Duration: 0.3ms | Allocations: 234)
+  Rendered layout layouts/application.html.erb (Duration: 94.5ms | Allocations: 12016)
+Completed 200 OK in 102ms (Views: 95.6ms | ActiveRecord: 0.5ms | Allocations: 13003)
+
+
+Started GET "/itineraries/1/edit" for 127.0.0.1 at 2023-10-30 03:13:35 -0700
+Processing by ItinerariesController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mItinerary Load (0.5ms)[0m  [1m[34mSELECT "itineraries".* FROM "itineraries" WHERE "itineraries"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/itineraries_controller.rb:63:in `set_itinerary'
+  Rendering layout layouts/application.html.erb
+  Rendering itineraries/edit.html.erb within layouts/application
+  Rendered itineraries/_form.html.erb (Duration: 2.1ms | Allocations: 1136)
+  Rendered itineraries/edit.html.erb within layouts/application (Duration: 4.6ms | Allocations: 1424)
+  Rendered shared/_navbar.html.erb (Duration: 0.3ms | Allocations: 234)
+  Rendered layout layouts/application.html.erb (Duration: 83.7ms | Allocations: 12813)
+Completed 200 OK in 94ms (Views: 85.1ms | ActiveRecord: 0.5ms | Allocations: 13838)
+
+
+Started GET "/itineraries/1" for 127.0.0.1 at 2023-10-30 03:13:37 -0700
+Processing by ItinerariesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mItinerary Load (0.3ms)[0m  [1m[34mSELECT "itineraries".* FROM "itineraries" WHERE "itineraries"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/itineraries_controller.rb:63:in `set_itinerary'
+  Rendering layout layouts/application.html.erb
+  Rendering itineraries/show.html.erb within layouts/application
+  Rendered itineraries/_itinerary.html.erb (Duration: 0.2ms | Allocations: 32)
+  Rendered itineraries/show.html.erb within layouts/application (Duration: 1.3ms | Allocations: 409)
+  Rendered shared/_navbar.html.erb (Duration: 0.3ms | Allocations: 234)
+  Rendered layout layouts/application.html.erb (Duration: 72.6ms | Allocations: 11860)
+Completed 200 OK in 82ms (Views: 73.5ms | ActiveRecord: 0.3ms | Allocations: 12830)
+
+
+Started GET "/itineraries/1/edit" for 127.0.0.1 at 2023-10-30 03:13:38 -0700
+Processing by ItinerariesController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mItinerary Load (0.5ms)[0m  [1m[34mSELECT "itineraries".* FROM "itineraries" WHERE "itineraries"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/itineraries_controller.rb:63:in `set_itinerary'
+  Rendering layout layouts/application.html.erb
+  Rendering itineraries/edit.html.erb within layouts/application
+  Rendered itineraries/_form.html.erb (Duration: 1.9ms | Allocations: 1112)
+  Rendered itineraries/edit.html.erb within layouts/application (Duration: 2.7ms | Allocations: 1237)
+  Rendered shared/_navbar.html.erb (Duration: 0.4ms | Allocations: 234)
+  Rendered layout layouts/application.html.erb (Duration: 76.7ms | Allocations: 12686)
+Completed 200 OK in 84ms (Views: 77.9ms | ActiveRecord: 0.5ms | Allocations: 13674)
+
+
+Started GET "/itineraries" for 127.0.0.1 at 2023-10-30 03:13:39 -0700
+Processing by ItinerariesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering itineraries/index.html.erb within layouts/application
+  [1m[36mItinerary Load (0.5ms)[0m  [1m[34mSELECT "itineraries".* FROM "itineraries"[0m
+  ↳ app/views/itineraries/index.html.erb:6
+  Rendered itineraries/_itinerary.html.erb (Duration: 0.2ms | Allocations: 32)
+  Rendered itineraries/index.html.erb within layouts/application (Duration: 4.9ms | Allocations: 1818)
+  Rendered layout layouts/application.html.erb (Duration: 6.3ms | Allocations: 1900)
+Completed 500 Internal Server Error in 11ms (ActiveRecord: 0.5ms | Allocations: 2343)
+
+
+  
+ActionView::Template::Error (undefined method `completed' for #<Itinerary id: 1, description: "Go to class", location: "SFU", datetime: "2023-10-31 15:00:00.000000000 +0000", created_at: "2023-10-30 10:13:18.379145000 +0000", updated_at: "2023-10-30 10:13:18.379145000 +0000">):
+    27:   </thead>
+    28:   <tbody>
+    29:     <% @itineraries.each do |itinerary| %>
+    30:       <% if itinerary.completed %>
+    31:         <tr class="table-secondary">
+    32:           <td class="striker"><%= link_to itinerary.description, edit_itinerary_path(itinerary) %></td>
+    33:           <td>
+  
+app/views/itineraries/index.html.erb:30
+app/views/itineraries/index.html.erb:29
+Started GET "/itineraries" for 127.0.0.1 at 2023-10-30 03:15:33 -0700
+Processing by ItinerariesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering itineraries/index.html.erb within layouts/application
+  [1m[36mItinerary Load (0.5ms)[0m  [1m[34mSELECT "itineraries".* FROM "itineraries"[0m
+  ↳ app/views/itineraries/index.html.erb:6
+  Rendered itineraries/_itinerary.html.erb (Duration: 1.5ms | Allocations: 214)
+  Rendered itineraries/index.html.erb within layouts/application (Duration: 68.6ms | Allocations: 2209)
+  Rendered shared/_navbar.html.erb (Duration: 2.3ms | Allocations: 629)
+  Rendered layout layouts/application.html.erb (Duration: 161.9ms | Allocations: 14650)
+Completed 200 OK in 177ms (Views: 170.6ms | ActiveRecord: 0.5ms | Allocations: 15681)
+
+
+Started GET "/itineraries/new" for 127.0.0.1 at 2023-10-30 03:15:43 -0700
+Processing by ItinerariesController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering itineraries/new.html.erb within layouts/application
+  Rendered itineraries/_form.html.erb (Duration: 3.0ms | Allocations: 1396)
+  Rendered itineraries/new.html.erb within layouts/application (Duration: 7.3ms | Allocations: 1687)
+  Rendered shared/_navbar.html.erb (Duration: 0.3ms | Allocations: 234)
+  Rendered layout layouts/application.html.erb (Duration: 82.9ms | Allocations: 13084)
+Completed 200 OK in 92ms (Views: 84.3ms | ActiveRecord: 0.0ms | Allocations: 13610)
+
+
+Started GET "/itineraries" for 127.0.0.1 at 2023-10-30 03:15:45 -0700
+Processing by ItinerariesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering itineraries/index.html.erb within layouts/application
+  [1m[36mItinerary Load (0.5ms)[0m  [1m[34mSELECT "itineraries".* FROM "itineraries"[0m
+  ↳ app/views/itineraries/index.html.erb:6
+  Rendered itineraries/_itinerary.html.erb (Duration: 0.3ms | Allocations: 32)
+  Rendered itineraries/index.html.erb within layouts/application (Duration: 5.1ms | Allocations: 1415)
+  Rendered shared/_navbar.html.erb (Duration: 0.3ms | Allocations: 234)
+  Rendered layout layouts/application.html.erb (Duration: 75.0ms | Allocations: 12813)
+Completed 200 OK in 81ms (Views: 76.3ms | ActiveRecord: 0.5ms | Allocations: 13271)
+
+
+Started GET "/itineraries/1/edit" for 127.0.0.1 at 2023-10-30 03:15:46 -0700
+Processing by ItinerariesController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mItinerary Load (0.4ms)[0m  [1m[34mSELECT "itineraries".* FROM "itineraries" WHERE "itineraries"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/itineraries_controller.rb:63:in `set_itinerary'
+  Rendering layout layouts/application.html.erb
+  Rendering itineraries/edit.html.erb within layouts/application
+  Rendered itineraries/_form.html.erb (Duration: 2.1ms | Allocations: 1112)
+  Rendered itineraries/edit.html.erb within layouts/application (Duration: 4.6ms | Allocations: 1399)
+  Rendered shared/_navbar.html.erb (Duration: 0.3ms | Allocations: 234)
+  Rendered layout layouts/application.html.erb (Duration: 78.8ms | Allocations: 12790)
+Completed 200 OK in 90ms (Views: 80.0ms | ActiveRecord: 0.4ms | Allocations: 13830)
+
+
+Started GET "/itineraries" for 127.0.0.1 at 2023-10-30 03:15:50 -0700
+Processing by ItinerariesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering itineraries/index.html.erb within layouts/application
+  [1m[36mItinerary Load (0.4ms)[0m  [1m[34mSELECT "itineraries".* FROM "itineraries"[0m
+  ↳ app/views/itineraries/index.html.erb:6
+  Rendered itineraries/_itinerary.html.erb (Duration: 0.3ms | Allocations: 32)
+  Rendered itineraries/index.html.erb within layouts/application (Duration: 5.1ms | Allocations: 1415)
+  Rendered shared/_navbar.html.erb (Duration: 0.3ms | Allocations: 234)
+  Rendered layout layouts/application.html.erb (Duration: 75.3ms | Allocations: 12954)
+Completed 200 OK in 82ms (Views: 76.1ms | ActiveRecord: 0.4ms | Allocations: 13424)
+
+
+Started GET "/itineraries" for 127.0.0.1 at 2023-10-30 03:16:14 -0700
+Processing by ItinerariesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering itineraries/index.html.erb within layouts/application
+  [1m[36mItinerary Load (0.5ms)[0m  [1m[34mSELECT "itineraries".* FROM "itineraries"[0m
+  ↳ app/views/itineraries/index.html.erb:6
+  Rendered itineraries/_itinerary.html.erb (Duration: 1.3ms | Allocations: 214)
+  Rendered itineraries/index.html.erb within layouts/application (Duration: 63.6ms | Allocations: 2152)
+  Rendered shared/_navbar.html.erb (Duration: 1.6ms | Allocations: 626)
+  Rendered layout layouts/application.html.erb (Duration: 147.6ms | Allocations: 14373)
+Completed 200 OK in 166ms (Views: 158.5ms | ActiveRecord: 0.5ms | Allocations: 15392)
+
+
+Started GET "/itineraries" for 127.0.0.1 at 2023-10-30 03:16:45 -0700
+Processing by ItinerariesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering itineraries/index.html.erb within layouts/application
+  [1m[36mItinerary Load (0.4ms)[0m  [1m[34mSELECT "itineraries".* FROM "itineraries"[0m
+  ↳ app/views/itineraries/index.html.erb:6
+  Rendered itineraries/_itinerary.html.erb (Duration: 1.6ms | Allocations: 214)
+  Rendered itineraries/index.html.erb within layouts/application (Duration: 81.7ms | Allocations: 2192)
+  Rendered shared/_navbar.html.erb (Duration: 3.0ms | Allocations: 626)
+  Rendered layout layouts/application.html.erb (Duration: 175.9ms | Allocations: 14413)
+Completed 200 OK in 197ms (Views: 190.1ms | ActiveRecord: 0.4ms | Allocations: 15454)
+
+
+Started GET "/itineraries" for 127.0.0.1 at 2023-10-30 03:17:07 -0700
+Processing by ItinerariesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering itineraries/index.html.erb within layouts/application
+  [1m[36mItinerary Load (0.4ms)[0m  [1m[34mSELECT "itineraries".* FROM "itineraries"[0m
+  ↳ app/views/itineraries/index.html.erb:6
+  Rendered itineraries/_itinerary.html.erb (Duration: 1.4ms | Allocations: 214)
+  Rendered itineraries/index.html.erb within layouts/application (Duration: 49.7ms | Allocations: 2191)
+  Rendered shared/_navbar.html.erb (Duration: 1.3ms | Allocations: 626)
+  Rendered layout layouts/application.html.erb (Duration: 133.4ms | Allocations: 14413)
+Completed 200 OK in 151ms (Views: 142.5ms | ActiveRecord: 0.4ms | Allocations: 15424)
+
+
+Started GET "/itineraries/1/edit" for 127.0.0.1 at 2023-10-30 03:17:49 -0700
+Processing by ItinerariesController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mItinerary Load (0.5ms)[0m  [1m[34mSELECT "itineraries".* FROM "itineraries" WHERE "itineraries"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/itineraries_controller.rb:63:in `set_itinerary'
+  Rendering layout layouts/application.html.erb
+  Rendering itineraries/edit.html.erb within layouts/application
+  Rendered itineraries/_form.html.erb (Duration: 6.0ms | Allocations: 1491)
+  Rendered itineraries/edit.html.erb within layouts/application (Duration: 10.3ms | Allocations: 1836)
+  Rendered shared/_navbar.html.erb (Duration: 0.3ms | Allocations: 234)
+  Rendered layout layouts/application.html.erb (Duration: 85.0ms | Allocations: 13431)
+Completed 200 OK in 97ms (Views: 86.2ms | ActiveRecord: 0.5ms | Allocations: 14454)
+
+
+Started PATCH "/itineraries/1" for 127.0.0.1 at 2023-10-30 03:17:53 -0700
+Processing by ItinerariesController#update as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "itinerary"=>{"description"=>"Go to work", "location"=>"SFU", "datetime"=>"2023-10-31T15:00"}, "commit"=>"Update Itinerary", "id"=>"1"}
+  [1m[36mItinerary Load (0.4ms)[0m  [1m[34mSELECT "itineraries".* FROM "itineraries" WHERE "itineraries"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/itineraries_controller.rb:63:in `set_itinerary'
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/itineraries_controller.rb:40:in `block in update'
+  [1m[36mItinerary Update (3.0ms)[0m  [1m[33mUPDATE "itineraries" SET "description" = $1, "updated_at" = $2 WHERE "itineraries"."id" = $3[0m  [["description", "Go to work"], ["updated_at", "2023-10-30 10:17:53.990632"], ["id", 1]]
+  ↳ app/controllers/itineraries_controller.rb:40:in `block in update'
+  [1m[36mTRANSACTION (0.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/itineraries_controller.rb:40:in `block in update'
+Redirected to http://127.0.0.1:3000/itineraries/1
+Completed 302 Found in 19ms (ActiveRecord: 4.2ms | Allocations: 3038)
+
+
+Started GET "/itineraries/1" for 127.0.0.1 at 2023-10-30 03:17:54 -0700
+Processing by ItinerariesController#show as TURBO_STREAM
+  Parameters: {"id"=>"1"}
+  [1m[36mItinerary Load (0.3ms)[0m  [1m[34mSELECT "itineraries".* FROM "itineraries" WHERE "itineraries"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/itineraries_controller.rb:63:in `set_itinerary'
+  Rendering layout layouts/application.html.erb
+  Rendering itineraries/show.html.erb within layouts/application
+  Rendered itineraries/_itinerary.html.erb (Duration: 0.2ms | Allocations: 32)
+  Rendered itineraries/show.html.erb within layouts/application (Duration: 3.1ms | Allocations: 651)
+  Rendered shared/_navbar.html.erb (Duration: 0.3ms | Allocations: 234)
+  Rendered layout layouts/application.html.erb (Duration: 71.6ms | Allocations: 12084)
+Completed 200 OK in 85ms (Views: 73.0ms | ActiveRecord: 0.3ms | Allocations: 13202)
+
+
+Started GET "/itineraries" for 127.0.0.1 at 2023-10-30 03:17:56 -0700
+Processing by ItinerariesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering itineraries/index.html.erb within layouts/application
+  [1m[36mItinerary Load (0.4ms)[0m  [1m[34mSELECT "itineraries".* FROM "itineraries"[0m
+  ↳ app/views/itineraries/index.html.erb:6
+  Rendered itineraries/_itinerary.html.erb (Duration: 0.3ms | Allocations: 32)
+  Rendered itineraries/index.html.erb within layouts/application (Duration: 5.5ms | Allocations: 1426)
+  Rendered shared/_navbar.html.erb (Duration: 0.5ms | Allocations: 234)
+  Rendered layout layouts/application.html.erb (Duration: 71.8ms | Allocations: 12824)
+Completed 200 OK in 77ms (Views: 72.8ms | ActiveRecord: 0.4ms | Allocations: 13291)
+
+
+Started GET "/itineraries/1/edit" for 127.0.0.1 at 2023-10-30 03:18:03 -0700
+Processing by ItinerariesController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mItinerary Load (0.6ms)[0m  [1m[34mSELECT "itineraries".* FROM "itineraries" WHERE "itineraries"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/itineraries_controller.rb:63:in `set_itinerary'
+  Rendering layout layouts/application.html.erb
+  Rendering itineraries/edit.html.erb within layouts/application
+  Rendered itineraries/_form.html.erb (Duration: 2.1ms | Allocations: 1112)
+  Rendered itineraries/edit.html.erb within layouts/application (Duration: 3.0ms | Allocations: 1237)
+  Rendered shared/_navbar.html.erb (Duration: 0.3ms | Allocations: 234)
+  Rendered layout layouts/application.html.erb (Duration: 78.8ms | Allocations: 12725)
+Completed 200 OK in 89ms (Views: 80.5ms | ActiveRecord: 0.6ms | Allocations: 13689)
+
+
+Started GET "/itineraries" for 127.0.0.1 at 2023-10-30 03:18:06 -0700
+Processing by ItinerariesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering itineraries/index.html.erb within layouts/application
+  [1m[36mItinerary Load (0.6ms)[0m  [1m[34mSELECT "itineraries".* FROM "itineraries"[0m
+  ↳ app/views/itineraries/index.html.erb:6
+  Rendered itineraries/_itinerary.html.erb (Duration: 0.3ms | Allocations: 32)
+  Rendered itineraries/index.html.erb within layouts/application (Duration: 6.0ms | Allocations: 1426)
+  Rendered shared/_navbar.html.erb (Duration: 0.3ms | Allocations: 234)
+  Rendered layout layouts/application.html.erb (Duration: 76.6ms | Allocations: 12965)
+Completed 200 OK in 83ms (Views: 77.3ms | ActiveRecord: 0.6ms | Allocations: 13423)
+
+
+Started GET "/itineraries" for 127.0.0.1 at 2023-10-30 03:20:10 -0700
+Processing by ItinerariesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering itineraries/index.html.erb within layouts/application
+  [1m[36mItinerary Load (0.3ms)[0m  [1m[34mSELECT "itineraries".* FROM "itineraries"[0m
+  ↳ app/views/itineraries/index.html.erb:6
+  Rendered itineraries/_itinerary.html.erb (Duration: 1.3ms | Allocations: 214)
+  Rendered itineraries/index.html.erb within layouts/application (Duration: 84.8ms | Allocations: 2196)
+  Rendered shared/_navbar.html.erb (Duration: 1.6ms | Allocations: 626)
+  Rendered layout layouts/application.html.erb (Duration: 211.3ms | Allocations: 14417)
+Completed 200 OK in 231ms (Views: 222.4ms | ActiveRecord: 0.3ms | Allocations: 15448)
+
+
+Started GET "/itineraries" for 127.0.0.1 at 2023-10-30 03:22:12 -0700
+Processing by ItinerariesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering itineraries/index.html.erb within layouts/application
+  [1m[36mItinerary Load (0.5ms)[0m  [1m[34mSELECT "itineraries".* FROM "itineraries"[0m
+  ↳ app/views/itineraries/index.html.erb:6
+  Rendered itineraries/_itinerary.html.erb (Duration: 1.4ms | Allocations: 214)
+  Rendered itineraries/index.html.erb within layouts/application (Duration: 63.7ms | Allocations: 2046)
+  Rendered shared/_navbar.html.erb (Duration: 2.4ms | Allocations: 626)
+  Rendered layout layouts/application.html.erb (Duration: 146.5ms | Allocations: 14268)
+Completed 200 OK in 166ms (Views: 158.0ms | ActiveRecord: 0.5ms | Allocations: 15297)
+
+
+Started GET "/itineraries/1/edit" for 127.0.0.1 at 2023-10-30 03:22:23 -0700
+Processing by ItinerariesController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mItinerary Load (0.4ms)[0m  [1m[34mSELECT "itineraries".* FROM "itineraries" WHERE "itineraries"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/itineraries_controller.rb:63:in `set_itinerary'
+  Rendering layout layouts/application.html.erb
+  Rendering itineraries/edit.html.erb within layouts/application
+  Rendered itineraries/_form.html.erb (Duration: 5.7ms | Allocations: 1491)
+  Rendered itineraries/edit.html.erb within layouts/application (Duration: 9.6ms | Allocations: 1836)
+  Rendered shared/_navbar.html.erb (Duration: 0.3ms | Allocations: 234)
+  Rendered layout layouts/application.html.erb (Duration: 101.1ms | Allocations: 13431)
+Completed 200 OK in 113ms (Views: 102.7ms | ActiveRecord: 0.4ms | Allocations: 14463)
+
+
+Started PATCH "/itineraries/1" for 127.0.0.1 at 2023-10-30 03:22:27 -0700
+Processing by ItinerariesController#update as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "itinerary"=>{"description"=>"Go to work", "location"=>"UBC", "datetime"=>"2023-10-31T15:00"}, "commit"=>"Update Itinerary", "id"=>"1"}
+  [1m[36mItinerary Load (0.3ms)[0m  [1m[34mSELECT "itineraries".* FROM "itineraries" WHERE "itineraries"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/itineraries_controller.rb:63:in `set_itinerary'
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/itineraries_controller.rb:40:in `block in update'
+  [1m[36mItinerary Update (0.6ms)[0m  [1m[33mUPDATE "itineraries" SET "location" = $1, "updated_at" = $2 WHERE "itineraries"."id" = $3[0m  [["location", "UBC"], ["updated_at", "2023-10-30 10:22:27.866720"], ["id", 1]]
+  ↳ app/controllers/itineraries_controller.rb:40:in `block in update'
+  [1m[36mTRANSACTION (0.8ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/itineraries_controller.rb:40:in `block in update'
+Redirected to http://127.0.0.1:3000/itineraries/1
+Completed 302 Found in 17ms (ActiveRecord: 2.0ms | Allocations: 2880)
+
+
+Started GET "/itineraries/1" for 127.0.0.1 at 2023-10-30 03:22:27 -0700
+Processing by ItinerariesController#show as TURBO_STREAM
+  Parameters: {"id"=>"1"}
+  [1m[36mItinerary Load (0.4ms)[0m  [1m[34mSELECT "itineraries".* FROM "itineraries" WHERE "itineraries"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/itineraries_controller.rb:63:in `set_itinerary'
+  Rendering layout layouts/application.html.erb
+  Rendering itineraries/show.html.erb within layouts/application
+  Rendered itineraries/_itinerary.html.erb (Duration: 0.4ms | Allocations: 32)
+  Rendered itineraries/show.html.erb within layouts/application (Duration: 4.1ms | Allocations: 650)
+  Rendered shared/_navbar.html.erb (Duration: 0.3ms | Allocations: 234)
+  Rendered layout layouts/application.html.erb (Duration: 77.5ms | Allocations: 12216)
+Completed 200 OK in 88ms (Views: 78.7ms | ActiveRecord: 0.4ms | Allocations: 13307)
+
+
+Started GET "/itineraries" for 127.0.0.1 at 2023-10-30 03:22:30 -0700
+Processing by ItinerariesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering itineraries/index.html.erb within layouts/application
+  [1m[36mItinerary Load (0.6ms)[0m  [1m[34mSELECT "itineraries".* FROM "itineraries"[0m
+  ↳ app/views/itineraries/index.html.erb:6
+  Rendered itineraries/_itinerary.html.erb (Duration: 0.3ms | Allocations: 32)
+  Rendered itineraries/index.html.erb within layouts/application (Duration: 5.6ms | Allocations: 1277)
+  Rendered shared/_navbar.html.erb (Duration: 0.3ms | Allocations: 234)
+  Rendered layout layouts/application.html.erb (Duration: 73.2ms | Allocations: 12674)
+Completed 200 OK in 80ms (Views: 74.4ms | ActiveRecord: 0.6ms | Allocations: 13126)
+
+
+Started GET "/itineraries" for 127.0.0.1 at 2023-10-30 03:24:29 -0700
+Processing by ItinerariesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering itineraries/index.html.erb within layouts/application
+  [1m[36mItinerary Load (0.4ms)[0m  [1m[34mSELECT "itineraries".* FROM "itineraries"[0m
+  ↳ app/views/itineraries/index.html.erb:6
+  Rendered itineraries/_itinerary.html.erb (Duration: 2.0ms | Allocations: 214)
+  Rendered itineraries/index.html.erb within layouts/application (Duration: 53.6ms | Allocations: 2052)
+  Rendered shared/_navbar.html.erb (Duration: 2.4ms | Allocations: 629)
+  Rendered layout layouts/application.html.erb (Duration: 137.0ms | Allocations: 14374)
+Completed 200 OK in 154ms (Views: 145.8ms | ActiveRecord: 0.4ms | Allocations: 15393)
+
+
+Started GET "/itineraries" for 127.0.0.1 at 2023-10-30 03:24:38 -0700
+Processing by ItinerariesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering itineraries/index.html.erb within layouts/application
+  [1m[36mItinerary Load (0.6ms)[0m  [1m[34mSELECT "itineraries".* FROM "itineraries"[0m
+  ↳ app/views/itineraries/index.html.erb:6
+  Rendered itineraries/_itinerary.html.erb (Duration: 0.3ms | Allocations: 32)
+  Rendered itineraries/index.html.erb within layouts/application (Duration: 5.9ms | Allocations: 1277)
+  Rendered shared/_navbar.html.erb (Duration: 0.3ms | Allocations: 234)
+  Rendered layout layouts/application.html.erb (Duration: 89.5ms | Allocations: 12852)
+Completed 200 OK in 95ms (Views: 90.3ms | ActiveRecord: 0.6ms | Allocations: 13288)
+
+
+Started GET "/itineraries" for 127.0.0.1 at 2023-10-30 03:26:09 -0700
+Processing by ItinerariesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering itineraries/index.html.erb within layouts/application
+  [1m[36mItinerary Load (0.4ms)[0m  [1m[34mSELECT "itineraries".* FROM "itineraries"[0m
+  ↳ app/views/itineraries/index.html.erb:6
+  Rendered itineraries/_itinerary.html.erb (Duration: 1.7ms | Allocations: 214)
+  Rendered itineraries/index.html.erb within layouts/application (Duration: 55.9ms | Allocations: 2049)
+  Rendered shared/_navbar.html.erb (Duration: 1.8ms | Allocations: 626)
+  Rendered layout layouts/application.html.erb (Duration: 139.1ms | Allocations: 14270)
+Completed 200 OK in 162ms (Views: 152.8ms | ActiveRecord: 0.4ms | Allocations: 15304)
+
+
+Started GET "/itineraries" for 127.0.0.1 at 2023-10-30 03:28:24 -0700
+Processing by ItinerariesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering itineraries/index.html.erb within layouts/application
+  [1m[36mItinerary Load (0.4ms)[0m  [1m[34mSELECT "itineraries".* FROM "itineraries"[0m
+  ↳ app/views/itineraries/index.html.erb:6
+  Rendered itineraries/_itinerary.html.erb (Duration: 1.2ms | Allocations: 214)
+  Rendered itineraries/index.html.erb within layouts/application (Duration: 58.6ms | Allocations: 2048)
+  Rendered shared/_navbar.html.erb (Duration: 1.5ms | Allocations: 626)
+  Rendered layout layouts/application.html.erb (Duration: 139.0ms | Allocations: 14270)
+Completed 200 OK in 157ms (Views: 150.0ms | ActiveRecord: 0.4ms | Allocations: 15284)
+
+
+Started GET "/itineraries" for 127.0.0.1 at 2023-10-30 03:29:57 -0700
+Processing by ItinerariesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering itineraries/index.html.erb within layouts/application
+  [1m[36mItinerary Load (0.4ms)[0m  [1m[34mSELECT "itineraries".* FROM "itineraries"[0m
+  ↳ app/views/itineraries/index.html.erb:6
+  Rendered itineraries/_itinerary.html.erb (Duration: 1.6ms | Allocations: 214)
+  Rendered itineraries/index.html.erb within layouts/application (Duration: 49.5ms | Allocations: 1598)
+  Rendered shared/_navbar.html.erb (Duration: 2.1ms | Allocations: 631)
+  Rendered layout layouts/application.html.erb (Duration: 139.4ms | Allocations: 14034)
+Completed 200 OK in 154ms (Views: 146.4ms | ActiveRecord: 0.4ms | Allocations: 15045)
+
+
+Started GET "/itineraries/1/edit" for 127.0.0.1 at 2023-10-30 03:30:15 -0700
+Processing by ItinerariesController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mItinerary Load (0.3ms)[0m  [1m[34mSELECT "itineraries".* FROM "itineraries" WHERE "itineraries"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/itineraries_controller.rb:63:in `set_itinerary'
+  Rendering layout layouts/application.html.erb
+  Rendering itineraries/edit.html.erb within layouts/application
+  Rendered itineraries/_form.html.erb (Duration: 3.2ms | Allocations: 1522)
+  Rendered itineraries/edit.html.erb within layouts/application (Duration: 6.3ms | Allocations: 1868)
+  Rendered shared/_navbar.html.erb (Duration: 0.3ms | Allocations: 234)
+  Rendered layout layouts/application.html.erb (Duration: 83.3ms | Allocations: 13428)
+Completed 200 OK in 95ms (Views: 84.5ms | ActiveRecord: 0.3ms | Allocations: 14475)
+
+
+Started PATCH "/itineraries/1" for 127.0.0.1 at 2023-10-30 03:30:20 -0700
+Processing by ItinerariesController#update as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "itinerary"=>{"description"=>"Go to work", "location"=>"SFU", "datetime"=>"2023-10-31T15:00"}, "commit"=>"Update Itinerary", "id"=>"1"}
+  [1m[36mItinerary Load (0.5ms)[0m  [1m[34mSELECT "itineraries".* FROM "itineraries" WHERE "itineraries"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/itineraries_controller.rb:63:in `set_itinerary'
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/itineraries_controller.rb:40:in `block in update'
+  [1m[36mItinerary Update (0.6ms)[0m  [1m[33mUPDATE "itineraries" SET "location" = $1, "updated_at" = $2 WHERE "itineraries"."id" = $3[0m  [["location", "SFU"], ["updated_at", "2023-10-30 10:30:20.134062"], ["id", 1]]
+  ↳ app/controllers/itineraries_controller.rb:40:in `block in update'
+  [1m[36mTRANSACTION (0.9ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/itineraries_controller.rb:40:in `block in update'
+Redirected to http://127.0.0.1:3000/itineraries/1
+Completed 302 Found in 16ms (ActiveRecord: 2.3ms | Allocations: 2867)
+
+
+Started GET "/itineraries/1" for 127.0.0.1 at 2023-10-30 03:30:20 -0700
+Processing by ItinerariesController#show as TURBO_STREAM
+  Parameters: {"id"=>"1"}
+  [1m[36mItinerary Load (0.3ms)[0m  [1m[34mSELECT "itineraries".* FROM "itineraries" WHERE "itineraries"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/itineraries_controller.rb:63:in `set_itinerary'
+  Rendering layout layouts/application.html.erb
+  Rendering itineraries/show.html.erb within layouts/application
+  Rendered itineraries/_itinerary.html.erb (Duration: 0.2ms | Allocations: 32)
+  Rendered itineraries/show.html.erb within layouts/application (Duration: 2.9ms | Allocations: 648)
+  Rendered shared/_navbar.html.erb (Duration: 0.3ms | Allocations: 234)
+  Rendered layout layouts/application.html.erb (Duration: 68.9ms | Allocations: 12038)
+Completed 200 OK in 80ms (Views: 70.0ms | ActiveRecord: 0.3ms | Allocations: 13162)
+
+
+Started GET "/itineraries" for 127.0.0.1 at 2023-10-30 03:30:24 -0700
+Processing by ItinerariesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering itineraries/index.html.erb within layouts/application
+  [1m[36mItinerary Load (0.4ms)[0m  [1m[34mSELECT "itineraries".* FROM "itineraries"[0m
+  ↳ app/views/itineraries/index.html.erb:6
+  Rendered itineraries/_itinerary.html.erb (Duration: 0.3ms | Allocations: 32)
+  Rendered itineraries/index.html.erb within layouts/application (Duration: 4.1ms | Allocations: 930)
+  Rendered shared/_navbar.html.erb (Duration: 0.3ms | Allocations: 234)
+  Rendered layout layouts/application.html.erb (Duration: 73.7ms | Allocations: 12382)
+Completed 200 OK in 80ms (Views: 74.7ms | ActiveRecord: 0.4ms | Allocations: 12846)
+
+
+Started GET "/itineraries/1/edit" for 127.0.0.1 at 2023-10-30 03:30:27 -0700
+Processing by ItinerariesController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mItinerary Load (0.3ms)[0m  [1m[34mSELECT "itineraries".* FROM "itineraries" WHERE "itineraries"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/itineraries_controller.rb:63:in `set_itinerary'
+  Rendering layout layouts/application.html.erb
+  Rendering itineraries/edit.html.erb within layouts/application
+  Rendered itineraries/_form.html.erb (Duration: 2.1ms | Allocations: 1112)
+  Rendered itineraries/edit.html.erb within layouts/application (Duration: 2.9ms | Allocations: 1237)
+  Rendered shared/_navbar.html.erb (Duration: 0.3ms | Allocations: 234)
+  Rendered layout layouts/application.html.erb (Duration: 72.7ms | Allocations: 12804)
+Completed 200 OK in 82ms (Views: 74.0ms | ActiveRecord: 0.3ms | Allocations: 13789)
+
+
+Started GET "/itineraries" for 127.0.0.1 at 2023-10-30 03:30:30 -0700
+Processing by ItinerariesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering itineraries/index.html.erb within layouts/application
+  [1m[36mItinerary Load (0.4ms)[0m  [1m[34mSELECT "itineraries".* FROM "itineraries"[0m
+  ↳ app/views/itineraries/index.html.erb:6
+  Rendered itineraries/_itinerary.html.erb (Duration: 0.3ms | Allocations: 32)
+  Rendered itineraries/index.html.erb within layouts/application (Duration: 4.3ms | Allocations: 930)
+  Rendered shared/_navbar.html.erb (Duration: 0.3ms | Allocations: 234)
+  Rendered layout layouts/application.html.erb (Duration: 79.7ms | Allocations: 12328)
+Completed 200 OK in 87ms (Views: 80.7ms | ActiveRecord: 0.4ms | Allocations: 12765)
+
+
+Started GET "/itineraries/new" for 127.0.0.1 at 2023-10-30 03:30:31 -0700
+Processing by ItinerariesController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering itineraries/new.html.erb within layouts/application
+  Rendered itineraries/_form.html.erb (Duration: 1.7ms | Allocations: 1015)
+  Rendered itineraries/new.html.erb within layouts/application (Duration: 3.3ms | Allocations: 1253)
+  Rendered shared/_navbar.html.erb (Duration: 0.3ms | Allocations: 234)
+  Rendered layout layouts/application.html.erb (Duration: 71.1ms | Allocations: 12651)
+Completed 200 OK in 78ms (Views: 72.4ms | ActiveRecord: 0.0ms | Allocations: 13149)
+
+
+Started POST "/itineraries" for 127.0.0.1 at 2023-10-30 03:30:51 -0700
+Processing by ItinerariesController#create as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "itinerary"=>{"description"=>"Go home", "location"=>"Home", "datetime"=>"2023-10-31T16:30"}, "commit"=>"Create Itinerary"}
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/itineraries_controller.rb:27:in `block in create'
+  [1m[36mItinerary Create (0.7ms)[0m  [1m[32mINSERT INTO "itineraries" ("description", "location", "datetime", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["description", "Go home"], ["location", "Home"], ["datetime", "2023-10-31 16:30:00"], ["created_at", "2023-10-30 10:30:51.633954"], ["updated_at", "2023-10-30 10:30:51.633954"]]
+  ↳ app/controllers/itineraries_controller.rb:27:in `block in create'
+  [1m[36mTRANSACTION (1.0ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/itineraries_controller.rb:27:in `block in create'
+Redirected to http://127.0.0.1:3000/itineraries/2
+Completed 302 Found in 16ms (ActiveRecord: 2.0ms | Allocations: 2374)
+
+
+Started GET "/itineraries/2" for 127.0.0.1 at 2023-10-30 03:30:51 -0700
+Processing by ItinerariesController#show as TURBO_STREAM
+  Parameters: {"id"=>"2"}
+  [1m[36mItinerary Load (0.4ms)[0m  [1m[34mSELECT "itineraries".* FROM "itineraries" WHERE "itineraries"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/itineraries_controller.rb:63:in `set_itinerary'
+  Rendering layout layouts/application.html.erb
+  Rendering itineraries/show.html.erb within layouts/application
+  Rendered itineraries/_itinerary.html.erb (Duration: 0.4ms | Allocations: 32)
+  Rendered itineraries/show.html.erb within layouts/application (Duration: 2.1ms | Allocations: 417)
+  Rendered shared/_navbar.html.erb (Duration: 0.3ms | Allocations: 234)
+  Rendered layout layouts/application.html.erb (Duration: 75.0ms | Allocations: 12012)
+Completed 200 OK in 84ms (Views: 76.4ms | ActiveRecord: 0.4ms | Allocations: 12991)
+
+
+Started GET "/itineraries" for 127.0.0.1 at 2023-10-30 03:30:53 -0700
+Processing by ItinerariesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering itineraries/index.html.erb within layouts/application
+  [1m[36mItinerary Load (0.4ms)[0m  [1m[34mSELECT "itineraries".* FROM "itineraries"[0m
+  ↳ app/views/itineraries/index.html.erb:6
+  Rendered itineraries/_itinerary.html.erb (Duration: 0.3ms | Allocations: 32)
+  Rendered itineraries/_itinerary.html.erb (Duration: 0.3ms | Allocations: 31)
+  Rendered itineraries/index.html.erb within layouts/application (Duration: 6.4ms | Allocations: 1209)
+  Rendered shared/_navbar.html.erb (Duration: 0.3ms | Allocations: 234)
+  Rendered layout layouts/application.html.erb (Duration: 78.6ms | Allocations: 12779)
+Completed 200 OK in 84ms (Views: 79.5ms | ActiveRecord: 0.4ms | Allocations: 13225)
+
+
+Started GET "/itineraries" for 127.0.0.1 at 2023-10-30 03:33:12 -0700
+Processing by ItinerariesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering itineraries/index.html.erb within layouts/application
+  [1m[36mItinerary Load (0.3ms)[0m  [1m[34mSELECT "itineraries".* FROM "itineraries"[0m
+  ↳ app/views/itineraries/index.html.erb:6
+  Rendered itineraries/_itinerary.html.erb (Duration: 1.6ms | Allocations: 214)
+  Rendered itineraries/_itinerary.html.erb (Duration: 0.4ms | Allocations: 31)
+  Rendered itineraries/index.html.erb within layouts/application (Duration: 53.9ms | Allocations: 1878)
+  Rendered shared/_navbar.html.erb (Duration: 2.6ms | Allocations: 626)
+  Rendered layout layouts/application.html.erb (Duration: 137.9ms | Allocations: 14103)
+Completed 200 OK in 155ms (Views: 146.5ms | ActiveRecord: 0.3ms | Allocations: 15107)
+
+
+Started GET "/itineraries/new" for 127.0.0.1 at 2023-10-30 03:33:16 -0700
+Processing by ItinerariesController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering itineraries/new.html.erb within layouts/application
+  Rendered itineraries/_form.html.erb (Duration: 3.2ms | Allocations: 1424)
+  Rendered itineraries/new.html.erb within layouts/application (Duration: 8.7ms | Allocations: 1715)
+  Rendered shared/_navbar.html.erb (Duration: 0.3ms | Allocations: 234)
+  Rendered layout layouts/application.html.erb (Duration: 77.6ms | Allocations: 13113)
+Completed 200 OK in 86ms (Views: 79.1ms | ActiveRecord: 0.0ms | Allocations: 13612)
+
+
+Started GET "/itineraries" for 127.0.0.1 at 2023-10-30 03:33:19 -0700
+Processing by ItinerariesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering itineraries/index.html.erb within layouts/application
+  [1m[36mItinerary Load (0.4ms)[0m  [1m[34mSELECT "itineraries".* FROM "itineraries"[0m
+  ↳ app/views/itineraries/index.html.erb:6
+  Rendered itineraries/_itinerary.html.erb (Duration: 0.3ms | Allocations: 32)
+  Rendered itineraries/_itinerary.html.erb (Duration: 0.3ms | Allocations: 31)
+  Rendered itineraries/index.html.erb within layouts/application (Duration: 10.6ms | Allocations: 1209)
+  Rendered shared/_navbar.html.erb (Duration: 0.3ms | Allocations: 234)
+  Rendered layout layouts/application.html.erb (Duration: 78.4ms | Allocations: 12813)
+Completed 200 OK in 87ms (Views: 82.0ms | ActiveRecord: 0.4ms | Allocations: 13271)
+
+
+Started GET "/itineraries/2" for 127.0.0.1 at 2023-10-30 03:33:22 -0700
+Processing by ItinerariesController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mItinerary Load (0.4ms)[0m  [1m[34mSELECT "itineraries".* FROM "itineraries" WHERE "itineraries"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/itineraries_controller.rb:63:in `set_itinerary'
+  Rendering layout layouts/application.html.erb
+  Rendering itineraries/show.html.erb within layouts/application
+  Rendered itineraries/_itinerary.html.erb (Duration: 0.3ms | Allocations: 32)
+  Rendered itineraries/show.html.erb within layouts/application (Duration: 3.6ms | Allocations: 606)
+  Rendered shared/_navbar.html.erb (Duration: 0.4ms | Allocations: 234)
+  Rendered layout layouts/application.html.erb (Duration: 71.5ms | Allocations: 12160)
+Completed 200 OK in 82ms (Views: 72.7ms | ActiveRecord: 0.4ms | Allocations: 13210)
+
+
+Started DELETE "/itineraries/2" for 127.0.0.1 at 2023-10-30 03:33:24 -0700
+Processing by ItinerariesController#destroy as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "id"=>"2"}
+  [1m[36mItinerary Load (0.4ms)[0m  [1m[34mSELECT "itineraries".* FROM "itineraries" WHERE "itineraries"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/itineraries_controller.rb:63:in `set_itinerary'
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/itineraries_controller.rb:52:in `destroy'
+  [1m[36mItinerary Destroy (0.6ms)[0m  [1m[31mDELETE FROM "itineraries" WHERE "itineraries"."id" = $1[0m  [["id", 2]]
+  ↳ app/controllers/itineraries_controller.rb:52:in `destroy'
+  [1m[36mTRANSACTION (2.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/itineraries_controller.rb:52:in `destroy'
+Redirected to http://127.0.0.1:3000/itineraries
+Completed 302 Found in 19ms (ActiveRecord: 3.6ms | Allocations: 2529)
+
+
+Started GET "/itineraries" for 127.0.0.1 at 2023-10-30 03:33:24 -0700
+Processing by ItinerariesController#index as TURBO_STREAM
+  Rendering layout layouts/application.html.erb
+  Rendering itineraries/index.html.erb within layouts/application
+  [1m[36mItinerary Load (0.3ms)[0m  [1m[34mSELECT "itineraries".* FROM "itineraries"[0m
+  ↳ app/views/itineraries/index.html.erb:6
+  Rendered itineraries/_itinerary.html.erb (Duration: 0.5ms | Allocations: 32)
+  Rendered itineraries/index.html.erb within layouts/application (Duration: 3.9ms | Allocations: 977)
+  Rendered shared/_navbar.html.erb (Duration: 0.4ms | Allocations: 234)
+  Rendered layout layouts/application.html.erb (Duration: 69.5ms | Allocations: 12375)
+Completed 200 OK in 75ms (Views: 70.4ms | ActiveRecord: 0.3ms | Allocations: 12888)
+
+
+Started GET "/lists" for 127.0.0.1 at 2023-10-30 03:33:35 -0700
+Processing by ListsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering lists/index.html.erb within layouts/application
+  [1m[36mList Load (3.4ms)[0m  [1m[34mSELECT "lists".* FROM "lists"[0m
+  ↳ app/views/lists/index.html.erb:15
+  Rendered lists/index.html.erb within layouts/application (Duration: 35.7ms | Allocations: 5295)
+  Rendered shared/_navbar.html.erb (Duration: 0.3ms | Allocations: 255)
+  Rendered layout layouts/application.html.erb (Duration: 115.6ms | Allocations: 17000)
+Completed 200 OK in 136ms (Views: 114.8ms | ActiveRecord: 8.4ms | Allocations: 18273)
+
+
+Started GET "/itineraries" for 127.0.0.1 at 2023-10-30 03:39:20 -0700
+Processing by ItinerariesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering itineraries/index.html.erb within layouts/application
+  [1m[36mItinerary Load (2.0ms)[0m  [1m[34mSELECT "itineraries".* FROM "itineraries"[0m
+  ↳ app/views/itineraries/index.html.erb:6
+  Rendered itineraries/_itinerary.html.erb (Duration: 2.9ms | Allocations: 214)
+  Rendered itineraries/index.html.erb within layouts/application (Duration: 165.4ms | Allocations: 4560)
+  Rendered shared/_navbar.html.erb (Duration: 3.3ms | Allocations: 626)
+  Rendered layout layouts/application.html.erb (Duration: 247.6ms | Allocations: 16981)
+Completed 200 OK in 265ms (Views: 242.7ms | ActiveRecord: 16.3ms | Allocations: 18028)
+
+
+Started GET "/itineraries/new" for 127.0.0.1 at 2023-10-30 03:39:24 -0700
+Processing by ItinerariesController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering itineraries/new.html.erb within layouts/application
+  Rendered itineraries/_form.html.erb (Duration: 3.1ms | Allocations: 1424)
+  Rendered itineraries/new.html.erb within layouts/application (Duration: 6.2ms | Allocations: 1715)
+  Rendered shared/_navbar.html.erb (Duration: 0.3ms | Allocations: 234)
+  Rendered layout layouts/application.html.erb (Duration: 90.5ms | Allocations: 13112)
+Completed 200 OK in 101ms (Views: 92.0ms | ActiveRecord: 0.0ms | Allocations: 13611)
+
+
+Started POST "/itineraries" for 127.0.0.1 at 2023-10-30 03:39:39 -0700
+Processing by ItinerariesController#create as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "itinerary"=>{"description"=>"Go eat", "location"=>"Burnaby", "datetime"=>"2023-11-01T15:45"}, "commit"=>"Create Itinerary"}
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/itineraries_controller.rb:27:in `block in create'
+  [1m[36mItinerary Create (0.8ms)[0m  [1m[32mINSERT INTO "itineraries" ("description", "location", "datetime", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["description", "Go eat"], ["location", "Burnaby"], ["datetime", "2023-11-01 15:45:00"], ["created_at", "2023-10-30 10:39:39.781387"], ["updated_at", "2023-10-30 10:39:39.781387"]]
+  ↳ app/controllers/itineraries_controller.rb:27:in `block in create'
+  [1m[36mTRANSACTION (1.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/itineraries_controller.rb:27:in `block in create'
+Redirected to http://127.0.0.1:3000/itineraries/3
+Completed 302 Found in 15ms (ActiveRecord: 2.4ms | Allocations: 2378)
+
+
+Started GET "/itineraries/3" for 127.0.0.1 at 2023-10-30 03:39:39 -0700
+Processing by ItinerariesController#show as TURBO_STREAM
+  Parameters: {"id"=>"3"}
+  [1m[36mItinerary Load (0.7ms)[0m  [1m[34mSELECT "itineraries".* FROM "itineraries" WHERE "itineraries"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/itineraries_controller.rb:63:in `set_itinerary'
+  Rendering layout layouts/application.html.erb
+  Rendering itineraries/show.html.erb within layouts/application
+  Rendered itineraries/_itinerary.html.erb (Duration: 0.3ms | Allocations: 32)
+  Rendered itineraries/show.html.erb within layouts/application (Duration: 3.3ms | Allocations: 650)
+  Rendered shared/_navbar.html.erb (Duration: 0.4ms | Allocations: 234)
+  Rendered layout layouts/application.html.erb (Duration: 85.8ms | Allocations: 12065)
+Completed 200 OK in 99ms (Views: 87.3ms | ActiveRecord: 1.0ms | Allocations: 13213)
+
+
+Started GET "/itineraries" for 127.0.0.1 at 2023-10-30 03:39:42 -0700
+Processing by ItinerariesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering itineraries/index.html.erb within layouts/application
+  [1m[36mItinerary Load (0.4ms)[0m  [1m[34mSELECT "itineraries".* FROM "itineraries"[0m
+  ↳ app/views/itineraries/index.html.erb:6
+  Rendered itineraries/_itinerary.html.erb (Duration: 0.3ms | Allocations: 32)
+  Rendered itineraries/_itinerary.html.erb (Duration: 0.3ms | Allocations: 31)
+  Rendered itineraries/index.html.erb within layouts/application (Duration: 6.0ms | Allocations: 1209)
+  Rendered shared/_navbar.html.erb (Duration: 0.3ms | Allocations: 234)
+  Rendered layout layouts/application.html.erb (Duration: 84.4ms | Allocations: 12802)
+Completed 200 OK in 91ms (Views: 85.2ms | ActiveRecord: 0.4ms | Allocations: 13254)
+
+
+Started GET "/itineraries" for 127.0.0.1 at 2023-10-30 03:41:17 -0700
+Processing by ItinerariesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering itineraries/index.html.erb within layouts/application
+  [1m[36mItinerary Load (0.8ms)[0m  [1m[34mSELECT "itineraries".* FROM "itineraries"[0m
+  ↳ app/views/itineraries/index.html.erb:6
+  Rendered itineraries/_itinerary.html.erb (Duration: 2.3ms | Allocations: 214)
+  Rendered itineraries/_itinerary.html.erb (Duration: 0.4ms | Allocations: 31)
+  Rendered itineraries/index.html.erb within layouts/application (Duration: 50.6ms | Allocations: 1881)
+  Rendered shared/_navbar.html.erb (Duration: 1.5ms | Allocations: 626)
+  Rendered layout layouts/application.html.erb (Duration: 134.7ms | Allocations: 14108)
+Completed 200 OK in 155ms (Views: 147.4ms | ActiveRecord: 0.8ms | Allocations: 15112)
+
+
+Started GET "/itineraries/new" for 127.0.0.1 at 2023-10-30 03:41:51 -0700
+Processing by ItinerariesController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering itineraries/new.html.erb within layouts/application
+  Rendered itineraries/_form.html.erb (Duration: 4.5ms | Allocations: 1424)
+  Rendered itineraries/new.html.erb within layouts/application (Duration: 10.0ms | Allocations: 1715)
+  Rendered shared/_navbar.html.erb (Duration: 0.3ms | Allocations: 234)
+  Rendered layout layouts/application.html.erb (Duration: 89.8ms | Allocations: 13114)
+Completed 200 OK in 97ms (Views: 91.2ms | ActiveRecord: 0.0ms | Allocations: 13631)
+
+
+Started POST "/itineraries" for 127.0.0.1 at 2023-10-30 03:42:17 -0700
+Processing by ItinerariesController#create as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "itinerary"=>{"description"=>"Go to friend's house", "location"=>"Vancouver", "datetime"=>"2023-10-18T20:45"}, "commit"=>"Create Itinerary"}
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/itineraries_controller.rb:27:in `block in create'
+  [1m[36mItinerary Create (0.6ms)[0m  [1m[32mINSERT INTO "itineraries" ("description", "location", "datetime", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["description", "Go to friend's house"], ["location", "Vancouver"], ["datetime", "2023-10-18 20:45:00"], ["created_at", "2023-10-30 10:42:17.991336"], ["updated_at", "2023-10-30 10:42:17.991336"]]
+  ↳ app/controllers/itineraries_controller.rb:27:in `block in create'
+  [1m[36mTRANSACTION (0.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/itineraries_controller.rb:27:in `block in create'
+Redirected to http://127.0.0.1:3000/itineraries/4
+Completed 302 Found in 15ms (ActiveRecord: 1.4ms | Allocations: 2390)
+
+
+Started GET "/itineraries/4" for 127.0.0.1 at 2023-10-30 03:42:18 -0700
+Processing by ItinerariesController#show as TURBO_STREAM
+  Parameters: {"id"=>"4"}
+  [1m[36mItinerary Load (0.4ms)[0m  [1m[34mSELECT "itineraries".* FROM "itineraries" WHERE "itineraries"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/itineraries_controller.rb:63:in `set_itinerary'
+  Rendering layout layouts/application.html.erb
+  Rendering itineraries/show.html.erb within layouts/application
+  Rendered itineraries/_itinerary.html.erb (Duration: 0.3ms | Allocations: 33)
+  Rendered itineraries/show.html.erb within layouts/application (Duration: 2.6ms | Allocations: 651)
+  Rendered shared/_navbar.html.erb (Duration: 0.3ms | Allocations: 234)
+  Rendered layout layouts/application.html.erb (Duration: 77.8ms | Allocations: 12245)
+Completed 200 OK in 90ms (Views: 78.9ms | ActiveRecord: 0.4ms | Allocations: 13350)
+
+
+Started GET "/itineraries" for 127.0.0.1 at 2023-10-30 03:42:20 -0700
+Processing by ItinerariesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering itineraries/index.html.erb within layouts/application
+  [1m[36mItinerary Load (0.4ms)[0m  [1m[34mSELECT "itineraries".* FROM "itineraries"[0m
+  ↳ app/views/itineraries/index.html.erb:6
+  Rendered itineraries/_itinerary.html.erb (Duration: 0.3ms | Allocations: 32)
+  Rendered itineraries/_itinerary.html.erb (Duration: 0.2ms | Allocations: 31)
+  Rendered itineraries/_itinerary.html.erb (Duration: 0.2ms | Allocations: 32)
+  Rendered itineraries/index.html.erb within layouts/application (Duration: 6.5ms | Allocations: 1489)
+  Rendered shared/_navbar.html.erb (Duration: 0.3ms | Allocations: 234)
+  Rendered layout layouts/application.html.erb (Duration: 77.1ms | Allocations: 13083)
+Completed 200 OK in 84ms (Views: 79.6ms | ActiveRecord: 0.4ms | Allocations: 13523)
+
+
+Started GET "/itineraries/4" for 127.0.0.1 at 2023-10-30 03:42:32 -0700
+Processing by ItinerariesController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mItinerary Load (0.4ms)[0m  [1m[34mSELECT "itineraries".* FROM "itineraries" WHERE "itineraries"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/itineraries_controller.rb:63:in `set_itinerary'
+  Rendering layout layouts/application.html.erb
+  Rendering itineraries/show.html.erb within layouts/application
+  Rendered itineraries/_itinerary.html.erb (Duration: 0.2ms | Allocations: 33)
+  Rendered itineraries/show.html.erb within layouts/application (Duration: 1.6ms | Allocations: 410)
+  Rendered shared/_navbar.html.erb (Duration: 0.3ms | Allocations: 234)
+  Rendered layout layouts/application.html.erb (Duration: 77.2ms | Allocations: 11800)
+Completed 200 OK in 87ms (Views: 78.4ms | ActiveRecord: 0.4ms | Allocations: 12755)
+
+
+Started DELETE "/itineraries/4" for 127.0.0.1 at 2023-10-30 03:42:34 -0700
+Processing by ItinerariesController#destroy as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "id"=>"4"}
+  [1m[36mItinerary Load (0.5ms)[0m  [1m[34mSELECT "itineraries".* FROM "itineraries" WHERE "itineraries"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/itineraries_controller.rb:63:in `set_itinerary'
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/itineraries_controller.rb:52:in `destroy'
+  [1m[36mItinerary Destroy (5.3ms)[0m  [1m[31mDELETE FROM "itineraries" WHERE "itineraries"."id" = $1[0m  [["id", 4]]
+  ↳ app/controllers/itineraries_controller.rb:52:in `destroy'
+  [1m[36mTRANSACTION (0.7ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/itineraries_controller.rb:52:in `destroy'
+Redirected to http://127.0.0.1:3000/itineraries
+Completed 302 Found in 21ms (ActiveRecord: 6.8ms | Allocations: 2438)
+
+
+Started GET "/itineraries" for 127.0.0.1 at 2023-10-30 03:42:34 -0700
+Processing by ItinerariesController#index as TURBO_STREAM
+  Rendering layout layouts/application.html.erb
+  Rendering itineraries/index.html.erb within layouts/application
+  [1m[36mItinerary Load (0.3ms)[0m  [1m[34mSELECT "itineraries".* FROM "itineraries"[0m
+  ↳ app/views/itineraries/index.html.erb:6
+  Rendered itineraries/_itinerary.html.erb (Duration: 0.2ms | Allocations: 32)
+  Rendered itineraries/_itinerary.html.erb (Duration: 0.2ms | Allocations: 31)
+  Rendered itineraries/index.html.erb within layouts/application (Duration: 4.4ms | Allocations: 1217)
+  Rendered shared/_navbar.html.erb (Duration: 0.3ms | Allocations: 234)
+  Rendered layout layouts/application.html.erb (Duration: 84.7ms | Allocations: 12640)
+Completed 200 OK in 92ms (Views: 85.6ms | ActiveRecord: 0.3ms | Allocations: 13112)
+
+

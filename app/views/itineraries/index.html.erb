@@ -1,14 +1,31 @@
 <p style="color: green"><%= notice %></p>
 
-<h1>Itineraries</h1>
-
-<div id="itineraries">
-  <% @itineraries.each do |itinerary| %>
-    <%= render itinerary %>
-    <p>
-      <%= link_to "Show this itinerary", itinerary %>
-    </p>
-  <% end %>
+<div class="d-flex align-items-center justify-content-center">
+    <h1 class="title">My Itinerary<h1> 
 </div>
 
-<%= link_to "New itinerary", new_itinerary_path %>
+<table class="table">
+  <thead>
+    <tr>
+      <th>Event</th>
+      <th>Location</th>
+      <th>Date & Time</th>
+      <th>Action</th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @itineraries.each do |itinerary| %>
+      <tr>
+        <td><%= link_to itinerary.description, edit_itinerary_path(itinerary) %></td>
+        <td><%= itinerary.location %></td>
+        <td><%= itinerary.datetime %></td>
+        <td>
+          <%= link_to 'Delete', itinerary, class: 'btn btn-outline-danger btn-sm', method: :delete, data: { confirm: 'Are you sure you want to delete this item?' } %></td>
+        <td>
+      <tr>
+    <% end %>
+  </tbody>
+</table>
+
+
+<%= link_to "Add new itinerary item", new_itinerary_path %>
