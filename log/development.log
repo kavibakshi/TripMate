@@ -13834,3 +13834,291 @@ Processing by ItinerariesController#index as HTML
 Completed 200 OK in 84ms (Views: 78.6ms | ActiveRecord: 0.6ms | Allocations: 13482)
 
 
+Started GET "/" for 127.0.0.1 at 2023-10-30 03:57:32 -0700
+  [1m[36mActiveRecord::SchemaMigration Pluck (3.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 4.0ms | Allocations: 330)
+  Rendered shared/_navbar.html.erb (Duration: 2.5ms | Allocations: 811)
+  Rendered layout layouts/application.html.erb (Duration: 446.7ms | Allocations: 72950)
+Completed 200 OK in 503ms (Views: 461.6ms | ActiveRecord: 0.0ms | Allocations: 78184)
+
+
+Started GET "/itineraries" for 127.0.0.1 at 2023-10-30 03:57:38 -0700
+Processing by ItinerariesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering itineraries/index.html.erb within layouts/application
+  [1m[36mItinerary Load (2.4ms)[0m  [1m[34mSELECT "itineraries".* FROM "itineraries" ORDER BY "itineraries"."datetime" ASC[0m
+  ↳ app/views/itineraries/index.html.erb:17
+  Rendered itineraries/index.html.erb within layouts/application (Duration: 27.4ms | Allocations: 6079)
+  Rendered shared/_navbar.html.erb (Duration: 0.3ms | Allocations: 296)
+  Rendered layout layouts/application.html.erb (Duration: 104.8ms | Allocations: 17638)
+Completed 200 OK in 128ms (Views: 102.3ms | ActiveRecord: 12.2ms | Allocations: 19864)
+
+
+Started GET "/notes" for 127.0.0.1 at 2023-10-30 03:57:44 -0700
+Processing by NotesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering notes/index.html.erb within layouts/application
+  [1m[36mNote Load (2.8ms)[0m  [1m[34mSELECT "notes".* FROM "notes" ORDER BY created_at DESC[0m
+  ↳ app/views/notes/index.html.erb:24
+  Rendered notes/index.html.erb within layouts/application (Duration: 31.4ms | Allocations: 3674)
+  Rendered shared/_navbar.html.erb (Duration: 0.8ms | Allocations: 296)
+  Rendered layout layouts/application.html.erb (Duration: 159.0ms | Allocations: 15336)
+Completed 200 OK in 174ms (Views: 158.0ms | ActiveRecord: 7.4ms | Allocations: 16660)
+
+
+Started GET "/itineraries" for 127.0.0.1 at 2023-10-30 03:57:45 -0700
+Processing by ItinerariesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering itineraries/index.html.erb within layouts/application
+  [1m[36mItinerary Load (0.6ms)[0m  [1m[34mSELECT "itineraries".* FROM "itineraries" ORDER BY "itineraries"."datetime" ASC[0m
+  ↳ app/views/itineraries/index.html.erb:17
+  Rendered itineraries/index.html.erb within layouts/application (Duration: 4.3ms | Allocations: 1400)
+  Rendered shared/_navbar.html.erb (Duration: 0.4ms | Allocations: 273)
+  Rendered layout layouts/application.html.erb (Duration: 86.0ms | Allocations: 12942)
+Completed 200 OK in 93ms (Views: 86.9ms | ActiveRecord: 0.6ms | Allocations: 13458)
+
+
+Started GET "/about" for 127.0.0.1 at 2023-10-30 03:57:49 -0700
+Processing by AboutController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering about/index.html.erb within layouts/application
+  Rendered about/index.html.erb within layouts/application (Duration: 9.4ms | Allocations: 115)
+  Rendered shared/_navbar.html.erb (Duration: 0.7ms | Allocations: 323)
+  Rendered layout layouts/application.html.erb (Duration: 80.5ms | Allocations: 11704)
+Completed 200 OK in 96ms (Views: 89.7ms | ActiveRecord: 0.0ms | Allocations: 12529)
+
+
+Started GET "/lists" for 127.0.0.1 at 2023-10-30 03:57:50 -0700
+Processing by ListsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering lists/index.html.erb within layouts/application
+  [1m[36mList Load (2.7ms)[0m  [1m[34mSELECT "lists".* FROM "lists"[0m
+  ↳ app/views/lists/index.html.erb:15
+  Rendered lists/index.html.erb within layouts/application (Duration: 33.0ms | Allocations: 5573)
+  Rendered shared/_navbar.html.erb (Duration: 0.4ms | Allocations: 296)
+  Rendered layout layouts/application.html.erb (Duration: 101.8ms | Allocations: 17113)
+Completed 200 OK in 119ms (Views: 103.4ms | ActiveRecord: 6.4ms | Allocations: 18398)
+
+
+Started GET "/notes" for 127.0.0.1 at 2023-10-30 03:57:51 -0700
+Processing by NotesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering notes/index.html.erb within layouts/application
+  [1m[36mNote Load (1.1ms)[0m  [1m[34mSELECT "notes".* FROM "notes" ORDER BY created_at DESC[0m
+  ↳ app/views/notes/index.html.erb:24
+  Rendered notes/index.html.erb within layouts/application (Duration: 3.9ms | Allocations: 708)
+  Rendered shared/_navbar.html.erb (Duration: 0.4ms | Allocations: 273)
+  Rendered layout layouts/application.html.erb (Duration: 82.8ms | Allocations: 12316)
+Completed 200 OK in 90ms (Views: 82.9ms | ActiveRecord: 1.1ms | Allocations: 12790)
+
+
+Started GET "/itineraries" for 127.0.0.1 at 2023-10-30 03:57:53 -0700
+Processing by ItinerariesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering itineraries/index.html.erb within layouts/application
+  [1m[36mItinerary Load (0.5ms)[0m  [1m[34mSELECT "itineraries".* FROM "itineraries" ORDER BY "itineraries"."datetime" ASC[0m
+  ↳ app/views/itineraries/index.html.erb:17
+  Rendered itineraries/index.html.erb within layouts/application (Duration: 3.7ms | Allocations: 1393)
+  Rendered shared/_navbar.html.erb (Duration: 0.4ms | Allocations: 273)
+  Rendered layout layouts/application.html.erb (Duration: 72.8ms | Allocations: 12954)
+Completed 200 OK in 81ms (Views: 73.5ms | ActiveRecord: 0.5ms | Allocations: 13444)
+
+
+Started GET "/itineraries/1" for 127.0.0.1 at 2023-10-30 03:58:00 -0700
+Processing by ItinerariesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mItinerary Load (0.4ms)[0m  [1m[34mSELECT "itineraries".* FROM "itineraries" WHERE "itineraries"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/itineraries_controller.rb:64:in `set_itinerary'
+  Rendering layout layouts/application.html.erb
+  Rendering itineraries/show.html.erb within layouts/application
+  Rendered itineraries/_itinerary.html.erb (Duration: 1.2ms | Allocations: 221)
+  Rendered itineraries/show.html.erb within layouts/application (Duration: 8.1ms | Allocations: 1113)
+  Rendered shared/_navbar.html.erb (Duration: 0.3ms | Allocations: 272)
+  Rendered layout layouts/application.html.erb (Duration: 80.6ms | Allocations: 12541)
+Completed 200 OK in 240ms (Views: 81.7ms | ActiveRecord: 0.8ms | Allocations: 25470)
+
+
+Started DELETE "/itineraries/1" for 127.0.0.1 at 2023-10-30 03:58:02 -0700
+Processing by ItinerariesController#destroy as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "id"=>"1"}
+  [1m[36mItinerary Load (0.5ms)[0m  [1m[34mSELECT "itineraries".* FROM "itineraries" WHERE "itineraries"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/itineraries_controller.rb:64:in `set_itinerary'
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/itineraries_controller.rb:53:in `destroy'
+  [1m[36mItinerary Destroy (1.6ms)[0m  [1m[31mDELETE FROM "itineraries" WHERE "itineraries"."id" = $1[0m  [["id", 1]]
+  ↳ app/controllers/itineraries_controller.rb:53:in `destroy'
+  [1m[36mTRANSACTION (1.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/itineraries_controller.rb:53:in `destroy'
+Redirected to http://127.0.0.1:3000/itineraries
+Completed 302 Found in 18ms (ActiveRecord: 3.8ms | Allocations: 2815)
+
+
+Started GET "/itineraries" for 127.0.0.1 at 2023-10-30 03:58:02 -0700
+Processing by ItinerariesController#index as TURBO_STREAM
+  Rendering layout layouts/application.html.erb
+  Rendering itineraries/index.html.erb within layouts/application
+  [1m[36mItinerary Load (0.6ms)[0m  [1m[34mSELECT "itineraries".* FROM "itineraries" ORDER BY "itineraries"."datetime" ASC[0m
+  ↳ app/views/itineraries/index.html.erb:17
+  Rendered itineraries/index.html.erb within layouts/application (Duration: 3.8ms | Allocations: 1239)
+  Rendered shared/_navbar.html.erb (Duration: 0.3ms | Allocations: 273)
+  Rendered layout layouts/application.html.erb (Duration: 78.6ms | Allocations: 12764)
+Completed 200 OK in 84ms (Views: 79.2ms | ActiveRecord: 0.6ms | Allocations: 13326)
+
+
+Started GET "/notes" for 127.0.0.1 at 2023-10-30 03:58:11 -0700
+Processing by NotesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering notes/index.html.erb within layouts/application
+  [1m[36mNote Load (0.5ms)[0m  [1m[34mSELECT "notes".* FROM "notes" ORDER BY created_at DESC[0m
+  ↳ app/views/notes/index.html.erb:24
+  Rendered notes/index.html.erb within layouts/application (Duration: 3.1ms | Allocations: 708)
+  Rendered shared/_navbar.html.erb (Duration: 0.3ms | Allocations: 273)
+  Rendered layout layouts/application.html.erb (Duration: 85.7ms | Allocations: 12285)
+Completed 200 OK in 94ms (Views: 86.3ms | ActiveRecord: 0.5ms | Allocations: 12742)
+
+
+Started GET "/lists" for 127.0.0.1 at 2023-10-30 03:58:12 -0700
+Processing by ListsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering lists/index.html.erb within layouts/application
+  [1m[36mList Load (0.4ms)[0m  [1m[34mSELECT "lists".* FROM "lists"[0m
+  ↳ app/views/lists/index.html.erb:15
+  Rendered lists/index.html.erb within layouts/application (Duration: 4.7ms | Allocations: 1973)
+  Rendered shared/_navbar.html.erb (Duration: 0.3ms | Allocations: 273)
+  Rendered layout layouts/application.html.erb (Duration: 71.2ms | Allocations: 13410)
+Completed 200 OK in 78ms (Views: 72.3ms | ActiveRecord: 0.4ms | Allocations: 13874)
+
+
+Started GET "/about" for 127.0.0.1 at 2023-10-30 03:58:17 -0700
+Processing by AboutController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering about/index.html.erb within layouts/application
+  Rendered about/index.html.erb within layouts/application (Duration: 0.1ms | Allocations: 7)
+  Rendered shared/_navbar.html.erb (Duration: 0.4ms | Allocations: 282)
+  Rendered layout layouts/application.html.erb (Duration: 72.2ms | Allocations: 11452)
+Completed 200 OK in 79ms (Views: 73.9ms | ActiveRecord: 0.0ms | Allocations: 11899)
+
+
+Started GET "/itineraries" for 127.0.0.1 at 2023-10-30 03:58:18 -0700
+Processing by ItinerariesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering itineraries/index.html.erb within layouts/application
+  [1m[36mItinerary Load (0.5ms)[0m  [1m[34mSELECT "itineraries".* FROM "itineraries" ORDER BY "itineraries"."datetime" ASC[0m
+  ↳ app/views/itineraries/index.html.erb:17
+  Rendered itineraries/index.html.erb within layouts/application (Duration: 3.6ms | Allocations: 1238)
+  Rendered shared/_navbar.html.erb (Duration: 0.7ms | Allocations: 273)
+  Rendered layout layouts/application.html.erb (Duration: 74.2ms | Allocations: 12700)
+Completed 200 OK in 80ms (Views: 74.9ms | ActiveRecord: 0.5ms | Allocations: 13188)
+
+
+Started GET "/notes" for 127.0.0.1 at 2023-10-30 03:58:22 -0700
+Processing by NotesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering notes/index.html.erb within layouts/application
+  [1m[36mNote Load (0.5ms)[0m  [1m[34mSELECT "notes".* FROM "notes" ORDER BY created_at DESC[0m
+  ↳ app/views/notes/index.html.erb:24
+  Rendered notes/index.html.erb within layouts/application (Duration: 3.1ms | Allocations: 707)
+  Rendered shared/_navbar.html.erb (Duration: 0.4ms | Allocations: 273)
+  Rendered layout layouts/application.html.erb (Duration: 76.4ms | Allocations: 12281)
+Completed 200 OK in 83ms (Views: 77.3ms | ActiveRecord: 0.5ms | Allocations: 12756)
+
+
+Started GET "/lists" for 127.0.0.1 at 2023-10-30 03:58:23 -0700
+Processing by ListsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering lists/index.html.erb within layouts/application
+  [1m[36mList Load (0.4ms)[0m  [1m[34mSELECT "lists".* FROM "lists"[0m
+  ↳ app/views/lists/index.html.erb:15
+  Rendered lists/index.html.erb within layouts/application (Duration: 5.2ms | Allocations: 1973)
+  Rendered shared/_navbar.html.erb (Duration: 0.4ms | Allocations: 273)
+  Rendered layout layouts/application.html.erb (Duration: 75.5ms | Allocations: 13413)
+Completed 200 OK in 82ms (Views: 76.4ms | ActiveRecord: 0.4ms | Allocations: 13874)
+
+
+Started GET "/itineraries" for 127.0.0.1 at 2023-10-30 03:58:24 -0700
+Processing by ItinerariesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering itineraries/index.html.erb within layouts/application
+  [1m[36mItinerary Load (0.5ms)[0m  [1m[34mSELECT "itineraries".* FROM "itineraries" ORDER BY "itineraries"."datetime" ASC[0m
+  ↳ app/views/itineraries/index.html.erb:17
+  Rendered itineraries/index.html.erb within layouts/application (Duration: 5.8ms | Allocations: 1238)
+  Rendered shared/_navbar.html.erb (Duration: 0.3ms | Allocations: 273)
+  Rendered layout layouts/application.html.erb (Duration: 78.0ms | Allocations: 12675)
+Completed 200 OK in 84ms (Views: 78.8ms | ActiveRecord: 0.5ms | Allocations: 13178)
+
+
+Started GET "/notes" for 127.0.0.1 at 2023-10-30 03:58:31 -0700
+Processing by NotesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering notes/index.html.erb within layouts/application
+  [1m[36mNote Load (0.6ms)[0m  [1m[34mSELECT "notes".* FROM "notes" ORDER BY created_at DESC[0m
+  ↳ app/views/notes/index.html.erb:24
+  Rendered notes/index.html.erb within layouts/application (Duration: 3.1ms | Allocations: 707)
+  Rendered shared/_navbar.html.erb (Duration: 0.3ms | Allocations: 273)
+  Rendered layout layouts/application.html.erb (Duration: 77.8ms | Allocations: 12168)
+Completed 200 OK in 86ms (Views: 78.5ms | ActiveRecord: 0.6ms | Allocations: 12637)
+
+
+Started GET "/itineraries" for 127.0.0.1 at 2023-10-30 03:58:32 -0700
+Processing by ItinerariesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering itineraries/index.html.erb within layouts/application
+  [1m[36mItinerary Load (0.6ms)[0m  [1m[34mSELECT "itineraries".* FROM "itineraries" ORDER BY "itineraries"."datetime" ASC[0m
+  ↳ app/views/itineraries/index.html.erb:17
+  Rendered itineraries/index.html.erb within layouts/application (Duration: 5.2ms | Allocations: 1238)
+  Rendered shared/_navbar.html.erb (Duration: 0.4ms | Allocations: 273)
+  Rendered layout layouts/application.html.erb (Duration: 77.7ms | Allocations: 12815)
+Completed 200 OK in 84ms (Views: 78.4ms | ActiveRecord: 0.6ms | Allocations: 13294)
+
+
+Started GET "/notes" for 127.0.0.1 at 2023-10-30 03:58:35 -0700
+Processing by NotesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering notes/index.html.erb within layouts/application
+  [1m[36mNote Load (0.5ms)[0m  [1m[34mSELECT "notes".* FROM "notes" ORDER BY created_at DESC[0m
+  ↳ app/views/notes/index.html.erb:24
+  Rendered notes/index.html.erb within layouts/application (Duration: 2.7ms | Allocations: 707)
+  Rendered shared/_navbar.html.erb (Duration: 0.4ms | Allocations: 273)
+  Rendered layout layouts/application.html.erb (Duration: 78.1ms | Allocations: 12147)
+Completed 200 OK in 85ms (Views: 78.8ms | ActiveRecord: 0.5ms | Allocations: 12631)
+
+
+Started GET "/lists" for 127.0.0.1 at 2023-10-30 03:58:36 -0700
+Processing by ListsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering lists/index.html.erb within layouts/application
+  [1m[36mList Load (0.3ms)[0m  [1m[34mSELECT "lists".* FROM "lists"[0m
+  ↳ app/views/lists/index.html.erb:15
+  Rendered lists/index.html.erb within layouts/application (Duration: 4.9ms | Allocations: 1973)
+  Rendered shared/_navbar.html.erb (Duration: 0.6ms | Allocations: 273)
+  Rendered layout layouts/application.html.erb (Duration: 81.2ms | Allocations: 13410)
+Completed 200 OK in 87ms (Views: 82.0ms | ActiveRecord: 0.3ms | Allocations: 13853)
+
+
+Started GET "/notes" for 127.0.0.1 at 2023-10-30 03:58:37 -0700
+Processing by NotesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering notes/index.html.erb within layouts/application
+  [1m[36mNote Load (0.5ms)[0m  [1m[34mSELECT "notes".* FROM "notes" ORDER BY created_at DESC[0m
+  ↳ app/views/notes/index.html.erb:24
+  Rendered notes/index.html.erb within layouts/application (Duration: 3.1ms | Allocations: 707)
+  Rendered shared/_navbar.html.erb (Duration: 0.3ms | Allocations: 273)
+  Rendered layout layouts/application.html.erb (Duration: 78.0ms | Allocations: 12183)
+Completed 200 OK in 84ms (Views: 78.9ms | ActiveRecord: 0.5ms | Allocations: 12655)
+
+
+Started GET "/itineraries" for 127.0.0.1 at 2023-10-30 03:58:38 -0700
+Processing by ItinerariesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering itineraries/index.html.erb within layouts/application
+  [1m[36mItinerary Load (0.5ms)[0m  [1m[34mSELECT "itineraries".* FROM "itineraries" ORDER BY "itineraries"."datetime" ASC[0m
+  ↳ app/views/itineraries/index.html.erb:17
+  Rendered itineraries/index.html.erb within layouts/application (Duration: 3.2ms | Allocations: 1238)
+  Rendered shared/_navbar.html.erb (Duration: 0.3ms | Allocations: 273)
+  Rendered layout layouts/application.html.erb (Duration: 75.2ms | Allocations: 12812)
+Completed 200 OK in 84ms (Views: 77.2ms | ActiveRecord: 0.5ms | Allocations: 13300)
+
+
