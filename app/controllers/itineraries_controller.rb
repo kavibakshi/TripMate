@@ -4,6 +4,7 @@ class ItinerariesController < ApplicationController
   # GET /itineraries or /itineraries.json
   def index
     @itineraries = Itinerary.all
+    @itineraries = Itinerary.order(datetime: :asc)
   end
 
   # GET /itineraries/1 or /itineraries/1.json
