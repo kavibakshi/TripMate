@@ -1,0 +1,18 @@
+<div class="d-flex align-items-center justify-content-center">
+    <h1 class="title">My Expense Tracker<h1> 
+</div>
+
+<div>
+    <form class="form" oninput="remaining.value=(budget.value)-(accommodation.value)-(transportation.value)-(meal.value)">
+        <label for="budget">My total budget for this trip is:</label><br>
+        <input type="number" id="budget" name="budget" step="0.01"><br>
+        <label for="accommodation">Accommodations:</label><br>
+        <input type="number" id="accommodation" name="accommodation" step="0.01"><br>
+        <label for="transportation">Transportation:</label><br>
+        <input type="number" id="transportation" name="transportation" step="0.01"><br>
+        <label for="meal">Meals:</label><br>
+        <input type="number" id="meal" name="meal" step="0.01"><br>
+        <label for="remaining">My remaining budget:</label><br>
+        <output name="remaining" for=" "></output>
+</form>
+</div>
