@@ -28,10 +28,10 @@
             <!-- right side -->
             <div class="level-right">
                 <p class="level-item">
-                    <%= link_to "Edit", edit_note_path(@note), class: "button" %>
+                    <%= link_to "Edit this Note", edit_workspace_note_path(@workspace, @note), class: "button" %>
                 </p>
                 <p class="level-item">
-                    <%= form_for(@note, method: :delete, url: note_path(@note)) do |f| %>
+                    <%= form_for [@workspace, @note], method: :delete do |f| %>
                     <%= f.submit "Delete", class: "button is-danger" %>
                     <% end %>
                 </p>

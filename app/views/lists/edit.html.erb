@@ -5,6 +5,6 @@
 <br>
 
 <div>
-  <%= link_to "Show this list", @list %> |
-  <%= link_to "Back to lists", lists_path %>
+  <%= link_to "Show this list", workspace_list_path(@workspace, @list) %> |
+  <%= link_to "Back to lists", workspace_lists_path(@workspace) %>
 </div>

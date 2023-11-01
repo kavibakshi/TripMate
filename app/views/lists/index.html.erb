@@ -15,31 +15,31 @@
     <% @lists.each do |list| %>
       <% if list.completed %>
         <tr class="table-secondary">
-          <td class="striker"><%= link_to list.description, edit_list_path(list) %></td>
+          <td class="striker"><%= link_to list.description, edit_workspace_list_path(@workspace, list) %></td>
           <td>
             <center>
-              <%= form_for(list) do |f| %>
+              <%= form_for [@workspace, list] do |f| %>
               <%= f.text_field :description, type: 'hidden' %>
               <%= f.check_box :completed, :checked => false, :style => 'visibility: hidden' %>
               <%= f.submit "Unmark as Complete", class: 'btn btn-outline-secondary btn-sm' %>
               <% end%>
             </center>
           </td>
-          <td><%= link_to 'Delete', list, class: 'btn btn-outline-danger btn-sm', method: :delete, data: { confirm: 'Are you sure you want to delete this item?' } %></td>
+          <td><%= link_to 'Delete', [list.workspace, list], class: 'btn btn-outline-danger btn-sm', method: :delete, data: { confirm: 'Are you sure you want to delete this item?' } %></td>
         </tr>
       <% else %>
         <tr>
-          <td><%= link_to list.description, edit_list_path(list) %></td>
+          <td><%= link_to list.description, edit_workspace_list_path(@workspace, list) %></td>
           <td>
             <center>
-              <%= form_for(list) do |f| %>
+              <%= form_for [@workspace, list] do |f| %>
               <%= f.text_field :description, type: 'hidden' %>
               <%= f.check_box :completed, :checked => true, :style => 'visibility: hidden' %>
               <%= f.submit "Mark as Complete", class: 'btn btn-outline-secondary btn-sm' %>
               <% end%>
             </center>
           </td>
-          <td><%= link_to 'Delete', list, class: 'btn btn-outline-danger btn-sm', method: :delete, data: { confirm: 'Are you sure you want to delete this item?' } %></td>
+          <td><%= link_to 'Delete', [list.workspace, list], class: 'btn btn-outline-danger btn-sm', method: :delete, data: { confirm: 'Are you sure you want to delete this item?' } %></td>
         </tr>
       <% end %>
     <% end %>
@@ -47,4 +47,4 @@
 </table>
 
 
-<%= link_to "Add new list item", new_list_path %>
+<%= link_to "Add new list item", new_workspace_list_path(@workspace) %>

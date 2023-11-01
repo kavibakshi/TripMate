@@ -1,0 +1,36 @@
+<%= form_with model: @workspace do |form| %>
+  <% if @workspace.errors.any? %>
+    <div>
+      <h2><%= pluralize(@workspace.errors.count, "error") %> prohibited this workspace from being saved:</h2>
+      <ul>
+        <% @workspace.errors.full_messages.each do |message| %>
+          <li><%= message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div>
+    <%= form.label :name %>
+    <%= form.text_field :name %>
+  </div>
+
+  <div>
+    <%= form.label :description %>
+    <%= form.text_area :description, rows: 5 %>
+  </div>
+
+  <div>
+    <%= form.label :visibility, "Workspace Visibility" %>
+    <%= form.select :visibility, [['Public', 'public'], ['Private', 'private']] %>
+  </div>
+  
+  <div>
+    <%= form.label :deadline %>
+    <%= form.date_field :deadline %>
+  </div>
+
+  <div>
+    <%= form.submit %>
+  </div>
+<% end %>

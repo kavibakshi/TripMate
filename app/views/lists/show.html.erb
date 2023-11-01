@@ -3,8 +3,8 @@
 <%= render @list %>
 
 <div>
-  <%= link_to "Edit this list", edit_list_path(@list) %> |
-  <%= link_to "Back to list", lists_path %>
+  <%= link_to "Edit this list", edit_workspace_lists_path(@workspace, @list) %> |
+  <%= link_to "Back to list", workspace_lists_path(@workspace) %>
 
-  <%= button_to "Delete this list", @list, method: :delete %>
+  <%= button_to "Delete this list", [@workspace, @list], method: :delete %>
 </div>

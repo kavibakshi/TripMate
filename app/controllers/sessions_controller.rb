@@ -12,8 +12,8 @@ class SessionsController < ApplicationController
           # Redirect to the admin dashboard if the user is an admin
           redirect_to admin_dashboard_path, notice: "Logged in as admin"
         else
-          # Redirect to the root path for non-admin users
-          redirect_to lists_path, notice: "Logged in successfully"
+          # Redirect non-admin users to the workspace creation/index page
+        redirect_to workspaces_path, notice: "Logged in successfully"
         end
       else
         flash[:alert] = "Invalid email or password"

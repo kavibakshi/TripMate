@@ -1,0 +1,27 @@
+<h1>Your Workspaces</h1>
+
+<% if @workspaces.any? %>
+  <table>
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Action</th>
+      </tr>
+    </thead>
+    <tbody>
+      <% @workspaces.each do |workspace| %>
+        <tr>
+          <td><%= link_to workspace.name, workspace_path(workspace) %></td>
+          <td>
+            <%= link_to "Edit", edit_workspace_path(workspace) %> | 
+            <%= link_to "Delete", workspace_path(workspace), method: :delete, data: { confirm: "Are you sure?" } %>
+          </td>
+        </tr>
+      <% end %>
+    </tbody>
+  </table>
+<% else %>
+  <p>You have no workspaces yet. Create one!</p>
+<% end %>
+
+<%= link_to "Create a new workspace", new_workspace_path %>

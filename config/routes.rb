@@ -12,6 +12,10 @@ Rails.application.routes.draw do
   get "expense_trackers", to: "expense_trackers#index"
   get "map", to: "map#index"
 
+  # resources :workspaces do
+  #   resources :notes
+  #   resources :lists
+  # end
 
   get "sign_up", to: "registrations#new"
   post "sign_up", to: "registrations#create"
@@ -23,9 +27,7 @@ Rails.application.routes.draw do
 
   get '/admin/view_all_users', to: 'admin_dashboard#view_all_users', as: 'view_all_users'
 
-
   delete "logout", to: "sessions#destroy"
 
   root to: "home#index"
-
 end

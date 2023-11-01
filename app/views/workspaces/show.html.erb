@@ -1,0 +1,18 @@
+<h1><%= @workspace.name %></h1>
+
+
+<%= link_to "Manage Lists", workspace_lists_path(@workspace) %>
+<p>Lists:</p>
+<% @lists.each do |list| %>
+  <p><%= link_to list.description, workspace_list_path(@workspace, list) %></p>
+<% end %>
+
+<%= link_to "Manage Lists", workspace_notes_path(@workspace) %>
+<p>Notes:</p>
+<% @notes.each do |note| %>
+  <p><%= link_to note.title, workspace_note_path(@workspace, note) %></p>
+<% end %>
+
+<%= link_to "Edit", edit_workspace_path(@workspace) %> | 
+<%= link_to "Back", workspaces_path %> | 
+<%= link_to "Delete", workspace_path(@workspace), method: :delete, data: { confirm: "Are you sure?" } %>

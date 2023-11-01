@@ -9,12 +9,21 @@ class ApplicationController < ActionController::Base
 
       # Redirect according to the user type that is logged in
       if current_user
+        # Fetching the user's associated workspaces
+        @workspaces = Current.user.workspaces
         if current_user.admin?
           # Redirect admin users to the admin dashboard
           redirect_to admin_dashboard_path if request.original_fullpath == '/'
         else
-          # Redirect non-admin users to the lists_path
-          redirect_to lists_path if request.original_fullpath == '/'
+          # Check if the user has an associated workspace
+          if @workspaces.exists?
+            # Redirect non-admin users to the workspace's index action if accessing root path
+            redirect_to workspaces_path if request.original_fullpath == '/'
+          else
+            # Handle scenario where user has no associated workspace
+            # Example: Redirect them to a page where they can create a workspace or display a message
+            redirect_to new_workspace_path if request.original_fullpath == '/'
+          end
         end
       end
     end

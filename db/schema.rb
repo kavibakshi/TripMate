@@ -45,3 +45,49 @@ ActiveRecord::Schema[7.0].define(version: 2023_10_30_095226) do
   end
 
 end
+
+# ActiveRecord::Schema[7.0].define(version: 2023_10_29_233637) do
+#   # These are extensions that must be enabled in order to support this database
+#   enable_extension "plpgsql"
+
+#   create_table "lists", force: :cascade do |t|
+#     t.string "description"
+#     t.boolean "completed", default: false
+#     t.datetime "created_at", null: false
+#     t.datetime "updated_at", null: false
+#     t.bigint "workspace_id", null: false
+#     t.index ["workspace_id"], name: "index_lists_on_workspace_id"
+#   end
+
+#   create_table "notes", force: :cascade do |t|
+#     t.string "title"
+#     t.text "content"
+#     t.datetime "created_at", null: false
+#     t.datetime "updated_at", null: false
+#     t.bigint "workspace_id", null: false
+#     t.index ["workspace_id"], name: "index_notes_on_workspace_id"
+#   end
+
+#   create_table "users", force: :cascade do |t|
+#     t.string "email", null: false
+#     t.string "password_digest"
+#     t.boolean "admin", default: false, null: false
+#     t.datetime "created_at", null: false
+#     t.datetime "updated_at", null: false
+#   end
+
+#   create_table "workspaces", force: :cascade do |t|
+#     t.string "name"
+#     t.text "description"
+#     t.bigint "user_id", null: false
+#     t.datetime "created_at", null: false
+#     t.datetime "updated_at", null: false
+#     t.integer "visibility"
+#     t.date "deadline"
+#     t.index ["user_id"], name: "index_workspaces_on_user_id"
+#   end
+
+#   add_foreign_key "lists", "workspaces"
+#   add_foreign_key "notes", "workspaces"
+#   add_foreign_key "workspaces", "users"
+# end
