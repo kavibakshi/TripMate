@@ -1,6 +1,6 @@
 class ExpenseTrackersController < ApplicationController
     def index
-        /@expense_tracker = ExpenseTracker.all/
+        /@expense_trackers = ExpenseTracker.all/
     end
 
     def show

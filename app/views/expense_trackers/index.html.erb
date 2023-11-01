@@ -1,18 +1,50 @@
+#temp = %{}
+
 <div class="d-flex align-items-center justify-content-center">
     <h1 class="title">My Expense Tracker<h1> 
+    
 </div>
 
-<div>
-    <form class="form" oninput="remaining.value=(budget.value)-(accommodation.value)-(transportation.value)-(meal.value)">
-        <label for="budget">My total budget for this trip is:</label><br>
-        <input type="number" id="budget" name="budget" step="0.01"><br>
-        <label for="accommodation">Accommodations:</label><br>
-        <input type="number" id="accommodation" name="accommodation" step="0.01"><br>
-        <label for="transportation">Transportation:</label><br>
-        <input type="number" id="transportation" name="transportation" step="0.01"><br>
-        <label for="meal">Meals:</label><br>
-        <input type="number" id="meal" name="meal" step="0.01"><br>
-        <label for="remaining">My remaining budget:</label><br>
-        <output name="remaining" for=" "></output>
+<form class="" oninput="remaining.value=(budget.value)-(accommodation.value)-(transportation.value)-(meal.value)">
+  <label for="budget" class="form-label">My total budget for this trip is:</label>
+  <div class="input-group mb-3">
+    <span class="input-group-text">$</span>
+    <input type="number" class="form-control" id="budget" placeholder="Amount" required>
+  </div>
+  <label for="accommodation" class="form-label">Accommodations</label>
+  <div class="input-group mb-3">
+    <span class="input-group-text">$</span>
+    <input type="number" class="form-control" id="accommodation" placeholder="Amount">
+  </div>
+  <label for="transportation" class="form-label">Transportation</label>
+  <div class="input-group mb-3">  
+    <span class="input-group-text">$</span>
+    <input type="number" class="form-control" id="transportation" placeholder="Amount">
+  </div>
+  <label for="meal" class="form-label">Meal</label>
+  <div class="input-group mb-3">
+    <span class="input-group-text">$</span>
+    <input type="number" class="form-control" id="meal" placeholder="Amount">
+  </div><br>
+  <div class="input-group mb-3">
+    <label for="remaining" class="">My remaining budget: $&nbsp</label>
+    <output type="number" class="" id="remaining">0</output>
+  </div>
 </form>
-</div>
+
+
+#for the future change
+<%= form_with url:sign_in_path do |form| %>
+    <div class="mb-3">
+        <%= form.label :email %>
+        <%= form.text_field :email, class: "form-control", placeholder: "pearce@sfu.ca" %>
+    </div>
+    <div class="mb-3">
+        <%= form.label :password %>
+        <%= form.text_field :password, class: "form-control", placeholder: "spaceship"  %>
+    </div>
+
+    <div class="mb-3">
+    <%= form.submit "Sign In", class: "btn btn-primary" %>
+    </div>
+<% end %>

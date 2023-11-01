@@ -13577,3 +13577,1177 @@ Processing by NotesController#index as HTML
 Completed 200 OK in 28ms (Views: 21.3ms | ActiveRecord: 2.2ms | Allocations: 12039)
 
 
+Started GET "/expense_trackers" for 127.0.0.1 at 2023-10-31 14:24:52 -0700
+  [1m[36mActiveRecord::SchemaMigration Pluck (3.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by ExpenseTrackersController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7:in `set_current_user'
+  Rendering layout layouts/application.html.erb
+  Rendering expense_trackers/index.html.erb within layouts/application
+  Rendered expense_trackers/index.html.erb within layouts/application (Duration: 0.4ms | Allocations: 327)
+  Rendered shared/_navbar.html.erb (Duration: 0.6ms | Allocations: 772)
+  Rendered layout layouts/application.html.erb (Duration: 103.9ms | Allocations: 67835)
+Completed 200 OK in 115ms (Views: 105.4ms | ActiveRecord: 1.5ms | Allocations: 76407)
+
+
+Started GET "/" for 127.0.0.1 at 2023-10-31 14:24:59 -0700
+Processing by HomeController#index as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7:in `set_current_user'
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 0.6ms | Allocations: 110)
+  Rendered shared/_navbar.html.erb (Duration: 0.6ms | Allocations: 324)
+  Rendered layout layouts/application.html.erb (Duration: 17.3ms | Allocations: 9983)
+Completed 200 OK in 23ms (Views: 19.3ms | ActiveRecord: 0.4ms | Allocations: 11330)
+
+
+Started GET "/" for 127.0.0.1 at 2023-10-31 14:25:03 -0700
+Processing by HomeController#index as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7:in `set_current_user'
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 0.1ms | Allocations: 7)
+  Rendered shared/_navbar.html.erb (Duration: 0.2ms | Allocations: 283)
+  Rendered layout layouts/application.html.erb (Duration: 15.5ms | Allocations: 9737)
+Completed 200 OK in 20ms (Views: 16.0ms | ActiveRecord: 0.4ms | Allocations: 10690)
+
+
+Started GET "/expense_trackers" for 127.0.0.1 at 2023-10-31 14:26:25 -0700
+Processing by ExpenseTrackersController#index as HTML
+  [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7:in `set_current_user'
+  Rendering layout layouts/application.html.erb
+  Rendering expense_trackers/index.html.erb within layouts/application
+  Rendered expense_trackers/index.html.erb within layouts/application (Duration: 0.1ms | Allocations: 7)
+  Rendered shared/_navbar.html.erb (Duration: 0.3ms | Allocations: 283)
+  Rendered layout layouts/application.html.erb (Duration: 23.9ms | Allocations: 9739)
+Completed 200 OK in 32ms (Views: 24.7ms | ActiveRecord: 1.1ms | Allocations: 10736)
+
+
+Started GET "/expense_trackers" for 127.0.0.1 at 2023-10-31 14:27:17 -0700
+Processing by ExpenseTrackersController#index as HTML
+  [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7:in `set_current_user'
+  Rendering layout layouts/application.html.erb
+  Rendering expense_trackers/index.html.erb within layouts/application
+  Rendered expense_trackers/index.html.erb within layouts/application (Duration: 1.1ms | Allocations: 138)
+  Rendered shared/_navbar.html.erb (Duration: 1.2ms | Allocations: 682)
+  Rendered layout layouts/application.html.erb (Duration: 55.2ms | Allocations: 10693)
+Completed 200 OK in 69ms (Views: 59.4ms | ActiveRecord: 1.1ms | Allocations: 12212)
+
+
+Started GET "/expense_trackers" for 127.0.0.1 at 2023-10-31 14:27:29 -0700
+Processing by ExpenseTrackersController#index as HTML
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7:in `set_current_user'
+  Rendering layout layouts/application.html.erb
+  Rendering expense_trackers/index.html.erb within layouts/application
+  Rendered expense_trackers/index.html.erb within layouts/application (Duration: 0.2ms | Allocations: 7)
+  Rendered shared/_navbar.html.erb (Duration: 0.6ms | Allocations: 283)
+  Rendered layout layouts/application.html.erb (Duration: 21.3ms | Allocations: 9749)
+Completed 200 OK in 27ms (Views: 22.2ms | ActiveRecord: 0.7ms | Allocations: 10708)
+
+
+Started GET "/expense_trackers" for 127.0.0.1 at 2023-10-31 14:27:30 -0700
+Processing by ExpenseTrackersController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7:in `set_current_user'
+  Rendering layout layouts/application.html.erb
+  Rendering expense_trackers/index.html.erb within layouts/application
+  Rendered expense_trackers/index.html.erb within layouts/application (Duration: 0.0ms | Allocations: 7)
+  Rendered shared/_navbar.html.erb (Duration: 0.2ms | Allocations: 283)
+  Rendered layout layouts/application.html.erb (Duration: 7.5ms | Allocations: 9737)
+Completed 200 OK in 9ms (Views: 7.8ms | ActiveRecord: 0.3ms | Allocations: 10690)
+
+
+Started GET "/expense_trackers" for 127.0.0.1 at 2023-10-31 14:27:39 -0700
+Processing by ExpenseTrackersController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7:in `set_current_user'
+  Rendering layout layouts/application.html.erb
+  Rendering expense_trackers/index.html.erb within layouts/application
+  Rendered expense_trackers/index.html.erb within layouts/application (Duration: 0.7ms | Allocations: 139)
+  Rendered shared/_navbar.html.erb (Duration: 1.0ms | Allocations: 679)
+  Rendered layout layouts/application.html.erb (Duration: 17.1ms | Allocations: 10680)
+Completed 200 OK in 25ms (Views: 20.7ms | ActiveRecord: 0.3ms | Allocations: 12186)
+
+
+Started GET "/expense_trackers" for 127.0.0.1 at 2023-10-31 14:27:40 -0700
+Processing by ExpenseTrackersController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7:in `set_current_user'
+  Rendering layout layouts/application.html.erb
+  Rendering expense_trackers/index.html.erb within layouts/application
+  Rendered expense_trackers/index.html.erb within layouts/application (Duration: 0.1ms | Allocations: 7)
+  Rendered shared/_navbar.html.erb (Duration: 0.3ms | Allocations: 283)
+  Rendered layout layouts/application.html.erb (Duration: 19.9ms | Allocations: 9748)
+Completed 200 OK in 25ms (Views: 20.3ms | ActiveRecord: 0.3ms | Allocations: 10687)
+
+
+Started GET "/notes" for 127.0.0.1 at 2023-10-31 14:27:41 -0700
+Processing by NotesController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7:in `set_current_user'
+  Rendering layout layouts/application.html.erb
+  Rendering notes/index.html.erb within layouts/application
+  [1m[36mNote Load (4.1ms)[0m  [1m[34mSELECT "notes".* FROM "notes" ORDER BY created_at DESC[0m
+  ↳ app/views/notes/index.html.erb:24
+  Rendered notes/index.html.erb within layouts/application (Duration: 20.0ms | Allocations: 5111)
+  Rendered shared/_navbar.html.erb (Duration: 0.3ms | Allocations: 297)
+  Rendered layout layouts/application.html.erb (Duration: 30.0ms | Allocations: 14962)
+Completed 200 OK in 35ms (Views: 18.2ms | ActiveRecord: 13.0ms | Allocations: 16753)
+
+
+Started GET "/expense_trackers" for 127.0.0.1 at 2023-10-31 14:27:43 -0700
+Processing by ExpenseTrackersController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7:in `set_current_user'
+  Rendering layout layouts/application.html.erb
+  Rendering expense_trackers/index.html.erb within layouts/application
+  Rendered expense_trackers/index.html.erb within layouts/application (Duration: 0.1ms | Allocations: 7)
+  Rendered shared/_navbar.html.erb (Duration: 0.2ms | Allocations: 283)
+  Rendered layout layouts/application.html.erb (Duration: 15.8ms | Allocations: 9737)
+Completed 200 OK in 20ms (Views: 16.4ms | ActiveRecord: 0.3ms | Allocations: 10698)
+
+
+Started GET "/expense_trackers" for 127.0.0.1 at 2023-10-31 14:31:20 -0700
+Processing by ExpenseTrackersController#index as HTML
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7:in `set_current_user'
+  Rendering layout layouts/application.html.erb
+  Rendering expense_trackers/index.html.erb within layouts/application
+  Rendered expense_trackers/index.html.erb within layouts/application (Duration: 1.6ms | Allocations: 138)
+  Rendered shared/_navbar.html.erb (Duration: 9.6ms | Allocations: 679)
+  Rendered layout layouts/application.html.erb (Duration: 30.4ms | Allocations: 10680)
+Completed 200 OK in 42ms (Views: 34.0ms | ActiveRecord: 0.9ms | Allocations: 12198)
+
+
+Started GET "/expense_trackers" for 127.0.0.1 at 2023-10-31 14:31:34 -0700
+Processing by ExpenseTrackersController#index as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7:in `set_current_user'
+  Rendering layout layouts/application.html.erb
+  Rendering expense_trackers/index.html.erb within layouts/application
+  Rendered expense_trackers/index.html.erb within layouts/application (Duration: 0.6ms | Allocations: 137)
+  Rendered shared/_navbar.html.erb (Duration: 1.0ms | Allocations: 682)
+  Rendered layout layouts/application.html.erb (Duration: 27.5ms | Allocations: 10692)
+Completed 200 OK in 36ms (Views: 30.6ms | ActiveRecord: 0.4ms | Allocations: 12200)
+
+
+Started GET "/expense_trackers" for 127.0.0.1 at 2023-10-31 14:54:41 -0700
+Processing by ExpenseTrackersController#index as HTML
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7:in `set_current_user'
+  Rendering layout layouts/application.html.erb
+  Rendering expense_trackers/index.html.erb within layouts/application
+  Rendered expense_trackers/_form.html.erb (Duration: 19.0ms | Allocations: 9189)
+  Rendered expense_trackers/index.html.erb within layouts/application (Duration: 21.7ms | Allocations: 9472)
+  Rendered layout layouts/application.html.erb (Duration: 21.9ms | Allocations: 9560)
+Completed 500 Internal Server Error in 120ms (ActiveRecord: 11.2ms | Allocations: 14160)
+
+
+  
+ActionView::Template::Error (undefined method `each' for nil:NilClass):
+    1: <% @lists.each do |list| %>
+    2:     put "aaaaaaaa"
+    3: <%end %>
+  
+app/views/expense_trackers/_form.html.erb:1
+app/views/expense_trackers/index.html.erb:5
+Started GET "/expense_trackers" for 127.0.0.1 at 2023-10-31 14:55:11 -0700
+Processing by ExpenseTrackersController#index as HTML
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7:in `set_current_user'
+  Rendering layout layouts/application.html.erb
+  Rendering expense_trackers/index.html.erb within layouts/application
+  Rendered expense_trackers/_form.html.erb (Duration: 36.7ms | Allocations: 1197)
+  Rendered expense_trackers/index.html.erb within layouts/application (Duration: 42.2ms | Allocations: 1470)
+  Rendered layout layouts/application.html.erb (Duration: 43.1ms | Allocations: 1558)
+Completed 500 Internal Server Error in 62ms (ActiveRecord: 0.8ms | Allocations: 3036)
+
+
+  
+ActionView::Template::Error (undefined method `each' for nil:NilClass):
+    1: <% @form.each do |form| %>
+    2:     put "aaaaaaaa"
+    3: <%end %>
+  
+app/views/expense_trackers/_form.html.erb:1
+app/views/expense_trackers/index.html.erb:5
+Started GET "/notes" for 127.0.0.1 at 2023-10-31 14:55:15 -0700
+Processing by NotesController#index as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7:in `set_current_user'
+  Rendering layout layouts/application.html.erb
+  Rendering notes/index.html.erb within layouts/application
+  [1m[36mNote Load (2.5ms)[0m  [1m[34mSELECT "notes".* FROM "notes" ORDER BY created_at DESC[0m
+  ↳ app/views/notes/index.html.erb:24
+  Rendered notes/index.html.erb within layouts/application (Duration: 7.3ms | Allocations: 1015)
+  Rendered shared/_navbar.html.erb (Duration: 0.6ms | Allocations: 658)
+  Rendered layout layouts/application.html.erb (Duration: 24.7ms | Allocations: 11542)
+Completed 200 OK in 31ms (Views: 24.8ms | ActiveRecord: 3.0ms | Allocations: 12810)
+
+
+Started GET "/expense_trackers" for 127.0.0.1 at 2023-10-31 14:55:16 -0700
+Processing by ExpenseTrackersController#index as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7:in `set_current_user'
+  Rendering layout layouts/application.html.erb
+  Rendering expense_trackers/index.html.erb within layouts/application
+  Rendered expense_trackers/_form.html.erb (Duration: 0.8ms | Allocations: 1068)
+  Rendered expense_trackers/index.html.erb within layouts/application (Duration: 1.1ms | Allocations: 1133)
+  Rendered layout layouts/application.html.erb (Duration: 1.2ms | Allocations: 1220)
+Completed 500 Internal Server Error in 6ms (ActiveRecord: 0.5ms | Allocations: 2123)
+
+
+  
+ActionView::Template::Error (undefined method `each' for nil:NilClass):
+    1: <% @form.each do |form| %>
+    2:     put "aaaaaaaa"
+    3: <%end %>
+  
+app/views/expense_trackers/_form.html.erb:1
+app/views/expense_trackers/index.html.erb:5
+Started GET "/expense_trackers" for 127.0.0.1 at 2023-10-31 14:55:27 -0700
+Processing by ExpenseTrackersController#index as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7:in `set_current_user'
+  Rendering layout layouts/application.html.erb
+  Rendering expense_trackers/index.html.erb within layouts/application
+  Rendered expense_trackers/_form.html.erb (Duration: 4.4ms | Allocations: 1194)
+  Rendered expense_trackers/index.html.erb within layouts/application (Duration: 5.6ms | Allocations: 1467)
+  Rendered layout layouts/application.html.erb (Duration: 5.7ms | Allocations: 1555)
+Completed 500 Internal Server Error in 12ms (ActiveRecord: 0.5ms | Allocations: 3016)
+
+
+  
+ActionView::Template::Error (undefined method `all' for nil:NilClass):
+    1: <% @form.all do |form| %>
+    2:     put "aaaaaaaa"
+    3: <%end %>
+  
+app/views/expense_trackers/_form.html.erb:1
+app/views/expense_trackers/index.html.erb:5
+Started GET "/expense_trackers" for 127.0.0.1 at 2023-10-31 14:56:19 -0700
+Processing by ExpenseTrackersController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7:in `set_current_user'
+Completed 500 Internal Server Error in 10ms (ActiveRecord: 4.9ms | Allocations: 3050)
+
+
+  
+NameError (uninitialized constant ExpenseTrackersController::ExpenseTracker):
+  
+app/controllers/expense_trackers_controller.rb:3:in `index'
+Started GET "/expense_trackers" for 127.0.0.1 at 2023-10-31 14:57:56 -0700
+Processing by ExpenseTrackersController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7:in `set_current_user'
+Completed 500 Internal Server Error in 6ms (ActiveRecord: 2.3ms | Allocations: 2945)
+
+
+  
+NameError (uninitialized constant ExpenseTrackersController::ExpenseTracker):
+  
+app/controllers/expense_trackers_controller.rb:3:in `index'
+Started GET "/expense_trackers" for 127.0.0.1 at 2023-10-31 15:01:24 -0700
+Processing by ExpenseTrackersController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7:in `set_current_user'
+  Rendering layout layouts/application.html.erb
+  Rendering expense_trackers/index.html.erb within layouts/application
+  Rendered expense_trackers/_form.html.erb (Duration: 0.5ms | Allocations: 1121)
+  Rendered expense_trackers/index.html.erb within layouts/application (Duration: 1.1ms | Allocations: 1399)
+  Rendered layout layouts/application.html.erb (Duration: 1.1ms | Allocations: 1487)
+Completed 500 Internal Server Error in 10ms (ActiveRecord: 4.1ms | Allocations: 4860)
+
+
+  
+ActionView::Template::Error (undefined method `each' for nil:NilClass):
+    1: <% @form.each do |form| %>
+    2:     put "aaaaaaaa"
+    3: <%end %>
+  
+app/views/expense_trackers/_form.html.erb:1
+app/views/expense_trackers/index.html.erb:5
+Started GET "/expense_trackers" for 127.0.0.1 at 2023-10-31 15:01:39 -0700
+Processing by ExpenseTrackersController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7:in `set_current_user'
+  Rendering layout layouts/application.html.erb
+  Rendering expense_trackers/index.html.erb within layouts/application
+  Rendered expense_trackers/_form.html.erb (Duration: 2.0ms | Allocations: 1216)
+  Rendered expense_trackers/index.html.erb within layouts/application (Duration: 3.4ms | Allocations: 1489)
+  Rendered layout layouts/application.html.erb (Duration: 3.5ms | Allocations: 1578)
+Completed 500 Internal Server Error in 11ms (ActiveRecord: 0.2ms | Allocations: 3046)
+
+
+  
+ActionView::SyntaxErrorInTemplate (Encountered a syntax error while rendering template: check <% @form do |form| %>
+    put "aaaaaaaa"
+<%end %>
+):
+1:    <% @form do |form| %>
+2:        put "aaaaaaaa"
+3:    <%end %>
+  
+app/views/expense_trackers/_form.html.erb:1: syntax error, unexpected `do', expecting `end' or dummy end
+app/views/expense_trackers/_form.html.erb:5: syntax error, unexpected `end'
+app/views/expense_trackers/_form.html.erb:1: syntax error, unexpected `do', expecting `end' or dummy end
+app/views/expense_trackers/_form.html.erb:5: syntax error, unexpected `end'
+app/views/expense_trackers/_form.html.erb:1: syntax error, unexpected `do', expecting `end' or dummy end
+app/views/expense_trackers/_form.html.erb:5: syntax error, unexpected `end'
+app/views/expense_trackers/_form.html.erb:1: syntax error, unexpected `do', expecting `end' or dummy end
+app/views/expense_trackers/_form.html.erb:5: syntax error, unexpected `end'
+app/views/expense_trackers/index.html.erb:5
+Started GET "/expense_trackers" for 127.0.0.1 at 2023-10-31 15:04:28 -0700
+Processing by ExpenseTrackersController#index as HTML
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7:in `set_current_user'
+  Rendering layout layouts/application.html.erb
+  Rendering expense_trackers/index.html.erb within layouts/application
+  Rendered expense_trackers/index.html.erb within layouts/application (Duration: 2.2ms | Allocations: 1364)
+  Rendered layout layouts/application.html.erb (Duration: 2.3ms | Allocations: 1452)
+Completed 500 Internal Server Error in 13ms (ActiveRecord: 0.9ms | Allocations: 2916)
+
+
+  
+ActionView::Template::Error (Missing partial expense_trackers/_forma, application/_forma with {:locale=>[:en], :formats=>[:html], :variants=>[], :handlers=>[:raw, :erb, :html, :builder, :ruby, :jbuilder]}.
+
+Searched in:
+  * "/Users/rihanyao/Desktop/TripMate/app/views"
+  * "/opt/homebrew/lib/ruby/gems/3.2.0/gems/turbo-rails-1.4.0/app/views"
+  * "/opt/homebrew/lib/ruby/gems/3.2.0/gems/actiontext-7.0.8/app/views"
+  * "/opt/homebrew/lib/ruby/gems/3.2.0/gems/actionmailbox-7.0.8/app/views"
+):
+    2: 
+    3: <div class="d-flex align-items-center justify-content-center">
+    4:     <h1 class="title">My Expense Tracker<h1> 
+    5:     <%= render "forma" %>
+    6: </div>
+    7: 
+    8: <form class=" was-validated" novalidate oninput="remaining.value=(budget.value)-(accommodation.value)-(transportation.value)-(meal.value)">
+  
+app/views/expense_trackers/index.html.erb:5
+Started GET "/expense_trackers" for 127.0.0.1 at 2023-10-31 15:18:14 -0700
+Processing by ExpenseTrackersController#index as HTML
+  [1m[36mUser Load (1.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7:in `set_current_user'
+  Rendering layout layouts/application.html.erb
+  Rendering expense_trackers/index.html.erb within layouts/application
+  Rendered expense_trackers/_form.html.erb (Duration: 1.6ms | Allocations: 1202)
+  Rendered expense_trackers/index.html.erb within layouts/application (Duration: 3.7ms | Allocations: 1475)
+  Rendered layout layouts/application.html.erb (Duration: 3.9ms | Allocations: 1564)
+Completed 500 Internal Server Error in 159ms (ActiveRecord: 12.3ms | Allocations: 6105)
+
+
+  
+ActionView::SyntaxErrorInTemplate (Encountered a syntax error while rendering template: check <% @form do |form| %>
+    put "aaaaaaaa"
+<%end %>
+):
+1:    <% @form do |form| %>
+2:        put "aaaaaaaa"
+3:    <%end %>
+  
+app/views/expense_trackers/_form.html.erb:1: syntax error, unexpected `do', expecting `end' or dummy end
+app/views/expense_trackers/_form.html.erb:5: syntax error, unexpected `end'
+app/views/expense_trackers/_form.html.erb:1: syntax error, unexpected `do', expecting `end' or dummy end
+app/views/expense_trackers/_form.html.erb:5: syntax error, unexpected `end'
+app/views/expense_trackers/_form.html.erb:1: syntax error, unexpected `do', expecting `end' or dummy end
+app/views/expense_trackers/_form.html.erb:5: syntax error, unexpected `end'
+app/views/expense_trackers/_form.html.erb:1: syntax error, unexpected `do', expecting `end' or dummy end
+app/views/expense_trackers/_form.html.erb:5: syntax error, unexpected `end'
+app/views/expense_trackers/index.html.erb:5
+Started GET "/" for 127.0.0.1 at 2023-10-31 15:18:16 -0700
+Processing by HomeController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7:in `set_current_user'
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 0.4ms | Allocations: 105)
+  Rendered shared/_navbar.html.erb (Duration: 0.6ms | Allocations: 691)
+  Rendered layout layouts/application.html.erb (Duration: 21.3ms | Allocations: 23098)
+Completed 200 OK in 24ms (Views: 22.3ms | ActiveRecord: 0.3ms | Allocations: 24422)
+
+
+Started GET "/" for 127.0.0.1 at 2023-10-31 15:18:16 -0700
+Processing by HomeController#index as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7:in `set_current_user'
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 0.0ms | Allocations: 7)
+  Rendered shared/_navbar.html.erb (Duration: 0.4ms | Allocations: 283)
+  Rendered layout layouts/application.html.erb (Duration: 14.9ms | Allocations: 9738)
+Completed 200 OK in 18ms (Views: 15.2ms | ActiveRecord: 0.4ms | Allocations: 10696)
+
+
+Started GET "/lists" for 127.0.0.1 at 2023-10-31 15:18:24 -0700
+Processing by ListsController#index as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7:in `set_current_user'
+  Rendering layout layouts/application.html.erb
+  Rendering lists/index.html.erb within layouts/application
+  [1m[36mList Load (2.0ms)[0m  [1m[34mSELECT "lists".* FROM "lists"[0m
+  ↳ app/views/lists/index.html.erb:15
+  Rendered lists/index.html.erb within layouts/application (Duration: 24.3ms | Allocations: 5108)
+  Rendered shared/_navbar.html.erb (Duration: 0.3ms | Allocations: 297)
+  Rendered layout layouts/application.html.erb (Duration: 38.8ms | Allocations: 14933)
+Completed 200 OK in 48ms (Views: 30.0ms | ActiveRecord: 11.3ms | Allocations: 16701)
+
+
+Started GET "/lists" for 127.0.0.1 at 2023-10-31 15:51:36 -0700
+Processing by ListsController#index as HTML
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7:in `set_current_user'
+  Rendering layout layouts/application.html.erb
+  Rendering lists/index.html.erb within layouts/application
+  [1m[36mList Load (1.8ms)[0m  [1m[34mSELECT "lists".* FROM "lists"[0m
+  ↳ app/views/lists/index.html.erb:15
+  Rendered lists/index.html.erb within layouts/application (Duration: 26.0ms | Allocations: 1277)
+  Rendered shared/_navbar.html.erb (Duration: 0.1ms | Allocations: 274)
+  Rendered layout layouts/application.html.erb (Duration: 39.0ms | Allocations: 11219)
+Completed 200 OK in 209ms (Views: 38.3ms | ActiveRecord: 12.7ms | Allocations: 15243)
+
+
+Started GET "/notes" for 127.0.0.1 at 2023-10-31 15:51:39 -0700
+Processing by NotesController#index as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7:in `set_current_user'
+  Rendering layout layouts/application.html.erb
+  Rendering notes/index.html.erb within layouts/application
+  [1m[36mNote Load (1.7ms)[0m  [1m[34mSELECT "notes".* FROM "notes" ORDER BY created_at DESC[0m
+  ↳ app/views/notes/index.html.erb:24
+  Rendered notes/index.html.erb within layouts/application (Duration: 17.2ms | Allocations: 2563)
+  Rendered shared/_navbar.html.erb (Duration: 0.2ms | Allocations: 297)
+  Rendered layout layouts/application.html.erb (Duration: 29.3ms | Allocations: 12425)
+Completed 200 OK in 36ms (Views: 18.6ms | ActiveRecord: 12.4ms | Allocations: 14173)
+
+
+Started GET "/lists" for 127.0.0.1 at 2023-10-31 15:51:40 -0700
+Processing by ListsController#index as HTML
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7:in `set_current_user'
+  Rendering layout layouts/application.html.erb
+  Rendering lists/index.html.erb within layouts/application
+  [1m[36mList Load (0.8ms)[0m  [1m[34mSELECT "lists".* FROM "lists"[0m
+  ↳ app/views/lists/index.html.erb:15
+  Rendered lists/index.html.erb within layouts/application (Duration: 5.2ms | Allocations: 1279)
+  Rendered shared/_navbar.html.erb (Duration: 0.2ms | Allocations: 274)
+  Rendered layout layouts/application.html.erb (Duration: 25.6ms | Allocations: 11001)
+Completed 200 OK in 32ms (Views: 25.5ms | ActiveRecord: 1.4ms | Allocations: 11955)
+
+
+Started GET "/about" for 127.0.0.1 at 2023-10-31 15:51:41 -0700
+Processing by AboutController#index as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7:in `set_current_user'
+  Rendering layout layouts/application.html.erb
+  Rendering about/index.html.erb within layouts/application
+  Rendered about/index.html.erb within layouts/application (Duration: 0.9ms | Allocations: 110)
+  Rendered shared/_navbar.html.erb (Duration: 0.3ms | Allocations: 324)
+  Rendered layout layouts/application.html.erb (Duration: 21.4ms | Allocations: 10190)
+Completed 200 OK in 27ms (Views: 23.3ms | ActiveRecord: 0.5ms | Allocations: 11522)
+
+
+Started GET "/notes" for 127.0.0.1 at 2023-10-31 15:51:42 -0700
+Processing by NotesController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7:in `set_current_user'
+  Rendering layout layouts/application.html.erb
+  Rendering notes/index.html.erb within layouts/application
+  [1m[36mNote Load (0.4ms)[0m  [1m[34mSELECT "notes".* FROM "notes" ORDER BY created_at DESC[0m
+  ↳ app/views/notes/index.html.erb:24
+  Rendered notes/index.html.erb within layouts/application (Duration: 2.1ms | Allocations: 739)
+  Rendered shared/_navbar.html.erb (Duration: 0.3ms | Allocations: 274)
+  Rendered layout layouts/application.html.erb (Duration: 20.5ms | Allocations: 10588)
+Completed 200 OK in 23ms (Views: 20.7ms | ActiveRecord: 0.7ms | Allocations: 11550)
+
+
+Started GET "/lists" for 127.0.0.1 at 2023-10-31 15:51:48 -0700
+Processing by ListsController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7:in `set_current_user'
+  Rendering layout layouts/application.html.erb
+  Rendering lists/index.html.erb within layouts/application
+  [1m[36mList Load (0.2ms)[0m  [1m[34mSELECT "lists".* FROM "lists"[0m
+  ↳ app/views/lists/index.html.erb:15
+  Rendered lists/index.html.erb within layouts/application (Duration: 2.0ms | Allocations: 1278)
+  Rendered shared/_navbar.html.erb (Duration: 0.3ms | Allocations: 274)
+  Rendered layout layouts/application.html.erb (Duration: 15.4ms | Allocations: 11001)
+Completed 200 OK in 19ms (Views: 15.7ms | ActiveRecord: 0.6ms | Allocations: 11958)
+
+
+Started GET "/notes" for 127.0.0.1 at 2023-10-31 15:51:49 -0700
+Processing by NotesController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7:in `set_current_user'
+  Rendering layout layouts/application.html.erb
+  Rendering notes/index.html.erb within layouts/application
+  [1m[36mNote Load (0.4ms)[0m  [1m[34mSELECT "notes".* FROM "notes" ORDER BY created_at DESC[0m
+  ↳ app/views/notes/index.html.erb:24
+  Rendered notes/index.html.erb within layouts/application (Duration: 1.8ms | Allocations: 738)
+  Rendered shared/_navbar.html.erb (Duration: 0.4ms | Allocations: 274)
+  Rendered layout layouts/application.html.erb (Duration: 15.7ms | Allocations: 10460)
+Completed 200 OK in 19ms (Views: 16.0ms | ActiveRecord: 0.7ms | Allocations: 11442)
+
+
+Started GET "/notes" for 127.0.0.1 at 2023-10-31 15:53:34 -0700
+Processing by NotesController#index as HTML
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7:in `set_current_user'
+  Rendering layout layouts/application.html.erb
+  Rendering notes/index.html.erb within layouts/application
+  [1m[36mNote Load (2.4ms)[0m  [1m[34mSELECT "notes".* FROM "notes" ORDER BY created_at DESC[0m
+  ↳ app/views/notes/index.html.erb:24
+  Rendered notes/index.html.erb within layouts/application (Duration: 17.4ms | Allocations: 689)
+  Rendered shared/_navbar.html.erb (Duration: 0.2ms | Allocations: 274)
+  Rendered layout layouts/application.html.erb (Duration: 41.9ms | Allocations: 10618)
+Completed 200 OK in 57ms (Views: 43.9ms | ActiveRecord: 3.1ms | Allocations: 11577)
+
+
+Started GET "/sign_up" for 127.0.0.1 at 2023-10-31 15:58:12 -0700
+Processing by RegistrationsController#new as HTML
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7:in `set_current_user'
+  Rendering layout layouts/application.html.erb
+  Rendering registrations/new.html.erb within layouts/application
+  Rendered registrations/new.html.erb within layouts/application (Duration: 5.0ms | Allocations: 2108)
+  Rendered shared/_navbar.html.erb (Duration: 0.2ms | Allocations: 299)
+  Rendered layout layouts/application.html.erb (Duration: 18.1ms | Allocations: 12066)
+Completed 200 OK in 35ms (Views: 19.7ms | ActiveRecord: 5.5ms | Allocations: 16120)
+
+
+Started POST "/sign_up" for 127.0.0.1 at 2023-10-31 15:59:12 -0700
+Processing by RegistrationsController#create as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "user"=>{"email"=>"rihany@sfu.ca", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Sign Up"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7:in `set_current_user'
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/registrations_controller.rb:8:in `create'
+  [1m[36mUser Exists? (1.8ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "rihany@sfu.ca"], ["LIMIT", 1]]
+  ↳ app/controllers/registrations_controller.rb:8:in `create'
+  [1m[36mUser Create (6.8ms)[0m  [1m[32mINSERT INTO "users" ("email", "password_digest", "admin", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["email", "rihany@sfu.ca"], ["password_digest", "[FILTERED]"], ["admin", false], ["created_at", "2023-10-31 22:59:12.435689"], ["updated_at", "2023-10-31 22:59:12.435689"]]
+  ↳ app/controllers/registrations_controller.rb:8:in `create'
+  [1m[36mTRANSACTION (1.0ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/registrations_controller.rb:8:in `create'
+Redirected to http://127.0.0.1:3000/
+Completed 302 Found in 271ms (ActiveRecord: 10.4ms | Allocations: 5526)
+
+
+Started GET "/" for 127.0.0.1 at 2023-10-31 15:59:12 -0700
+Processing by HomeController#index as TURBO_STREAM
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7:in `set_current_user'
+Redirected to http://127.0.0.1:3000/lists
+Filter chain halted as :set_current_user rendered or redirected
+Completed 302 Found in 1ms (ActiveRecord: 0.2ms | Allocations: 893)
+
+
+Started GET "/lists" for 127.0.0.1 at 2023-10-31 15:59:12 -0700
+Processing by ListsController#index as TURBO_STREAM
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7:in `set_current_user'
+  Rendering layout layouts/application.html.erb
+  Rendering lists/index.html.erb within layouts/application
+  [1m[36mList Load (0.2ms)[0m  [1m[34mSELECT "lists".* FROM "lists"[0m
+  ↳ app/views/lists/index.html.erb:15
+  Rendered lists/index.html.erb within layouts/application (Duration: 1.0ms | Allocations: 1281)
+  Rendered shared/_navbar.html.erb (Duration: 0.2ms | Allocations: 437)
+  Rendered layout layouts/application.html.erb (Duration: 8.0ms | Allocations: 11214)
+Completed 200 OK in 9ms (Views: 8.0ms | ActiveRecord: 0.4ms | Allocations: 12223)
+
+
+Started DELETE "/logout" for 127.0.0.1 at 2023-10-31 16:03:55 -0700
+Processing by SessionsController#destroy as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]"}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7:in `set_current_user'
+Redirected to http://127.0.0.1:3000/
+Completed 302 Found in 3ms (ActiveRecord: 0.6ms | Allocations: 960)
+
+
+Started GET "/" for 127.0.0.1 at 2023-10-31 16:03:55 -0700
+Processing by HomeController#index as TURBO_STREAM
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 0.0ms | Allocations: 7)
+  Rendered shared/_navbar.html.erb (Duration: 0.2ms | Allocations: 283)
+  Rendered layout layouts/application.html.erb (Duration: 10.5ms | Allocations: 9960)
+Completed 200 OK in 11ms (Views: 10.8ms | ActiveRecord: 0.0ms | Allocations: 10416)
+
+
+Started GET "/sign_in" for 127.0.0.1 at 2023-10-31 16:03:56 -0700
+Processing by SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (Duration: 5.0ms | Allocations: 2562)
+  Rendered shared/_navbar.html.erb (Duration: 0.5ms | Allocations: 299)
+  Rendered layout layouts/application.html.erb (Duration: 19.9ms | Allocations: 12476)
+Completed 200 OK in 25ms (Views: 22.6ms | ActiveRecord: 0.0ms | Allocations: 13269)
+
+
+Started POST "/sign_in" for 127.0.0.1 at 2023-10-31 16:04:04 -0700
+Processing by SessionsController#create as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "email"=>"rihany@sfu.ca", "password"=>"[FILTERED]", "commit"=>"Sign In"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "rihany@sfu.ca"], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:6:in `create'
+  Rendering layout layouts/application.html.erb
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (Duration: 1.4ms | Allocations: 2231)
+  Rendered shared/_navbar.html.erb (Duration: 0.1ms | Allocations: 274)
+  Rendered layout layouts/application.html.erb (Duration: 7.3ms | Allocations: 11949)
+Completed 422 Unprocessable Entity in 283ms (Views: 7.9ms | ActiveRecord: 0.4ms | Allocations: 13088)
+
+
+Started GET "/sign_in" for 127.0.0.1 at 2023-10-31 16:04:10 -0700
+Processing by SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (Duration: 1.5ms | Allocations: 2235)
+  Rendered shared/_navbar.html.erb (Duration: 0.2ms | Allocations: 274)
+  Rendered layout layouts/application.html.erb (Duration: 16.9ms | Allocations: 11957)
+Completed 200 OK in 19ms (Views: 17.4ms | ActiveRecord: 0.0ms | Allocations: 12417)
+
+
+Started GET "/sign_in" for 127.0.0.1 at 2023-10-31 16:04:12 -0700
+Processing by SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (Duration: 2.0ms | Allocations: 2235)
+  Rendered shared/_navbar.html.erb (Duration: 0.2ms | Allocations: 274)
+  Rendered layout layouts/application.html.erb (Duration: 22.6ms | Allocations: 12163)
+Completed 200 OK in 24ms (Views: 23.2ms | ActiveRecord: 0.0ms | Allocations: 12613)
+
+
+Started POST "/sign_in" for 127.0.0.1 at 2023-10-31 16:04:16 -0700
+Processing by SessionsController#create as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "email"=>"rihany@sfu.ca", "password"=>"[FILTERED]", "commit"=>"Sign In"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "rihany@sfu.ca"], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:6:in `create'
+  Rendering layout layouts/application.html.erb
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (Duration: 0.9ms | Allocations: 2232)
+  Rendered shared/_navbar.html.erb (Duration: 0.1ms | Allocations: 274)
+  Rendered layout layouts/application.html.erb (Duration: 6.4ms | Allocations: 12166)
+Completed 422 Unprocessable Entity in 281ms (Views: 6.7ms | ActiveRecord: 0.5ms | Allocations: 13173)
+
+
+Started GET "/" for 127.0.0.1 at 2023-10-31 16:04:18 -0700
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 0.1ms | Allocations: 7)
+  Rendered shared/_navbar.html.erb (Duration: 0.3ms | Allocations: 283)
+  Rendered layout layouts/application.html.erb (Duration: 15.9ms | Allocations: 9737)
+Completed 200 OK in 18ms (Views: 16.5ms | ActiveRecord: 0.0ms | Allocations: 10210)
+
+
+Started GET "/about" for 127.0.0.1 at 2023-10-31 16:04:19 -0700
+Processing by AboutController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering about/index.html.erb within layouts/application
+  Rendered about/index.html.erb within layouts/application (Duration: 0.1ms | Allocations: 7)
+  Rendered shared/_navbar.html.erb (Duration: 0.4ms | Allocations: 283)
+  Rendered layout layouts/application.html.erb (Duration: 19.1ms | Allocations: 9738)
+Completed 200 OK in 22ms (Views: 20.9ms | ActiveRecord: 0.0ms | Allocations: 10184)
+
+
+Started GET "/sign_in" for 127.0.0.1 at 2023-10-31 16:04:22 -0700
+Processing by SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (Duration: 2.0ms | Allocations: 2236)
+  Rendered shared/_navbar.html.erb (Duration: 0.3ms | Allocations: 274)
+  Rendered layout layouts/application.html.erb (Duration: 21.4ms | Allocations: 12020)
+Completed 200 OK in 23ms (Views: 22.0ms | ActiveRecord: 0.0ms | Allocations: 12462)
+
+
+Started POST "/sign_in" for 127.0.0.1 at 2023-10-31 16:04:25 -0700
+Processing by SessionsController#create as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "email"=>"rihany@sfu.ca", "password"=>"[FILTERED]", "commit"=>"Sign In"}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "rihany@sfu.ca"], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:6:in `create'
+  Rendering layout layouts/application.html.erb
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (Duration: 1.2ms | Allocations: 2232)
+  Rendered shared/_navbar.html.erb (Duration: 0.1ms | Allocations: 274)
+  Rendered layout layouts/application.html.erb (Duration: 7.4ms | Allocations: 12163)
+Completed 422 Unprocessable Entity in 283ms (Views: 8.0ms | ActiveRecord: 0.6ms | Allocations: 13168)
+
+
+Started GET "/sign_up" for 127.0.0.1 at 2023-10-31 16:04:29 -0700
+Processing by RegistrationsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering registrations/new.html.erb within layouts/application
+  Rendered registrations/new.html.erb within layouts/application (Duration: 2.3ms | Allocations: 964)
+  Rendered shared/_navbar.html.erb (Duration: 0.3ms | Allocations: 274)
+  Rendered layout layouts/application.html.erb (Duration: 19.4ms | Allocations: 10690)
+Completed 200 OK in 22ms (Views: 20.1ms | ActiveRecord: 0.0ms | Allocations: 11150)
+
+
+Started GET "/sign_in" for 127.0.0.1 at 2023-10-31 16:04:30 -0700
+Processing by SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (Duration: 2.4ms | Allocations: 2236)
+  Rendered shared/_navbar.html.erb (Duration: 0.2ms | Allocations: 274)
+  Rendered layout layouts/application.html.erb (Duration: 17.2ms | Allocations: 11959)
+Completed 200 OK in 19ms (Views: 17.8ms | ActiveRecord: 0.0ms | Allocations: 12391)
+
+
+Started GET "/expense_trackers" for 127.0.0.1 at 2023-10-31 16:04:31 -0700
+Processing by ExpenseTrackersController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering expense_trackers/index.html.erb within layouts/application
+  Rendered expense_trackers/_form.html.erb (Duration: 2.6ms | Allocations: 1198)
+  Rendered expense_trackers/index.html.erb within layouts/application (Duration: 2.9ms | Allocations: 1263)
+  Rendered layout layouts/application.html.erb (Duration: 3.0ms | Allocations: 1351)
+Completed 500 Internal Server Error in 5ms (ActiveRecord: 0.0ms | Allocations: 1755)
+
+
+  
+ActionView::SyntaxErrorInTemplate (Encountered a syntax error while rendering template: check <% @form do |form| %>
+    put "aaaaaaaa"
+<%end %>
+):
+1:    <% @form do |form| %>
+2:        put "aaaaaaaa"
+3:    <%end %>
+  
+app/views/expense_trackers/_form.html.erb:1: syntax error, unexpected `do', expecting `end' or dummy end
+app/views/expense_trackers/_form.html.erb:5: syntax error, unexpected `end'
+app/views/expense_trackers/_form.html.erb:1: syntax error, unexpected `do', expecting `end' or dummy end
+app/views/expense_trackers/_form.html.erb:5: syntax error, unexpected `end'
+app/views/expense_trackers/_form.html.erb:1: syntax error, unexpected `do', expecting `end' or dummy end
+app/views/expense_trackers/_form.html.erb:5: syntax error, unexpected `end'
+app/views/expense_trackers/_form.html.erb:1: syntax error, unexpected `do', expecting `end' or dummy end
+app/views/expense_trackers/_form.html.erb:5: syntax error, unexpected `end'
+app/views/expense_trackers/index.html.erb:5
+Started GET "/sign_in" for 127.0.0.1 at 2023-10-31 16:04:33 -0700
+Processing by SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (Duration: 2.1ms | Allocations: 2236)
+  Rendered shared/_navbar.html.erb (Duration: 0.2ms | Allocations: 274)
+  Rendered layout layouts/application.html.erb (Duration: 14.2ms | Allocations: 12177)
+Completed 200 OK in 16ms (Views: 14.9ms | ActiveRecord: 0.0ms | Allocations: 12599)
+
+
+Started GET "/notes" for 127.0.0.1 at 2023-10-31 16:04:35 -0700
+Processing by NotesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering notes/index.html.erb within layouts/application
+  [1m[36mNote Load (0.8ms)[0m  [1m[34mSELECT "notes".* FROM "notes" ORDER BY created_at DESC[0m
+  ↳ app/views/notes/index.html.erb:24
+  Rendered notes/index.html.erb within layouts/application (Duration: 2.9ms | Allocations: 690)
+  Rendered shared/_navbar.html.erb (Duration: 0.3ms | Allocations: 274)
+  Rendered layout layouts/application.html.erb (Duration: 19.7ms | Allocations: 10412)
+Completed 200 OK in 23ms (Views: 19.6ms | ActiveRecord: 0.8ms | Allocations: 10872)
+
+
+Started GET "/lists" for 127.0.0.1 at 2023-10-31 16:04:36 -0700
+Processing by ListsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering lists/index.html.erb within layouts/application
+  [1m[36mList Load (0.3ms)[0m  [1m[34mSELECT "lists".* FROM "lists"[0m
+  ↳ app/views/lists/index.html.erb:15
+  Rendered lists/index.html.erb within layouts/application (Duration: 1.7ms | Allocations: 1282)
+  Rendered shared/_navbar.html.erb (Duration: 0.1ms | Allocations: 274)
+  Rendered layout layouts/application.html.erb (Duration: 9.8ms | Allocations: 11029)
+Completed 200 OK in 10ms (Views: 9.7ms | ActiveRecord: 0.3ms | Allocations: 11477)
+
+
+Started GET "/about" for 127.0.0.1 at 2023-10-31 16:04:37 -0700
+Processing by AboutController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering about/index.html.erb within layouts/application
+  Rendered about/index.html.erb within layouts/application (Duration: 0.1ms | Allocations: 7)
+  Rendered shared/_navbar.html.erb (Duration: 0.3ms | Allocations: 283)
+  Rendered layout layouts/application.html.erb (Duration: 18.0ms | Allocations: 9760)
+Completed 200 OK in 20ms (Views: 18.6ms | ActiveRecord: 0.0ms | Allocations: 10188)
+
+
+Started GET "/lists" for 127.0.0.1 at 2023-10-31 16:04:38 -0700
+Processing by ListsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering lists/index.html.erb within layouts/application
+  [1m[36mList Load (0.5ms)[0m  [1m[34mSELECT "lists".* FROM "lists"[0m
+  ↳ app/views/lists/index.html.erb:15
+  Rendered lists/index.html.erb within layouts/application (Duration: 4.8ms | Allocations: 1281)
+  Rendered shared/_navbar.html.erb (Duration: 0.3ms | Allocations: 274)
+  Rendered layout layouts/application.html.erb (Duration: 24.3ms | Allocations: 11004)
+Completed 200 OK in 26ms (Views: 24.4ms | ActiveRecord: 0.5ms | Allocations: 11434)
+
+
+Started GET "/" for 127.0.0.1 at 2023-10-31 16:04:38 -0700
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 0.1ms | Allocations: 7)
+  Rendered shared/_navbar.html.erb (Duration: 0.4ms | Allocations: 283)
+  Rendered layout layouts/application.html.erb (Duration: 17.5ms | Allocations: 9737)
+Completed 200 OK in 20ms (Views: 18.2ms | ActiveRecord: 0.0ms | Allocations: 10160)
+
+
+Started GET "/expense_trackers" for 127.0.0.1 at 2023-10-31 16:12:50 -0700
+Processing by ExpenseTrackersController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering expense_trackers/index.html.erb within layouts/application
+  Rendered expense_trackers/_form.html.erb (Duration: 3.7ms | Allocations: 1197)
+  Rendered expense_trackers/index.html.erb within layouts/application (Duration: 4.0ms | Allocations: 1262)
+  Rendered layout layouts/application.html.erb (Duration: 4.2ms | Allocations: 1350)
+Completed 500 Internal Server Error in 8ms (ActiveRecord: 0.0ms | Allocations: 1771)
+
+
+  
+ActionView::SyntaxErrorInTemplate (Encountered a syntax error while rendering template: check <% @form do |form| %>
+    put "aaaaaaaa"
+<%end %>
+):
+1:    <% @form do |form| %>
+2:        put "aaaaaaaa"
+3:    <%end %>
+  
+app/views/expense_trackers/_form.html.erb:1: syntax error, unexpected `do', expecting `end' or dummy end
+app/views/expense_trackers/_form.html.erb:5: syntax error, unexpected `end'
+app/views/expense_trackers/_form.html.erb:1: syntax error, unexpected `do', expecting `end' or dummy end
+app/views/expense_trackers/_form.html.erb:5: syntax error, unexpected `end'
+app/views/expense_trackers/_form.html.erb:1: syntax error, unexpected `do', expecting `end' or dummy end
+app/views/expense_trackers/_form.html.erb:5: syntax error, unexpected `end'
+app/views/expense_trackers/_form.html.erb:1: syntax error, unexpected `do', expecting `end' or dummy end
+app/views/expense_trackers/_form.html.erb:5: syntax error, unexpected `end'
+app/views/expense_trackers/index.html.erb:5
+Started GET "/expense_trackers" for 127.0.0.1 at 2023-10-31 16:13:00 -0700
+Processing by ExpenseTrackersController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering expense_trackers/index.html.erb within layouts/application
+  Rendered expense_trackers/_form.html.erb (Duration: 1.2ms | Allocations: 1202)
+  Rendered expense_trackers/index.html.erb within layouts/application (Duration: 2.1ms | Allocations: 1475)
+  Rendered layout layouts/application.html.erb (Duration: 2.2ms | Allocations: 1564)
+Completed 500 Internal Server Error in 5ms (ActiveRecord: 0.0ms | Allocations: 2545)
+
+
+  
+ActionView::SyntaxErrorInTemplate (Encountered a syntax error while rendering template: check <% @form do |form| %>
+    put "aaaaaaaa"
+<%end %>
+):
+1:    <% @form do |form| %>
+2:        put "aaaaaaaa"
+3:    <%end %>
+  
+app/views/expense_trackers/_form.html.erb:1: syntax error, unexpected `do', expecting `end' or dummy end
+app/views/expense_trackers/_form.html.erb:5: syntax error, unexpected `end'
+app/views/expense_trackers/_form.html.erb:1: syntax error, unexpected `do', expecting `end' or dummy end
+app/views/expense_trackers/_form.html.erb:5: syntax error, unexpected `end'
+app/views/expense_trackers/_form.html.erb:1: syntax error, unexpected `do', expecting `end' or dummy end
+app/views/expense_trackers/_form.html.erb:5: syntax error, unexpected `end'
+app/views/expense_trackers/_form.html.erb:1: syntax error, unexpected `do', expecting `end' or dummy end
+app/views/expense_trackers/_form.html.erb:5: syntax error, unexpected `end'
+app/views/expense_trackers/index.html.erb:5
+Started GET "/expense_trackers" for 127.0.0.1 at 2023-10-31 16:13:02 -0700
+Processing by ExpenseTrackersController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering expense_trackers/index.html.erb within layouts/application
+  Rendered expense_trackers/_form.html.erb (Duration: 1.4ms | Allocations: 1192)
+  Rendered expense_trackers/index.html.erb within layouts/application (Duration: 2.2ms | Allocations: 1257)
+  Rendered layout layouts/application.html.erb (Duration: 2.4ms | Allocations: 1345)
+Completed 500 Internal Server Error in 7ms (ActiveRecord: 0.0ms | Allocations: 1767)
+
+
+  
+ActionView::SyntaxErrorInTemplate (Encountered a syntax error while rendering template: check <% @form do |form| %>
+    put "aaaaaaaa"
+<%end %>
+):
+1:    <% @form do |form| %>
+2:        put "aaaaaaaa"
+3:    <%end %>
+  
+app/views/expense_trackers/_form.html.erb:1: syntax error, unexpected `do', expecting `end' or dummy end
+app/views/expense_trackers/_form.html.erb:5: syntax error, unexpected `end'
+app/views/expense_trackers/_form.html.erb:1: syntax error, unexpected `do', expecting `end' or dummy end
+app/views/expense_trackers/_form.html.erb:5: syntax error, unexpected `end'
+app/views/expense_trackers/_form.html.erb:1: syntax error, unexpected `do', expecting `end' or dummy end
+app/views/expense_trackers/_form.html.erb:5: syntax error, unexpected `end'
+app/views/expense_trackers/_form.html.erb:1: syntax error, unexpected `do', expecting `end' or dummy end
+app/views/expense_trackers/_form.html.erb:5: syntax error, unexpected `end'
+app/views/expense_trackers/index.html.erb:5
+Started GET "/expense_trackers" for 127.0.0.1 at 2023-10-31 16:13:13 -0700
+Processing by ExpenseTrackersController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering expense_trackers/index.html.erb within layouts/application
+  Rendered expense_trackers/_form.html.erb (Duration: 0.9ms | Allocations: 1202)
+  Rendered expense_trackers/index.html.erb within layouts/application (Duration: 2.0ms | Allocations: 1476)
+  Rendered layout layouts/application.html.erb (Duration: 2.2ms | Allocations: 1565)
+Completed 500 Internal Server Error in 7ms (ActiveRecord: 0.0ms | Allocations: 2546)
+
+
+  
+ActionView::SyntaxErrorInTemplate (Encountered a syntax error while rendering template: check <% @form do |form| %>
+    put "aaaaaaaa"
+<%end %>
+):
+1:    <% @form do |form| %>
+2:        put "aaaaaaaa"
+3:    <%end %>
+  
+app/views/expense_trackers/_form.html.erb:1: syntax error, unexpected `do', expecting `end' or dummy end
+app/views/expense_trackers/_form.html.erb:5: syntax error, unexpected `end'
+app/views/expense_trackers/_form.html.erb:1: syntax error, unexpected `do', expecting `end' or dummy end
+app/views/expense_trackers/_form.html.erb:5: syntax error, unexpected `end'
+app/views/expense_trackers/_form.html.erb:1: syntax error, unexpected `do', expecting `end' or dummy end
+app/views/expense_trackers/_form.html.erb:5: syntax error, unexpected `end'
+app/views/expense_trackers/_form.html.erb:1: syntax error, unexpected `do', expecting `end' or dummy end
+app/views/expense_trackers/_form.html.erb:5: syntax error, unexpected `end'
+app/views/expense_trackers/index.html.erb:5
+Started GET "/" for 127.0.0.1 at 2023-10-31 16:13:15 -0700
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 1.1ms | Allocations: 105)
+  Rendered shared/_navbar.html.erb (Duration: 0.9ms | Allocations: 679)
+  Rendered layout layouts/application.html.erb (Duration: 21.5ms | Allocations: 10867)
+Completed 200 OK in 26ms (Views: 24.0ms | ActiveRecord: 0.0ms | Allocations: 11627)
+
+
+Started GET "/expense_trackers" for 127.0.0.1 at 2023-10-31 16:13:19 -0700
+Processing by ExpenseTrackersController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering expense_trackers/index.html.erb within layouts/application
+  Rendered expense_trackers/_form.html.erb (Duration: 0.8ms | Allocations: 1192)
+  Rendered expense_trackers/index.html.erb within layouts/application (Duration: 1.1ms | Allocations: 1257)
+  Rendered layout layouts/application.html.erb (Duration: 1.2ms | Allocations: 1345)
+Completed 500 Internal Server Error in 3ms (ActiveRecord: 0.0ms | Allocations: 1762)
+
+
+  
+ActionView::SyntaxErrorInTemplate (Encountered a syntax error while rendering template: check <% @form do |form| %>
+    put "aaaaaaaa"
+<%end %>
+):
+1:    <% @form do |form| %>
+2:        put "aaaaaaaa"
+3:    <%end %>
+  
+app/views/expense_trackers/_form.html.erb:1: syntax error, unexpected `do', expecting `end' or dummy end
+app/views/expense_trackers/_form.html.erb:5: syntax error, unexpected `end'
+app/views/expense_trackers/_form.html.erb:1: syntax error, unexpected `do', expecting `end' or dummy end
+app/views/expense_trackers/_form.html.erb:5: syntax error, unexpected `end'
+app/views/expense_trackers/_form.html.erb:1: syntax error, unexpected `do', expecting `end' or dummy end
+app/views/expense_trackers/_form.html.erb:5: syntax error, unexpected `end'
+app/views/expense_trackers/_form.html.erb:1: syntax error, unexpected `do', expecting `end' or dummy end
+app/views/expense_trackers/_form.html.erb:5: syntax error, unexpected `end'
+app/views/expense_trackers/index.html.erb:5
+Started GET "/expense_trackers" for 127.0.0.1 at 2023-10-31 16:13:33 -0700
+Processing by ExpenseTrackersController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering expense_trackers/index.html.erb within layouts/application
+  Rendered expense_trackers/_form.html.erb (Duration: 1.0ms | Allocations: 1202)
+  Rendered expense_trackers/index.html.erb within layouts/application (Duration: 1.7ms | Allocations: 1476)
+  Rendered layout layouts/application.html.erb (Duration: 1.8ms | Allocations: 1565)
+Completed 500 Internal Server Error in 7ms (ActiveRecord: 0.0ms | Allocations: 2540)
+
+
+  
+ActionView::SyntaxErrorInTemplate (Encountered a syntax error while rendering template: check <% @form do |form| %>
+    put "aaaaaaaa"
+<%end %>
+):
+1:    <% @form do |form| %>
+2:        put "aaaaaaaa"
+3:    <%end %>
+  
+app/views/expense_trackers/_form.html.erb:1: syntax error, unexpected `do', expecting `end' or dummy end
+app/views/expense_trackers/_form.html.erb:5: syntax error, unexpected `end'
+app/views/expense_trackers/_form.html.erb:1: syntax error, unexpected `do', expecting `end' or dummy end
+app/views/expense_trackers/_form.html.erb:5: syntax error, unexpected `end'
+app/views/expense_trackers/_form.html.erb:1: syntax error, unexpected `do', expecting `end' or dummy end
+app/views/expense_trackers/_form.html.erb:5: syntax error, unexpected `end'
+app/views/expense_trackers/_form.html.erb:1: syntax error, unexpected `do', expecting `end' or dummy end
+app/views/expense_trackers/_form.html.erb:5: syntax error, unexpected `end'
+app/views/expense_trackers/index.html.erb:5
+Started GET "/expense_trackers" for 127.0.0.1 at 2023-10-31 16:13:34 -0700
+Processing by ExpenseTrackersController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering expense_trackers/index.html.erb within layouts/application
+  Rendered expense_trackers/_form.html.erb (Duration: 1.0ms | Allocations: 1192)
+  Rendered expense_trackers/index.html.erb within layouts/application (Duration: 1.3ms | Allocations: 1257)
+  Rendered layout layouts/application.html.erb (Duration: 1.5ms | Allocations: 1345)
+Completed 500 Internal Server Error in 4ms (ActiveRecord: 0.0ms | Allocations: 1761)
+
+
+  
+ActionView::SyntaxErrorInTemplate (Encountered a syntax error while rendering template: check <% @form do |form| %>
+    put "aaaaaaaa"
+<%end %>
+):
+1:    <% @form do |form| %>
+2:        put "aaaaaaaa"
+3:    <%end %>
+  
+app/views/expense_trackers/_form.html.erb:1: syntax error, unexpected `do', expecting `end' or dummy end
+app/views/expense_trackers/_form.html.erb:5: syntax error, unexpected `end'
+app/views/expense_trackers/_form.html.erb:1: syntax error, unexpected `do', expecting `end' or dummy end
+app/views/expense_trackers/_form.html.erb:5: syntax error, unexpected `end'
+app/views/expense_trackers/_form.html.erb:1: syntax error, unexpected `do', expecting `end' or dummy end
+app/views/expense_trackers/_form.html.erb:5: syntax error, unexpected `end'
+app/views/expense_trackers/_form.html.erb:1: syntax error, unexpected `do', expecting `end' or dummy end
+app/views/expense_trackers/_form.html.erb:5: syntax error, unexpected `end'
+app/views/expense_trackers/index.html.erb:5
+Started GET "/expense_trackers" for 127.0.0.1 at 2023-10-31 16:13:44 -0700
+Processing by ExpenseTrackersController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering expense_trackers/index.html.erb within layouts/application
+  Rendered expense_trackers/index.html.erb within layouts/application (Duration: 0.7ms | Allocations: 136)
+  Rendered shared/_navbar.html.erb (Duration: 5.0ms | Allocations: 685)
+  Rendered layout layouts/application.html.erb (Duration: 23.5ms | Allocations: 10915)
+Completed 200 OK in 29ms (Views: 25.8ms | ActiveRecord: 0.0ms | Allocations: 11924)
+
+
+Started GET "/expense_trackers" for 127.0.0.1 at 2023-10-31 16:17:23 -0700
+Processing by ExpenseTrackersController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering expense_trackers/index.html.erb within layouts/application
+  Rendered expense_trackers/index.html.erb within layouts/application (Duration: 1.0ms | Allocations: 139)
+  Rendered shared/_navbar.html.erb (Duration: 1.1ms | Allocations: 679)
+  Rendered layout layouts/application.html.erb (Duration: 40.9ms | Allocations: 10693)
+Completed 200 OK in 47ms (Views: 44.5ms | ActiveRecord: 0.0ms | Allocations: 11705)
+
+
+Started GET "/expense_trackers" for 127.0.0.1 at 2023-10-31 16:17:38 -0700
+Processing by ExpenseTrackersController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering expense_trackers/index.html.erb within layouts/application
+  Rendered expense_trackers/index.html.erb within layouts/application (Duration: 0.7ms | Allocations: 136)
+  Rendered shared/_navbar.html.erb (Duration: 1.0ms | Allocations: 679)
+  Rendered layout layouts/application.html.erb (Duration: 17.0ms | Allocations: 10679)
+Completed 200 OK in 23ms (Views: 20.1ms | ActiveRecord: 0.0ms | Allocations: 11677)
+
+
+Started GET "/expense_trackers" for 127.0.0.1 at 2023-10-31 16:17:49 -0700
+Processing by ExpenseTrackersController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering expense_trackers/index.html.erb within layouts/application
+  Rendered expense_trackers/index.html.erb within layouts/application (Duration: 0.6ms | Allocations: 136)
+  Rendered shared/_navbar.html.erb (Duration: 0.8ms | Allocations: 679)
+  Rendered layout layouts/application.html.erb (Duration: 10.5ms | Allocations: 10677)
+Completed 200 OK in 16ms (Views: 13.7ms | ActiveRecord: 0.0ms | Allocations: 11697)
+
+
+Started GET "/expense_trackers" for 127.0.0.1 at 2023-10-31 16:17:58 -0700
+Processing by ExpenseTrackersController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering expense_trackers/index.html.erb within layouts/application
+  Rendered expense_trackers/index.html.erb within layouts/application (Duration: 0.6ms | Allocations: 136)
+  Rendered shared/_navbar.html.erb (Duration: 0.5ms | Allocations: 682)
+  Rendered layout layouts/application.html.erb (Duration: 22.1ms | Allocations: 10800)
+Completed 200 OK in 27ms (Views: 24.5ms | ActiveRecord: 0.0ms | Allocations: 11806)
+
+
+Started GET "/expense_trackers" for 127.0.0.1 at 2023-10-31 16:20:07 -0700
+Processing by ExpenseTrackersController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering expense_trackers/index.html.erb within layouts/application
+  Rendered expense_trackers/index.html.erb within layouts/application (Duration: 1.3ms | Allocations: 136)
+  Rendered shared/_navbar.html.erb (Duration: 1.3ms | Allocations: 680)
+  Rendered layout layouts/application.html.erb (Duration: 23.6ms | Allocations: 10749)
+Completed 200 OK in 31ms (Views: 27.7ms | ActiveRecord: 0.0ms | Allocations: 11754)
+
+
+Started GET "/sign_in" for 127.0.0.1 at 2023-10-31 16:31:05 -0700
+Processing by SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (Duration: 3.9ms | Allocations: 2531)
+  Rendered shared/_navbar.html.erb (Duration: 0.4ms | Allocations: 299)
+  Rendered layout layouts/application.html.erb (Duration: 21.3ms | Allocations: 12355)
+Completed 200 OK in 31ms (Views: 25.5ms | ActiveRecord: 0.0ms | Allocations: 13124)
+
+
+Started GET "/sign_in" for 127.0.0.1 at 2023-10-31 16:31:14 -0700
+Processing by SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (Duration: 3.7ms | Allocations: 2537)
+  Rendered shared/_navbar.html.erb (Duration: 1.1ms | Allocations: 660)
+  Rendered layout layouts/application.html.erb (Duration: 20.3ms | Allocations: 13050)
+Completed 200 OK in 26ms (Views: 23.4ms | ActiveRecord: 0.0ms | Allocations: 14050)
+
+
+Started GET "/sign_in" for 127.0.0.1 at 2023-10-31 16:31:27 -0700
+Processing by SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (Duration: 2.0ms | Allocations: 2541)
+  Rendered shared/_navbar.html.erb (Duration: 0.7ms | Allocations: 661)
+  Rendered layout layouts/application.html.erb (Duration: 18.5ms | Allocations: 13274)
+Completed 200 OK in 34ms (Views: 31.9ms | ActiveRecord: 0.0ms | Allocations: 14264)
+
+
+Started GET "/expense_trackers" for 127.0.0.1 at 2023-10-31 16:32:23 -0700
+Processing by ExpenseTrackersController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering expense_trackers/index.html.erb within layouts/application
+  Rendered expense_trackers/index.html.erb within layouts/application (Duration: 20.9ms | Allocations: 2556)
+  Rendered shared/_navbar.html.erb (Duration: 1.4ms | Allocations: 660)
+  Rendered layout layouts/application.html.erb (Duration: 41.0ms | Allocations: 13191)
+Completed 200 OK in 49ms (Views: 45.5ms | ActiveRecord: 0.0ms | Allocations: 14198)
+
+
+Started GET "/expense_trackers" for 127.0.0.1 at 2023-10-31 18:49:11 -0700
+Processing by ExpenseTrackersController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering expense_trackers/index.html.erb within layouts/application
+  Rendered expense_trackers/index.html.erb within layouts/application (Duration: 17.2ms | Allocations: 2236)
+  Rendered shared/_navbar.html.erb (Duration: 0.2ms | Allocations: 274)
+  Rendered layout layouts/application.html.erb (Duration: 42.4ms | Allocations: 11958)
+Completed 200 OK in 46ms (Views: 43.2ms | ActiveRecord: 0.0ms | Allocations: 12407)
+
+
+Started GET "/expense_trackers" for 127.0.0.1 at 2023-10-31 18:49:25 -0700
+Processing by ExpenseTrackersController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering expense_trackers/index.html.erb within layouts/application
+  Rendered expense_trackers/index.html.erb within layouts/application (Duration: 1.0ms | Allocations: 137)
+  Rendered shared/_navbar.html.erb (Duration: 1.2ms | Allocations: 679)
+  Rendered layout layouts/application.html.erb (Duration: 19.5ms | Allocations: 10678)
+Completed 200 OK in 27ms (Views: 23.8ms | ActiveRecord: 0.0ms | Allocations: 11697)
+
+
+Started GET "/expense_trackers" for 127.0.0.1 at 2023-10-31 18:49:26 -0700
+Processing by ExpenseTrackersController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering expense_trackers/index.html.erb within layouts/application
+  Rendered expense_trackers/index.html.erb within layouts/application (Duration: 0.1ms | Allocations: 7)
+  Rendered shared/_navbar.html.erb (Duration: 0.2ms | Allocations: 283)
+  Rendered layout layouts/application.html.erb (Duration: 27.4ms | Allocations: 9944)
+Completed 200 OK in 30ms (Views: 28.2ms | ActiveRecord: 0.0ms | Allocations: 10392)
+
+
+Started GET "/notes" for 127.0.0.1 at 2023-10-31 18:49:27 -0700
+Processing by NotesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering notes/index.html.erb within layouts/application
+  [1m[36mNote Load (2.1ms)[0m  [1m[34mSELECT "notes".* FROM "notes" ORDER BY created_at DESC[0m
+  ↳ app/views/notes/index.html.erb:24
+  Rendered notes/index.html.erb within layouts/application (Duration: 8.4ms | Allocations: 1043)
+  Rendered shared/_navbar.html.erb (Duration: 0.4ms | Allocations: 297)
+  Rendered layout layouts/application.html.erb (Duration: 32.1ms | Allocations: 11085)
+Completed 200 OK in 183ms (Views: 33.3ms | ActiveRecord: 12.8ms | Allocations: 14822)
+
+
+Started GET "/expense_trackers" for 127.0.0.1 at 2023-10-31 18:49:28 -0700
+Processing by ExpenseTrackersController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering expense_trackers/index.html.erb within layouts/application
+  Rendered expense_trackers/index.html.erb within layouts/application (Duration: 0.1ms | Allocations: 7)
+  Rendered shared/_navbar.html.erb (Duration: 0.2ms | Allocations: 283)
+  Rendered layout layouts/application.html.erb (Duration: 14.6ms | Allocations: 9738)
+Completed 200 OK in 17ms (Views: 15.1ms | ActiveRecord: 0.0ms | Allocations: 10209)
+
+
