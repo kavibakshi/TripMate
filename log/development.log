@@ -14123,6 +14123,7 @@ Completed 200 OK in 84ms (Views: 77.2ms | ActiveRecord: 0.5ms | Allocations: 133
 
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 Started GET "/" for 127.0.0.1 at 2023-10-27 13:32:49 -0700
   
 ActiveRecord::ConnectionNotEstablished (connection to server at "::1", port 5432 failed: server closed the connection unexpectedly
@@ -16082,5 +16083,7 @@ Processing by NotesController#index as HTML
 Completed 200 OK in 84ms (Views: 77.9ms | ActiveRecord: 0.5ms | Allocations: 12441)
 
 
+=======
+>>>>>>> 80748e4dc72b915ddd4fbf67f5529081a8edd7d1
 =======
 >>>>>>> 80748e4dc72b915ddd4fbf67f5529081a8edd7d1
