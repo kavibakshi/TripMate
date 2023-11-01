@@ -1,6 +1,8 @@
 # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
 
 Rails.application.routes.draw do
+  get '/map', to: 'map#index'
+  resources :itineraries
   resources :lists
   resources :notes
   get "about", to:"about#index", as: :about
