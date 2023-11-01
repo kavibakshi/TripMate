@@ -1,0 +1,41 @@
+<div class="d-flex align-items-center justify-content-center">
+    <h1 class="title">My Notes<h1> 
+</div>
+
+<section class="section">
+    <div class="container">
+        <nav class="level">
+            <!-- left side -->
+            <div class="level-left">
+                <p class="level-item">
+                    <strong></strong>
+                </p>
+            </div>
+
+            <!-- right side -->
+            <div class="level-right">
+                <p class="level-item">
+                    <%= link_to "New", new_note_path(@note), class: "button" %>
+                </p>
+            </div>
+        </nav>
+
+
+        <% @notes.each do |note| %>
+            <div class="card">
+                <div class="card-content">
+                    <div class="media">
+                        <div class="media-content">
+                            <p class="title is-4"> 
+                                <%= link_to note.title, note %>
+                            </p>
+                        </div>
+                    </div>
+                    <div class="content">
+                        <%= note.content %>
+                    </div>
+                </div>
+            </div>
+        <% end %>
+    </div>
+</section>

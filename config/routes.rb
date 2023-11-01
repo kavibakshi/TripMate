@@ -2,8 +2,13 @@
 
 Rails.application.routes.draw do
   get '/map', to: 'map#index'
+  resources :itineraries
   resources :lists
-  get "about-page", to:"about#index", as: :about
+  resources :notes
+  get "about", to:"about#index", as: :about
+  get "lists", to:"lists#index"
+  get "notes", to: "notes#index"
+
 
   get "sign_up", to: "registrations#new"
   post "sign_up", to: "registrations#create"
