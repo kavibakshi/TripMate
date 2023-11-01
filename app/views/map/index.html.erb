@@ -60,7 +60,7 @@
             const lat = pos.coords.latitude;
             const lng = pos.coords.longitude;
             const accuracy = pos.coords.accuracy;
-
+            
             let marker = L.marker([lat,lng]).addTo(map);
             let circle = L.circle([lat,lng],{radius:accuracy}).addTo(map);
             
