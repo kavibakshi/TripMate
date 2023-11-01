@@ -4,6 +4,7 @@ Rails.application.routes.draw do
   resources :itineraries
   resources :lists
   resources :notes
+  get "map", to: "map#index"
   get "about", to:"about#index", as: :about
   get "lists", to:"lists#index"
   get "notes", to: "notes#index"
