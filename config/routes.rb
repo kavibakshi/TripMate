@@ -5,10 +5,12 @@ Rails.application.routes.draw do
   resources :lists
   resources :notes
   resources :expense_tracker
+
   get "about", to:"about#index", as: :about
   get "lists", to:"lists#index"
   get "notes", to: "notes#index"
   get "expense_trackers", to: "expense_trackers#index"
+  get "map", to: "map#index"
 
 
   get "sign_up", to: "registrations#new"
