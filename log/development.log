@@ -14120,5 +14120,3 @@ Processing by ItinerariesController#index as HTML
   Rendered shared/_navbar.html.erb (Duration: 0.3ms | Allocations: 273)
   Rendered layout layouts/application.html.erb (Duration: 75.2ms | Allocations: 12812)
 Completed 200 OK in 84ms (Views: 77.2ms | ActiveRecord: 0.5ms | Allocations: 13300)
-
-
