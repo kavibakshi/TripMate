@@ -35,16 +35,10 @@ class WeatherController < ApplicationController
         @pressure_output = @output['main']['pressure']
         @humidity_output = @output['main']['humidity']
       end
+      @city_specified = true # City is specified
     else
       # When the user doesn't provide a city
-      @city_output = "City not specified"
-      @country_output = ""
-      @weather_output = ""
-      @icon_output = ""
-      @temp_output = ""
-      @feelslike_output = ""
-      @pressure_output = ""
-      @humidity_output = ""
+      @city_specified = false # City is not specified
     end
 
     respond_to do |format|
