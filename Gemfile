@@ -31,6 +31,9 @@ gem "jbuilder"
 gem 'bootstrap', '~> 5.3', '>= 5.3.1'
 gem 'jquery-rails'
 
+# JSON implementation as a Ruby extension in C
+gem 'json', '~> 2.6', '>= 2.6.3'
+
 # Use Redis adapter to run Action Cable in production
 # gem "redis", "~> 4.0"
 

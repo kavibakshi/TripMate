@@ -1,0 +1,36 @@
+<h1 class="title">Current Weather<h1> 
+
+<!-- City submission form -->
+<%= form_tag(weather_index_path, method: :get, id: "weather-form") do %>
+  <label for="city">Enter a City:</label>
+  <%= text_field_tag(:city, nil, id: "city", required: true) %>
+  <%= submit_tag("Get Weather") %>
+<% end %>
+
+<br/>
+
+<!-- Display weather data -->
+<div id="jumbotron-container">
+    <h1 class = "display-4"><%= @weather_output %></h1>
+    <img src="http://openweathermap.org/img/wn/<%= @icon_output %>@2x.png" />
+    <hr class="my-4">
+    <p class="lead">This is the current weather reading in <%= @city_output %>, <%= @country_output %></p>
+    <hr class="my-4">
+    <p>Temperature: <%= @temp_output %>&#8451;</p>
+    <p>Feels Like: <%= @feelslike_output %>&#8451;</p>
+    <p>Pressure: <%= @pressure_output %> hPa</p>
+    <p>Humidity: <%= @humidity_output %>%</p>
+    <hr class="my-4">
+    <p>Reload your web browser to update the weather reading.</p>
+</div>
+
+<br/>
+
+<!-- Page display logic -->
+<script>
+  $('#weather-form').on('ajax:success', function (event, data, status, xhr) {
+    $('#jumbotron-container').empty(); // Clear existing content
+    $('#jumbotron-container').show(); // Display the jumbotron
+    $('#jumbotron-container').html(data); // Update the jumbotron content
+  });
+</script>
