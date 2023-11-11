@@ -33,7 +33,7 @@
 
         <input type="text" id="locationInput" placeholder="Search for a location">
         <button onclick="searchLocation()">Search</button>
-        <button onclick="liveLocation">Current Location</button>
+        <button onclick="liveLocation()">Current Location</button>
 
 
         <div id="map"></div>
@@ -61,8 +61,8 @@
             const lng = pos.coords.longitude;
             const accuracy = pos.coords.accuracy;
             
-            let marker = L.marker([lat,lng]).addTo(map);
-            let circle = L.circle([lat,lng],{radius:accuracy}).addTo(map);
+            marker = L.marker([lat,lng]).addTo(map);
+            circle = L.circle([lat,lng],{radius:accuracy}).addTo(map);
             
             map.fitBounds(circle.getBounds());
 
@@ -98,8 +98,14 @@
               });
           }
           
-
-
+        function liveLocation() {
+            if (circle) {
+                map.fitBounds(circle.getBounds());
+            } else {
+                alert('Current location not available.');
+            }
+        }
+        
     </script>
 
 </html>
