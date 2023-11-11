@@ -26,9 +26,12 @@
 
         <style>
             #map { height: 350px; }
-            #map { height: 400px; }
             #add-to-itinerary-button { font-weight: normal; color: gray; }
             #add-to-itinerary-button.active { font-weight: bold; color: green; }
+            #remove-from-map-button {font-weight: normal; color: gray}
+            #remove-from-map-button.active {font-weight: normal; color: red}
+
+
         </style>
     </head>
 
@@ -38,6 +41,7 @@
         <button onclick="searchLocation()">Search</button>
         <button onclick="liveLocation()">Current Location</button>
         <button id="add-to-itinerary-button" onclick="addToItinerary()">Add to Itinerary</button>
+        <button id="remove-from-map-button" onclick="removeFromMap()">Remove Marker</button>
         <div id="map"></div>
         
     </body>
@@ -65,6 +69,7 @@
 
             if(marker){
                 map.removeLayer(marker);
+                map.removeLayer(circle);
             }
             
             marker = L.marker([lat,lng]).addTo(map);
@@ -145,12 +150,31 @@
             }
         }
 
-        function updateButtonStyle() {
-            const button = document.getElementById('add-to-itinerary-button');
+        function removeFromMap() {
             if (selectedMarker) {
-                button.classList.add('active');
+                map.removeLayer(selectedMarker);
+
+                const index = chosen_markers.indexOf(selectedMarker);
+                if (index !== -1) {
+                    chosen_markers.splice(index, 1);
+                }
+
+                selectedMarker = null;
+                updateButtonStyle();
             } else {
-                button.classList.remove('active');
+                alert('Please select a marker to remove.');
+            }
+        }
+        function updateButtonStyle() {
+            const addButton = document.getElementById('add-to-itinerary-button');
+            const removeButton = document.getElementById('remove-from-map-button');
+
+            if (selectedMarker) {
+                addButton.classList.add('active');
+                removeButton.classList.add('active');
+            } else {
+                addButton.classList.remove('active');
+                removeButton.classList.remove('active');
             }
         }
 
