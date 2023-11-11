@@ -26,6 +26,9 @@
 
         <style>
             #map { height: 350px; }
+            #map { height: 400px; }
+            #add-to-itinerary-button { font-weight: normal; color: gray; }
+            #add-to-itinerary-button.active { font-weight: bold; color: green; }
         </style>
     </head>
 
@@ -34,8 +37,7 @@
         <input type="text" id="locationInput" placeholder="Search for a location">
         <button onclick="searchLocation()">Search</button>
         <button onclick="liveLocation()">Current Location</button>
-
-
+        <button id="add-to-itinerary-button" onclick="addToItinerary()">Add to Itinerary</button>
         <div id="map"></div>
         
     </body>
@@ -60,6 +62,10 @@
             const lat = pos.coords.latitude;
             const lng = pos.coords.longitude;
             const accuracy = pos.coords.accuracy;
+
+            if(marker){
+                map.removeLayer(marker);
+            }
             
             marker = L.marker([lat,lng]).addTo(map);
             circle = L.circle([lat,lng],{radius:accuracy}).addTo(map);
@@ -106,6 +112,49 @@
             }
         }
         
+        var chosen_markers = [];
+        var selectedMarker = null;
+
+        function addMarker(lat, lng) {
+            const newMarker = L.marker([lat, lng]).addTo(map);
+
+            newMarker.on('click', function () {
+                selectedMarker = newMarker;
+                updateButtonStyle();
+            });
+
+            chosen_markers.push(newMarker);
+        }
+
+        map.on('click', function (e) {
+            const lat = e.latlng.lat;
+            const lng = e.latlng.lng;
+        
+            addMarker(lat, lng);
+        });
+
+        function addToItinerary() {
+            if (selectedMarker) {
+                const lat = selectedMarker.getLatLng().lat;
+                const lng = selectedMarker.getLatLng().lng;
+                console.log(`Adding marker to itinerary: Lat ${lat}, Lng ${lng}`);
+                selectedMarker = null;
+                updateButtonStyle();
+            } else {
+                alert('Please select a marker.');
+            }
+        }
+
+        function updateButtonStyle() {
+            const button = document.getElementById('add-to-itinerary-button');
+            if (selectedMarker) {
+                button.classList.add('active');
+            } else {
+                button.classList.remove('active');
+            }
+        }
+
+
     </script>
 
 </html>
