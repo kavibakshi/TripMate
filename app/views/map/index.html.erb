@@ -44,7 +44,15 @@
         maxZoom: 19,
         attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
     }).addTo(map);
-    L.Control.geocoder().addTo(map);
+    var geocoder = L.Control.geocoder({
+        defaultMarkGeocode: false
+    })
+        .on('markgeocode', function (e) {
+            var latlng = e.geocode.center;
+            map.panTo(latlng);
+        })
+        .addTo(map);
+    
     
     document.addEventListener("DOMContentLoaded", function () {
         navigator.geolocation.getCurrentPosition(success, error);
