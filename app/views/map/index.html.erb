@@ -22,6 +22,7 @@
 </head>
 
 <body>
+
     <button onclick="liveLocation()">Current Location</button>
     <button id="add-to-itinerary-button" onclick="addToItinerary()">Add to Workspace</button>
     <button id="remove-from-map-button" onclick="removeFromMap()">Remove Marker</button>
@@ -37,24 +38,17 @@
         popupAnchor: [-3, -76],
     });
     
-    // Default view
     map.setView([51.505, -0.09], 13);
 
     L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
         maxZoom: 19,
         attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
     }).addTo(map);
-
-    var geocoder = L.Control.geocoder({
-        defaultMarkGeocode: false,
-        collapsed: false,
-        placeholder: "Search for a location",
-        geocoder: L.Control.Geocoder.nominatim({
-            autoComplete: true,
-        }),
-    }).addTo(map);
-
-    navigator.geolocation.watchPosition(success, error);
+    L.Control.geocoder().addTo(map);
+    
+    document.addEventListener("DOMContentLoaded", function () {
+        navigator.geolocation.getCurrentPosition(success, error);
+    });
 
     let marker, circle, zoomed;
 
@@ -83,9 +77,7 @@
     }
 
     map.on('moveend', function() {
-        // Get the center of the map
         const center = map.getCenter();
-        // Get the current country based on the center of the map
         getCurrentCountry(center.lat, center.lng);
     });
 
@@ -103,9 +95,6 @@
             });
     }
 
-    function updateGeocoderCountry(country) {
-        geocoder.options.geocoder.geocodingQueryParams.countrycodes = country;
-    }
 
     function liveLocation() {
         if (circle) {
