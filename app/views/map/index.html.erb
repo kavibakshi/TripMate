@@ -1,184 +1,218 @@
-# <!DOCTYPE html>
-# <html>
-#   <head>
-#     <title>Your Map Page</title>
-
-#     <link rel="stylesheet" href="map.css">
-#   </head>
-  
-#   <body>
-    
-#     <div id="map"></div>
-
-#     <script src="maps.js"></script>
-#   </body>
-# </html>
 <!DOCTYPE html>
 <html>
-    <head>
-        <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
-        integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY="
-        crossorigin=""/>
-        
-        <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
-        integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo="
-        crossorigin=""></script>
+<head>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+    integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY="
+    crossorigin=""/>
+    
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+    integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo="
+    crossorigin=""></script>
 
-        <style>
-            #map { height: 350px; }
-            #add-to-itinerary-button { font-weight: normal; color: gray; }
-            #add-to-itinerary-button.active { font-weight: bold; color: green; }
-            #remove-from-map-button {font-weight: normal; color: gray}
-            #remove-from-map-button.active {font-weight: normal; color: red}
+    <link rel="stylesheet" href="https://unpkg.com/leaflet-control-geocoder/dist/Control.Geocoder.css" />
+    <script src="https://unpkg.com/leaflet-control-geocoder/dist/Control.Geocoder.js"></script>
 
+    <style>
+        #map { height: 350px; }
+        #add-to-itinerary-button { font-weight: normal; color: gray; }
+        #add-to-itinerary-button.active { font-weight: bold; color: green; }
+        #remove-from-map-button {font-weight: normal; color: gray}
+        #remove-from-map-button.active {font-weight: normal; color: red}
+    </style>
+</head>
 
-        </style>
-    </head>
+<body>
 
-    <body>
+    <button onclick="liveLocation()">Current Location</button>
+    <button id="add-to-itinerary-button" onclick="addToItinerary()">Add to Itinerary</button>
+    <button id="remove-from-map-button" onclick="removeFromMap()">Remove Marker</button>
+    <div id="map"></div>
+</body>
 
-        <input type="text" id="locationInput" placeholder="Search for a location">
-        <button onclick="searchLocation()">Search</button>
-        <button onclick="liveLocation()">Current Location</button>
-        <button id="add-to-itinerary-button" onclick="addToItinerary()">Add to Itinerary</button>
-        <button id="remove-from-map-button" onclick="removeFromMap()">Remove Marker</button>
-        <div id="map"></div>
-        
-    </body>
+<script>
+    var map = L.map('map');
+    map.setView([51.505, -0.09], 13);
 
-    <script>
-        
-        var map = L.map('map');
-        map.setView([51.505, -0.09], 13);
-
-        L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
+    L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
         maxZoom: 19,
         attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
-        }).addTo(map);
+    }).addTo(map);
 
+    var geocoder = L.Control.geocoder({
+        defaultMarkGeocode: true,
+        collapsed: false,
+        placeholder: "Search for a location",
+        geocoder: L.Control.Geocoder.nominatim({
+            autoComplete: true,
+        }),
+    }).addTo(map);
 
+    document.addEventListener('DOMContentLoaded', function () {
         navigator.geolocation.watchPosition(success, error);
+        fetchMarkersFromBackend();
+    })
 
-        let marker, circle, zoomed; 
+    let marker, circle, zoomed;
 
-        function success(pos){
-
-            const lat = pos.coords.latitude;
-            const lng = pos.coords.longitude;
-            const accuracy = pos.coords.accuracy;
-
-            if(marker){
-                map.removeLayer(marker);
-                map.removeLayer(circle);
-            }
-            
-            marker = L.marker([lat,lng]).addTo(map);
-            circle = L.circle([lat,lng],{radius:accuracy}).addTo(map);
-            
-            map.fitBounds(circle.getBounds());
-
-        }
-
-        function error(err){
-
-            if(err.code ===1){
-                alert("Please Allow Geoloaction Access")
-            }else{
-                alert("Can not get Current Location")
-            }
-        }
-
-        function searchLocation() {
-            const locationInput = document.getElementById('locationInput').value;
-          
-            fetch(`https://nominatim.openstreetmap.org/search?format=json&q=${locationInput}`)
-              .then(response => response.json())
-              .then(data => {
-                if (data && data.length > 0) {
-                  const result = data[0];
-                  const lat = result.lat;
-                  const lon = result.lon;
-          
-                  map.setView([lat, lon], 13);
-                } else {
-                  alert('Location not found');
-                }
-              })
-              .catch(error => {
-                console.error('Error fetching location data:', error);
-              });
-          }
-          
-        function liveLocation() {
-            if (circle) {
-                map.fitBounds(circle.getBounds());
-            } else {
-                alert('Current location not available.');
-            }
+    function success(pos){
+        const lat = pos.coords.latitude;
+        const lng = pos.coords.longitude;
+        const accuracy = pos.coords.accuracy;
+        if(marker){
+            map.removeLayer(marker);
+            map.removeLayer(circle);
         }
         
-        var chosen_markers = [];
-        var selectedMarker = null;
+        marker = L.marker([lat,lng]).addTo(map);
+        circle = L.circle([lat,lng],{radius:accuracy}).addTo(map);
+        
+        map.fitBounds(circle.getBounds());
+    }
 
-        function addMarker(lat, lng) {
-            const newMarker = L.marker([lat, lng]).addTo(map);
+    function error(err){
+        if(err.code ===1){
+            alert("Please Allow Geolocation Access")
+        } else {
+            alert("Can not get Current Location")
+        }
+    }
 
-            newMarker.on('click', function () {
-                selectedMarker = newMarker;
-                updateButtonStyle();
+    map.on('moveend', function() {
+        const center = map.getCenter();
+        getCurrentCountry(center.lat, center.lng);
+    });
+
+    geocoder.on('markgeocode', function (e) {
+        const latlng = e.geocode.center;
+        map.setView(latlng, 13);
+    });
+
+    function getCurrentCountry(lat, lng) {
+        fetch(`https://nominatim.openstreetmap.org/reverse?format=json&lat=${lat}&lon=${lng}`)
+            .then(response => response.json())
+            .then(data => {
+                const country = data.address && data.address.country ? data.address.country : '';
+                console.log('Current Country:', country);
+                updateGeocoderCountry(country);
+            })
+            .catch(error => {
+                console.error('Error fetching country data:', error);
             });
+    }
 
-            chosen_markers.push(newMarker);
+    function updateGeocoderCountry(country) {
+        geocoder.options.geocoder.geocodingQueryParams.countrycodes = country;
+    }
+
+    function searchLocation() {
+        const locationInput = document.getElementById('locationInput').value;
+        geocoder.geocode(locationInput);
+    }
+
+    function liveLocation() {
+        if (circle) {
+            map.fitBounds(circle.getBounds());
+        } else {
+            alert('Current location not available.');
         }
+    }
 
-        map.on('click', function (e) {
-            const lat = e.latlng.lat;
-            const lng = e.latlng.lng;
-        
-            addMarker(lat, lng);
+    var selectedMarker = null;
+
+    function addMarker(lat, lng) {
+        const newMarker = L.marker([lat, lng]).addTo(map);
+
+        newMarker.on('click', function () {
+            selectedMarker = newMarker;
+            updateButtonStyle();
         });
 
-        function addToItinerary() {
-            if (selectedMarker) {
-                const lat = selectedMarker.getLatLng().lat;
-                const lng = selectedMarker.getLatLng().lng;
-                console.log(`Adding marker to itinerary: Lat ${lat}, Lng ${lng}`);
-                selectedMarker = null;
-                updateButtonStyle();
-            } else {
-                alert('Please select a marker.');
+        saveMarkerToBackend(lat, lng);
+
+    }
+    function saveMarkerToBackend(lat, lng) {
+        $.ajax({
+            type: 'POST',
+            url: '/markers',  // Update the URL according to your routes
+            data: { marker: { latitude: lat, longitude: lng } },
+            success: function (data) {
+                console.log('Marker saved successfully:', data);
+            },
+            error: function (error) {
+                console.error('Error saving marker:', error);
             }
+        });
+    }
+    function fetchMarkersFromBackend() {
+        $.ajax({
+            type: 'GET',
+            url: '/markers',  // Update the URL according to your routes
+            success: function (data) {
+                data.forEach(marker => {
+                    addMarker(marker.latitude, marker.longitude);
+                });
+            },
+            error: function (error) {
+                console.error('Error fetching markers:', error);
+            }
+        });
+    }
+
+    map.on('click', function (e) {
+        const lat = e.latlng.lat;
+        const lng = e.latlng.lng;
+
+        addMarker(lat, lng);
+    });
+
+    function addToItinerary() {
+        if (selectedMarker) {
+            const lat = selectedMarker.getLatLng().lat;
+            const lng = selectedMarker.getLatLng().lng;
+            console.log(`Adding marker to itinerary: Lat ${lat}, Lng ${lng}`);
+            selectedMarker = null;
+            updateButtonStyle();
+        } else {
+            alert('Please select a marker.');
         }
+    }
 
-        function removeFromMap() {
-            if (selectedMarker) {
-                map.removeLayer(selectedMarker);
-
-                const index = chosen_markers.indexOf(selectedMarker);
-                if (index !== -1) {
-                    chosen_markers.splice(index, 1);
+    function removeFromMap() {
+        if (selectedMarker) {
+            const markerId = selectedMarker.options.id;
+    
+            // Send a request to delete the marker from the backend
+            $.ajax({
+                type: 'DELETE',
+                url: `/markers/${markerId}`,  // Update the URL according to your routes
+                success: function () {
+                    map.removeLayer(selectedMarker);
+                    selectedMarker = null;
+                    updateButtonStyle();
+                },
+                error: function (error) {
+                    console.error('Error removing marker:', error);
                 }
-
-                selectedMarker = null;
-                updateButtonStyle();
-            } else {
-                alert('Please select a marker to remove.');
-            }
+            });
+        } else {
+            alert('Please select a marker to remove.');
         }
-        function updateButtonStyle() {
-            const addButton = document.getElementById('add-to-itinerary-button');
-            const removeButton = document.getElementById('remove-from-map-button');
+    }
+    
 
-            if (selectedMarker) {
-                addButton.classList.add('active');
-                removeButton.classList.add('active');
-            } else {
-                addButton.classList.remove('active');
-                removeButton.classList.remove('active');
-            }
+    function updateButtonStyle() {
+        const addButton = document.getElementById('add-to-itinerary-button');
+        const removeButton = document.getElementById('remove-from-map-button');
+
+        if (selectedMarker) {
+            addButton.classList.add('active');
+            removeButton.classList.add('active');
+        } else {
+            addButton.classList.remove('active');
+            removeButton.classList.remove('active');
         }
+    }
 
-
-    </script>
+</script>
 
 </html>
