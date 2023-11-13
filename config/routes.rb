@@ -1,16 +1,21 @@
 # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
 
 Rails.application.routes.draw do
+  
   resources :itineraries
   resources :lists
   resources :notes
   resources :markers, only: [:index, :create, :destroy]
+  resources :expense_tracker
+  resources :users
 
-  get "map", to: "map#index"
+  get "home", to:"home#index", as: :home
   get "about", to:"about#index", as: :about
   get "lists", to:"lists#index"
   get "notes", to: "notes#index"
-
+  get "expense_trackers", to: "expense_trackers#index"
+  get "map", to: "map#index"
+  get 'weather', to:"weather#index"
 
   get "sign_up", to: "registrations#new"
   post "sign_up", to: "registrations#create"

@@ -1,0 +1,2 @@
+class AdminDashboard < ApplicationRecord
+end
