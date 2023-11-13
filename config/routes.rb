@@ -6,7 +6,9 @@ Rails.application.routes.draw do
   resources :lists
   resources :notes
   resources :expense_tracker
+  resources :users
 
+  get "home", to:"home#index", as: :home
   get "about", to:"about#index", as: :about
   get "lists", to:"lists#index"
   get "notes", to: "notes#index"
