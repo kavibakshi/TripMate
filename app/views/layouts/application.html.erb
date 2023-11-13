@@ -19,13 +19,6 @@
       <%= yield %>
       <br/><br/>
     </div>
-    <nav>
-      <ul>
-        <% if current_user && current_user.admin? %>
-          <li><%= link_to "View All Users", view_all_users_path %></li>
-        <% end %>
-      </ul>
-    </nav>
   </body>
     
 </html>

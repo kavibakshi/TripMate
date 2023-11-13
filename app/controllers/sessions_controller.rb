@@ -10,7 +10,7 @@ class SessionsController < ApplicationController
   
         if user.admin?
           # Redirect to the admin dashboard if the user is an admin
-          redirect_to admin_dashboard_path, notice: "Logged in as admin"
+          redirect_to home_path, notice: "Logged in as admin"
         else
           # Redirect to the root path for non-admin users
           redirect_to home_path, notice: "Logged in successfully"

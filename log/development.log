@@ -18473,3 +18473,751 @@ Processing by HomeController#index as HTML
 Completed 200 OK in 84ms (Views: 75.6ms | ActiveRecord: 0.3ms | Allocations: 12556)
 
 
+  [1m[36mUser Load (3.4ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  [1m[36mTRANSACTION (0.8ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists? (1.1ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "boss@gmail.com"], ["LIMIT", 1]]
+  [1m[36mUser Create (3.1ms)[0m  [1m[32mINSERT INTO "users" ("email", "password_digest", "admin", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["email", "boss@gmail.com"], ["password_digest", "[FILTERED]"], ["admin", true], ["created_at", "2023-11-13 21:05:12.866955"], ["updated_at", "2023-11-13 21:05:12.866955"]]
+  [1m[36mTRANSACTION (1.1ms)[0m  [1m[35mCOMMIT[0m
+Started GET "/" for 127.0.0.1 at 2023-11-13 13:08:08 -0800
+  [1m[36mActiveRecord::SchemaMigration Pluck (10.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 4.3ms | Allocations: 333)
+  Rendered shared/_navbar.html.erb (Duration: 2.4ms | Allocations: 745)
+  Rendered layout layouts/application.html.erb (Duration: 1709.9ms | Allocations: 71189)
+Completed 200 OK in 1788ms (Views: 1729.1ms | ActiveRecord: 0.0ms | Allocations: 76314)
+
+
+Started GET "/sign_in" for 127.0.0.1 at 2023-11-13 13:08:14 -0800
+Processing by SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (Duration: 18.5ms | Allocations: 3186)
+  Rendered shared/_navbar.html.erb (Duration: 0.2ms | Allocations: 136)
+  Rendered layout layouts/application.html.erb (Duration: 97.6ms | Allocations: 14374)
+Completed 200 OK in 113ms (Views: 106.5ms | ActiveRecord: 0.0ms | Allocations: 15265)
+
+
+Started POST "/sign_in" for 127.0.0.1 at 2023-11-13 13:08:28 -0800
+Processing by SessionsController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "email"=>"boss@gmail.com", "password"=>"[FILTERED]", "commit"=>"Sign In"}
+  [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "boss@gmail.com"], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:6:in `create'
+Redirected to http://127.0.0.1:3000/admin/dashboard
+Completed 302 Found in 303ms (ActiveRecord: 8.2ms | Allocations: 8315)
+
+
+Started GET "/admin/dashboard" for 127.0.0.1 at 2023-11-13 13:08:29 -0800
+Processing by AdminDashboardController#index as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7:in `set_current_user'
+  Rendering layout layouts/application.html.erb
+  Rendering admin_dashboard/index.html.erb within layouts/application
+  Rendered admin_dashboard/index.html.erb within layouts/application (Duration: 1.5ms | Allocations: 121)
+  Rendered shared/_navbar.html.erb (Duration: 0.9ms | Allocations: 575)
+  Rendered layout layouts/application.html.erb (Duration: 75.5ms | Allocations: 12017)
+Completed 200 OK in 93ms (Views: 84.0ms | ActiveRecord: 0.4ms | Allocations: 13933)
+
+
+Started GET "/home" for 127.0.0.1 at 2023-11-13 13:08:32 -0800
+Processing by HomeController#index as HTML
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7:in `set_current_user'
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 0.1ms | Allocations: 7)
+  Rendered shared/_navbar.html.erb (Duration: 0.9ms | Allocations: 539)
+  Rendered layout layouts/application.html.erb (Duration: 73.6ms | Allocations: 11548)
+Completed 200 OK in 83ms (Views: 74.9ms | ActiveRecord: 0.6ms | Allocations: 12559)
+
+
+Started GET "/lists" for 127.0.0.1 at 2023-11-13 13:08:34 -0800
+Processing by ListsController#index as HTML
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7:in `set_current_user'
+  Rendering layout layouts/application.html.erb
+  Rendering lists/index.html.erb within layouts/application
+  [1m[36mList Load (14.9ms)[0m  [1m[34mSELECT "lists".* FROM "lists"[0m
+  ↳ app/views/lists/index.html.erb:15
+  Rendered lists/index.html.erb within layouts/application (Duration: 19.5ms | Allocations: 1259)
+  Rendered shared/_navbar.html.erb (Duration: 0.6ms | Allocations: 535)
+  Rendered layout layouts/application.html.erb (Duration: 95.5ms | Allocations: 12891)
+Completed 200 OK in 119ms (Views: 89.6ms | ActiveRecord: 15.7ms | Allocations: 14754)
+
+
+Started GET "/home" for 127.0.0.1 at 2023-11-13 13:08:34 -0800
+Processing by HomeController#index as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7:in `set_current_user'
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 0.1ms | Allocations: 7)
+  Rendered shared/_navbar.html.erb (Duration: 0.7ms | Allocations: 510)
+  Rendered layout layouts/application.html.erb (Duration: 76.8ms | Allocations: 11541)
+Completed 200 OK in 85ms (Views: 78.5ms | ActiveRecord: 0.4ms | Allocations: 12555)
+
+
+Started GET "/home" for 127.0.0.1 at 2023-11-13 13:08:48 -0800
+Processing by HomeController#index as HTML
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7:in `set_current_user'
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 0.0ms | Allocations: 7)
+  Rendered shared/_navbar.html.erb (Duration: 0.6ms | Allocations: 510)
+  Rendered layout layouts/application.html.erb (Duration: 77.7ms | Allocations: 11539)
+Completed 200 OK in 87ms (Views: 79.0ms | ActiveRecord: 0.8ms | Allocations: 12545)
+
+
+Started GET "/admin/view_all_users" for 127.0.0.1 at 2023-11-13 13:09:02 -0800
+Processing by AdminDashboardController#view_all_users as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7:in `set_current_user'
+  Rendering layout layouts/application.html.erb
+  Rendering admin_dashboard/view_all_users.html.erb within layouts/application
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/admin_dashboard/view_all_users.html.erb:3
+  Rendered admin_dashboard/view_all_users.html.erb within layouts/application (Duration: 4.0ms | Allocations: 912)
+  Rendered shared/_navbar.html.erb (Duration: 0.6ms | Allocations: 510)
+  Rendered layout layouts/application.html.erb (Duration: 74.9ms | Allocations: 12422)
+Completed 200 OK in 87ms (Views: 75.9ms | ActiveRecord: 1.1ms | Allocations: 13494)
+
+
+Started GET "/admin/view_all_users" for 127.0.0.1 at 2023-11-13 13:09:04 -0800
+Processing by AdminDashboardController#view_all_users as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7:in `set_current_user'
+  Rendering layout layouts/application.html.erb
+  Rendering admin_dashboard/view_all_users.html.erb within layouts/application
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/admin_dashboard/view_all_users.html.erb:3
+  Rendered admin_dashboard/view_all_users.html.erb within layouts/application (Duration: 2.6ms | Allocations: 723)
+  Rendered shared/_navbar.html.erb (Duration: 0.6ms | Allocations: 510)
+  Rendered layout layouts/application.html.erb (Duration: 72.9ms | Allocations: 12233)
+Completed 200 OK in 82ms (Views: 73.8ms | ActiveRecord: 0.9ms | Allocations: 13221)
+
+
+Started GET "/admin/view_all_users" for 127.0.0.1 at 2023-11-13 13:10:00 -0800
+Processing by AdminDashboardController#view_all_users as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7:in `set_current_user'
+  Rendering layout layouts/application.html.erb
+  Rendering admin_dashboard/view_all_users.html.erb within layouts/application
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/admin_dashboard/view_all_users.html.erb:3
+  Rendered admin_dashboard/view_all_users.html.erb within layouts/application (Duration: 3.6ms | Allocations: 886)
+  Rendered shared/_navbar.html.erb (Duration: 2.1ms | Allocations: 1053)
+  Rendered layout layouts/application.html.erb (Duration: 86.9ms | Allocations: 13337)
+Completed 200 OK in 107ms (Views: 97.0ms | ActiveRecord: 0.9ms | Allocations: 14917)
+
+
+Started GET "/home" for 127.0.0.1 at 2023-11-13 13:10:01 -0800
+Processing by HomeController#index as HTML
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7:in `set_current_user'
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 1.3ms | Allocations: 108)
+  Rendered shared/_navbar.html.erb (Duration: 0.8ms | Allocations: 554)
+  Rendered layout layouts/application.html.erb (Duration: 77.0ms | Allocations: 11761)
+Completed 200 OK in 96ms (Views: 85.7ms | ActiveRecord: 0.6ms | Allocations: 13104)
+
+
+Started GET "/home" for 127.0.0.1 at 2023-11-13 13:11:46 -0800
+Processing by HomeController#index as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7:in `set_current_user'
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 1.0ms | Allocations: 110)
+  Rendered shared/_navbar.html.erb (Duration: 2.5ms | Allocations: 1050)
+  Rendered layout layouts/application.html.erb (Duration: 83.2ms | Allocations: 12507)
+Completed 200 OK in 105ms (Views: 95.2ms | ActiveRecord: 0.4ms | Allocations: 14061)
+
+
+Started GET "/home" for 127.0.0.1 at 2023-11-13 13:11:48 -0800
+Processing by HomeController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7:in `set_current_user'
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 0.0ms | Allocations: 7)
+  Rendered shared/_navbar.html.erb (Duration: 0.6ms | Allocations: 510)
+  Rendered layout layouts/application.html.erb (Duration: 75.1ms | Allocations: 11483)
+Completed 200 OK in 84ms (Views: 76.4ms | ActiveRecord: 0.3ms | Allocations: 12501)
+
+
+Started GET "/admin/view_all_users" for 127.0.0.1 at 2023-11-13 13:13:06 -0800
+Processing by AdminDashboardController#view_all_users as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7:in `set_current_user'
+  Rendering layout layouts/application.html.erb
+  Rendering admin_dashboard/view_all_users.html.erb within layouts/application
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/admin_dashboard/view_all_users.html.erb:3
+  Rendered admin_dashboard/view_all_users.html.erb within layouts/application (Duration: 4.2ms | Allocations: 885)
+  Rendered shared/_navbar.html.erb (Duration: 0.7ms | Allocations: 554)
+  Rendered layout layouts/application.html.erb (Duration: 84.6ms | Allocations: 12559)
+Completed 200 OK in 103ms (Views: 93.0ms | ActiveRecord: 1.0ms | Allocations: 13875)
+
+
+Started GET "/home" for 127.0.0.1 at 2023-11-13 13:13:11 -0800
+Processing by HomeController#index as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7:in `set_current_user'
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 0.1ms | Allocations: 7)
+  Rendered shared/_navbar.html.erb (Duration: 0.6ms | Allocations: 510)
+  Rendered layout layouts/application.html.erb (Duration: 70.0ms | Allocations: 11552)
+Completed 200 OK in 78ms (Views: 71.1ms | ActiveRecord: 0.4ms | Allocations: 12564)
+
+
+Started GET "/home" for 127.0.0.1 at 2023-11-13 13:13:14 -0800
+Processing by HomeController#index as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7:in `set_current_user'
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 0.1ms | Allocations: 7)
+  Rendered shared/_navbar.html.erb (Duration: 0.6ms | Allocations: 510)
+  Rendered layout layouts/application.html.erb (Duration: 69.9ms | Allocations: 11483)
+Completed 200 OK in 78ms (Views: 71.2ms | ActiveRecord: 0.4ms | Allocations: 12497)
+
+
+Started GET "/sign_in" for 127.0.0.1 at 2023-11-13 13:13:21 -0800
+Processing by SessionsController#new as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7:in `set_current_user'
+  Rendering layout layouts/application.html.erb
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (Duration: 2.5ms | Allocations: 2563)
+  Rendered shared/_navbar.html.erb (Duration: 0.6ms | Allocations: 535)
+  Rendered layout layouts/application.html.erb (Duration: 79.1ms | Allocations: 14139)
+Completed 200 OK in 97ms (Views: 88.0ms | ActiveRecord: 0.3ms | Allocations: 15458)
+
+
+Started GET "/home" for 127.0.0.1 at 2023-11-13 13:14:22 -0800
+Processing by HomeController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7:in `set_current_user'
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 0.1ms | Allocations: 7)
+  Rendered shared/_navbar.html.erb (Duration: 0.6ms | Allocations: 510)
+  Rendered layout layouts/application.html.erb (Duration: 76.2ms | Allocations: 11507)
+Completed 200 OK in 85ms (Views: 77.5ms | ActiveRecord: 0.3ms | Allocations: 12516)
+
+
+Started GET "/home" for 127.0.0.1 at 2023-11-13 13:14:43 -0800
+Processing by HomeController#index as HTML
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7:in `set_current_user'
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 1.4ms | Allocations: 112)
+  Rendered shared/_navbar.html.erb (Duration: 2.1ms | Allocations: 1051)
+  Rendered layout layouts/application.html.erb (Duration: 77.8ms | Allocations: 12672)
+Completed 200 OK in 97ms (Views: 87.9ms | ActiveRecord: 0.6ms | Allocations: 14234)
+
+
+Started GET "/home" for 127.0.0.1 at 2023-11-13 13:14:44 -0800
+Processing by HomeController#index as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7:in `set_current_user'
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 0.1ms | Allocations: 7)
+  Rendered shared/_navbar.html.erb (Duration: 0.6ms | Allocations: 510)
+  Rendered layout layouts/application.html.erb (Duration: 70.8ms | Allocations: 11515)
+Completed 200 OK in 80ms (Views: 71.8ms | ActiveRecord: 0.5ms | Allocations: 12530)
+
+
+Started DELETE "/logout" for 127.0.0.1 at 2023-11-13 13:14:45 -0800
+Processing by SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7:in `set_current_user'
+Redirected to http://127.0.0.1:3000/
+Completed 302 Found in 8ms (ActiveRecord: 0.3ms | Allocations: 946)
+
+
+Started GET "/" for 127.0.0.1 at 2023-11-13 13:14:46 -0800
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 0.1ms | Allocations: 7)
+  Rendered shared/_navbar.html.erb (Duration: 0.2ms | Allocations: 138)
+  Rendered layout layouts/application.html.erb (Duration: 69.6ms | Allocations: 11113)
+Completed 200 OK in 76ms (Views: 71.0ms | ActiveRecord: 0.0ms | Allocations: 11560)
+
+
+Started GET "/sign_in" for 127.0.0.1 at 2023-11-13 13:14:47 -0800
+Processing by SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (Duration: 2.6ms | Allocations: 2558)
+  Rendered shared/_navbar.html.erb (Duration: 0.2ms | Allocations: 136)
+  Rendered layout layouts/application.html.erb (Duration: 72.6ms | Allocations: 13739)
+Completed 200 OK in 88ms (Views: 81.3ms | ActiveRecord: 0.0ms | Allocations: 14511)
+
+
+Started POST "/sign_in" for 127.0.0.1 at 2023-11-13 13:14:52 -0800
+Processing by SessionsController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "email"=>"boss@gmail.com", "password"=>"[FILTERED]", "commit"=>"Sign In"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "boss@gmail.com"], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:6:in `create'
+Redirected to http://127.0.0.1:3000/admin/dashboard
+Completed 302 Found in 268ms (ActiveRecord: 0.5ms | Allocations: 918)
+
+
+Started GET "/admin/dashboard" for 127.0.0.1 at 2023-11-13 13:14:52 -0800
+Processing by AdminDashboardController#index as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7:in `set_current_user'
+  Rendering layout layouts/application.html.erb
+  Rendering admin_dashboard/index.html.erb within layouts/application
+  Rendered admin_dashboard/index.html.erb within layouts/application (Duration: 1.0ms | Allocations: 119)
+  Rendered shared/_navbar.html.erb (Duration: 0.9ms | Allocations: 554)
+  Rendered layout layouts/application.html.erb (Duration: 70.1ms | Allocations: 11834)
+Completed 200 OK in 85ms (Views: 78.4ms | ActiveRecord: 0.4ms | Allocations: 13067)
+
+
+Started GET "/notes" for 127.0.0.1 at 2023-11-13 13:14:54 -0800
+Processing by NotesController#index as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7:in `set_current_user'
+  Rendering layout layouts/application.html.erb
+  Rendering notes/index.html.erb within layouts/application
+  [1m[36mNote Load (10.5ms)[0m  [1m[34mSELECT "notes".* FROM "notes" ORDER BY created_at DESC[0m
+  ↳ app/views/notes/index.html.erb:24
+  Rendered notes/index.html.erb within layouts/application (Duration: 16.0ms | Allocations: 1033)
+  Rendered shared/_navbar.html.erb (Duration: 0.6ms | Allocations: 539)
+  Rendered layout layouts/application.html.erb (Duration: 89.9ms | Allocations: 12714)
+Completed 200 OK in 111ms (Views: 87.8ms | ActiveRecord: 10.9ms | Allocations: 14573)
+
+
+Started GET "/lists" for 127.0.0.1 at 2023-11-13 13:14:57 -0800
+Processing by ListsController#index as HTML
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7:in `set_current_user'
+  Rendering layout layouts/application.html.erb
+  Rendering lists/index.html.erb within layouts/application
+  [1m[36mList Load (0.6ms)[0m  [1m[34mSELECT "lists".* FROM "lists"[0m
+  ↳ app/views/lists/index.html.erb:15
+  Rendered lists/index.html.erb within layouts/application (Duration: 5.5ms | Allocations: 1159)
+  Rendered shared/_navbar.html.erb (Duration: 0.6ms | Allocations: 533)
+  Rendered layout layouts/application.html.erb (Duration: 75.6ms | Allocations: 12774)
+Completed 200 OK in 94ms (Views: 83.3ms | ActiveRecord: 1.2ms | Allocations: 14093)
+
+
+Started GET "/notes" for 127.0.0.1 at 2023-11-13 13:14:58 -0800
+Processing by NotesController#index as HTML
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7:in `set_current_user'
+  Rendering layout layouts/application.html.erb
+  Rendering notes/index.html.erb within layouts/application
+  [1m[36mNote Load (0.5ms)[0m  [1m[34mSELECT "notes".* FROM "notes" ORDER BY created_at DESC[0m
+  ↳ app/views/notes/index.html.erb:24
+  Rendered notes/index.html.erb within layouts/application (Duration: 2.4ms | Allocations: 632)
+  Rendered shared/_navbar.html.erb (Duration: 0.6ms | Allocations: 501)
+  Rendered layout layouts/application.html.erb (Duration: 76.6ms | Allocations: 12202)
+Completed 200 OK in 86ms (Views: 77.4ms | ActiveRecord: 1.1ms | Allocations: 13220)
+
+
+Started GET "/notes" for 127.0.0.1 at 2023-11-13 13:15:20 -0800
+Processing by NotesController#index as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7:in `set_current_user'
+  Rendering layout layouts/application.html.erb
+  Rendering notes/index.html.erb within layouts/application
+  [1m[36mNote Load (0.5ms)[0m  [1m[34mSELECT "notes".* FROM "notes" ORDER BY created_at DESC[0m
+  ↳ app/views/notes/index.html.erb:24
+  Rendered notes/index.html.erb within layouts/application (Duration: 4.0ms | Allocations: 900)
+  Rendered layout layouts/application.html.erb (Duration: 80.5ms | Allocations: 12140)
+Completed 200 OK in 100ms (Views: 90.5ms | ActiveRecord: 1.0ms | Allocations: 13699)
+
+
+Started GET "/notes" for 127.0.0.1 at 2023-11-13 13:15:32 -0800
+Processing by NotesController#index as HTML
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7:in `set_current_user'
+  Rendering layout layouts/application.html.erb
+  Rendering notes/index.html.erb within layouts/application
+  [1m[36mNote Load (0.5ms)[0m  [1m[34mSELECT "notes".* FROM "notes" ORDER BY created_at DESC[0m
+  ↳ app/views/notes/index.html.erb:24
+  Rendered notes/index.html.erb within layouts/application (Duration: 3.9ms | Allocations: 895)
+  Rendered shared/_navbar.html.erb (Duration: 3.0ms | Allocations: 1031)
+  Rendered layout layouts/application.html.erb (Duration: 82.0ms | Allocations: 13269)
+Completed 200 OK in 102ms (Views: 92.2ms | ActiveRecord: 1.1ms | Allocations: 14815)
+
+
+Started GET "/home" for 127.0.0.1 at 2023-11-13 13:15:33 -0800
+Processing by HomeController#index as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7:in `set_current_user'
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 0.9ms | Allocations: 108)
+  Rendered shared/_navbar.html.erb (Duration: 0.6ms | Allocations: 554)
+  Rendered layout layouts/application.html.erb (Duration: 70.0ms | Allocations: 11712)
+Completed 200 OK in 88ms (Views: 78.5ms | ActiveRecord: 0.4ms | Allocations: 13000)
+
+
+Started GET "/home" for 127.0.0.1 at 2023-11-13 13:16:45 -0800
+Processing by HomeController#index as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7:in `set_current_user'
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 1.1ms | Allocations: 109)
+  Rendered shared/_navbar.html.erb (Duration: 2.6ms | Allocations: 1053)
+  Rendered layout layouts/application.html.erb (Duration: 82.6ms | Allocations: 12579)
+Completed 200 OK in 102ms (Views: 93.0ms | ActiveRecord: 0.4ms | Allocations: 14145)
+
+
+Started GET "/admin/dashboard" for 127.0.0.1 at 2023-11-13 13:16:50 -0800
+Processing by AdminDashboardController#index as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7:in `set_current_user'
+  Rendering layout layouts/application.html.erb
+  Rendering admin_dashboard/index.html.erb within layouts/application
+  Rendered admin_dashboard/index.html.erb within layouts/application (Duration: 1.4ms | Allocations: 244)
+  Rendered shared/_navbar.html.erb (Duration: 0.6ms | Allocations: 533)
+  Rendered layout layouts/application.html.erb (Duration: 78.4ms | Allocations: 11892)
+Completed 200 OK in 94ms (Views: 87.2ms | ActiveRecord: 0.4ms | Allocations: 13150)
+
+
+Started GET "/admin/dashboard" for 127.0.0.1 at 2023-11-13 13:21:00 -0800
+Processing by AdminDashboardController#index as HTML
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7:in `set_current_user'
+  Rendering layout layouts/application.html.erb
+  Rendering admin_dashboard/index.html.erb within layouts/application
+  Rendered admin_dashboard/index.html.erb within layouts/application (Duration: 1.6ms | Allocations: 243)
+  Rendered shared/_navbar.html.erb (Duration: 2.2ms | Allocations: 1130)
+  Rendered layout layouts/application.html.erb (Duration: 80.1ms | Allocations: 12716)
+Completed 200 OK in 99ms (Views: 90.4ms | ActiveRecord: 0.6ms | Allocations: 14080)
+
+
+Started GET "/lists" for 127.0.0.1 at 2023-11-13 13:21:02 -0800
+Processing by ListsController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7:in `set_current_user'
+  Rendering layout layouts/application.html.erb
+  Rendering lists/index.html.erb within layouts/application
+  [1m[36mList Load (0.5ms)[0m  [1m[34mSELECT "lists".* FROM "lists"[0m
+  ↳ app/views/lists/index.html.erb:15
+  Rendered lists/index.html.erb within layouts/application (Duration: 4.4ms | Allocations: 1158)
+  Rendered shared/_navbar.html.erb (Duration: 0.6ms | Allocations: 572)
+  Rendered layout layouts/application.html.erb (Duration: 80.5ms | Allocations: 12779)
+Completed 200 OK in 98ms (Views: 88.6ms | ActiveRecord: 0.8ms | Allocations: 14109)
+
+
+Started GET "/home" for 127.0.0.1 at 2023-11-13 13:21:03 -0800
+Processing by HomeController#index as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7:in `set_current_user'
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 1.4ms | Allocations: 108)
+  Rendered shared/_navbar.html.erb (Duration: 0.7ms | Allocations: 593)
+  Rendered layout layouts/application.html.erb (Duration: 75.1ms | Allocations: 11821)
+Completed 200 OK in 96ms (Views: 85.7ms | ActiveRecord: 0.5ms | Allocations: 13101)
+
+
+Started GET "/home" for 127.0.0.1 at 2023-11-13 13:21:22 -0800
+Processing by HomeController#index as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7:in `set_current_user'
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 1.0ms | Allocations: 114)
+  Rendered shared/_navbar.html.erb (Duration: 2.2ms | Allocations: 1149)
+  Rendered layout layouts/application.html.erb (Duration: 84.4ms | Allocations: 12661)
+Completed 200 OK in 104ms (Views: 94.8ms | ActiveRecord: 0.4ms | Allocations: 14212)
+
+
+Started GET "/admin/dashboard" for 127.0.0.1 at 2023-11-13 13:21:23 -0800
+Processing by AdminDashboardController#index as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7:in `set_current_user'
+  Rendering layout layouts/application.html.erb
+  Rendering admin_dashboard/index.html.erb within layouts/application
+  Rendered admin_dashboard/index.html.erb within layouts/application (Duration: 1.4ms | Allocations: 241)
+  Rendered shared/_navbar.html.erb (Duration: 0.6ms | Allocations: 574)
+  Rendered layout layouts/application.html.erb (Duration: 73.3ms | Allocations: 11861)
+Completed 200 OK in 90ms (Views: 81.9ms | ActiveRecord: 0.4ms | Allocations: 13110)
+
+
+Started GET "/home" for 127.0.0.1 at 2023-11-13 13:21:24 -0800
+Processing by HomeController#index as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7:in `set_current_user'
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 0.1ms | Allocations: 7)
+  Rendered shared/_navbar.html.erb (Duration: 1.0ms | Allocations: 548)
+  Rendered layout layouts/application.html.erb (Duration: 78.7ms | Allocations: 11521)
+Completed 200 OK in 87ms (Views: 79.8ms | ActiveRecord: 0.4ms | Allocations: 12516)
+
+
+Started GET "/admin/dashboard" for 127.0.0.1 at 2023-11-13 13:21:25 -0800
+Processing by AdminDashboardController#index as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7:in `set_current_user'
+  Rendering layout layouts/application.html.erb
+  Rendering admin_dashboard/index.html.erb within layouts/application
+  Rendered admin_dashboard/index.html.erb within layouts/application (Duration: 0.2ms | Allocations: 49)
+  Rendered shared/_navbar.html.erb (Duration: 1.0ms | Allocations: 539)
+  Rendered layout layouts/application.html.erb (Duration: 72.6ms | Allocations: 11625)
+Completed 200 OK in 81ms (Views: 73.9ms | ActiveRecord: 0.4ms | Allocations: 12624)
+
+
+Started GET "/admin/view_all_users" for 127.0.0.1 at 2023-11-13 13:21:40 -0800
+Processing by AdminDashboardController#view_all_users as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7:in `set_current_user'
+  Rendering layout layouts/application.html.erb
+  Rendering admin_dashboard/view_all_users.html.erb within layouts/application
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/admin_dashboard/view_all_users.html.erb:3
+  Rendered admin_dashboard/view_all_users.html.erb within layouts/application (Duration: 4.0ms | Allocations: 887)
+  Rendered shared/_navbar.html.erb (Duration: 0.6ms | Allocations: 548)
+  Rendered layout layouts/application.html.erb (Duration: 74.6ms | Allocations: 12459)
+Completed 200 OK in 85ms (Views: 75.5ms | ActiveRecord: 1.1ms | Allocations: 13552)
+
+
+Started GET "/admin/dashboard" for 127.0.0.1 at 2023-11-13 13:21:57 -0800
+Processing by AdminDashboardController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7:in `set_current_user'
+  Rendering layout layouts/application.html.erb
+  Rendering admin_dashboard/index.html.erb within layouts/application
+  Rendered admin_dashboard/index.html.erb within layouts/application (Duration: 156.5ms | Allocations: 14473)
+  Rendered layout layouts/application.html.erb (Duration: 157.8ms | Allocations: 14555)
+Completed 500 Internal Server Error in 175ms (ActiveRecord: 0.3ms | Allocations: 15903)
+
+
+  
+ActionView::Template::Error (undefined method `each' for nil:NilClass):
+    11:   
+    12:   <h1>All Users</h1>
+    13:   <ul>
+    14:     <% @users.each do |user| %>
+    15:       <li><%= user.email %></li>
+    16:     <% end %>
+    17:   </ul>
+  
+app/views/admin_dashboard/index.html.erb:14
+Started GET "/admin/dashboard" for 127.0.0.1 at 2023-11-13 13:22:06 -0800
+Processing by AdminDashboardController#index as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7:in `set_current_user'
+  Rendering layout layouts/application.html.erb
+  Rendering admin_dashboard/index.html.erb within layouts/application
+  Rendered admin_dashboard/index.html.erb within layouts/application (Duration: 1.2ms | Allocations: 242)
+  Rendered shared/_navbar.html.erb (Duration: 2.6ms | Allocations: 1128)
+  Rendered layout layouts/application.html.erb (Duration: 78.0ms | Allocations: 12783)
+Completed 200 OK in 96ms (Views: 88.6ms | ActiveRecord: 0.4ms | Allocations: 14134)
+
+
+Started GET "/home" for 127.0.0.1 at 2023-11-13 13:22:09 -0800
+Processing by HomeController#index as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7:in `set_current_user'
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 1.5ms | Allocations: 108)
+  Rendered shared/_navbar.html.erb (Duration: 0.7ms | Allocations: 595)
+  Rendered layout layouts/application.html.erb (Duration: 74.9ms | Allocations: 11823)
+Completed 200 OK in 94ms (Views: 84.7ms | ActiveRecord: 0.4ms | Allocations: 13143)
+
+
+Started DELETE "/logout" for 127.0.0.1 at 2023-11-13 13:22:10 -0800
+Processing by SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]"}
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7:in `set_current_user'
+Redirected to http://127.0.0.1:3000/
+Completed 302 Found in 9ms (ActiveRecord: 0.7ms | Allocations: 946)
+
+
+Started GET "/" for 127.0.0.1 at 2023-11-13 13:22:10 -0800
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 0.1ms | Allocations: 7)
+  Rendered shared/_navbar.html.erb (Duration: 0.2ms | Allocations: 138)
+  Rendered layout layouts/application.html.erb (Duration: 80.3ms | Allocations: 11179)
+Completed 200 OK in 87ms (Views: 81.5ms | ActiveRecord: 0.0ms | Allocations: 11657)
+
+
+Started GET "/sign_in" for 127.0.0.1 at 2023-11-13 13:22:11 -0800
+Processing by SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (Duration: 2.8ms | Allocations: 2563)
+  Rendered shared/_navbar.html.erb (Duration: 0.2ms | Allocations: 136)
+  Rendered layout layouts/application.html.erb (Duration: 80.4ms | Allocations: 13741)
+Completed 200 OK in 94ms (Views: 88.3ms | ActiveRecord: 0.0ms | Allocations: 14510)
+
+
+Started POST "/sign_in" for 127.0.0.1 at 2023-11-13 13:22:16 -0800
+Processing by SessionsController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "email"=>"boss@gmail.com", "password"=>"[FILTERED]", "commit"=>"Sign In"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "boss@gmail.com"], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:6:in `create'
+Redirected to http://127.0.0.1:3000/admin/dashboard
+Completed 302 Found in 268ms (ActiveRecord: 0.5ms | Allocations: 939)
+
+
+Started GET "/admin/dashboard" for 127.0.0.1 at 2023-11-13 13:22:16 -0800
+Processing by AdminDashboardController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7:in `set_current_user'
+  Rendering layout layouts/application.html.erb
+  Rendering admin_dashboard/index.html.erb within layouts/application
+  Rendered admin_dashboard/index.html.erb within layouts/application (Duration: 0.2ms | Allocations: 49)
+  Rendered shared/_navbar.html.erb (Duration: 0.6ms | Allocations: 539)
+  Rendered layout layouts/application.html.erb (Duration: 74.6ms | Allocations: 11555)
+Completed 200 OK in 84ms (Views: 76.2ms | ActiveRecord: 0.3ms | Allocations: 12536)
+
+
+Started GET "/home" for 127.0.0.1 at 2023-11-13 13:22:21 -0800
+Processing by HomeController#index as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7:in `set_current_user'
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 0.1ms | Allocations: 7)
+  Rendered shared/_navbar.html.erb (Duration: 0.8ms | Allocations: 548)
+  Rendered layout layouts/application.html.erb (Duration: 75.3ms | Allocations: 11591)
+Completed 200 OK in 84ms (Views: 76.4ms | ActiveRecord: 0.4ms | Allocations: 12599)
+
+
+Started GET "/admin/dashboard" for 127.0.0.1 at 2023-11-13 13:22:44 -0800
+Processing by AdminDashboardController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7:in `set_current_user'
+  Rendering layout layouts/application.html.erb
+  Rendering admin_dashboard/index.html.erb within layouts/application
+  Rendered admin_dashboard/index.html.erb within layouts/application (Duration: 0.3ms | Allocations: 82)
+  Rendered shared/_navbar.html.erb (Duration: 0.7ms | Allocations: 583)
+  Rendered layout layouts/application.html.erb (Duration: 112.0ms | Allocations: 24604)
+Completed 200 OK in 135ms (Views: 114.7ms | ActiveRecord: 4.4ms | Allocations: 29195)
+
+
+Started DELETE "/logout" for 127.0.0.1 at 2023-11-13 13:22:48 -0800
+Processing by SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7:in `set_current_user'
+Redirected to http://127.0.0.1:3000/
+Completed 302 Found in 8ms (ActiveRecord: 0.3ms | Allocations: 990)
+
+
+Started GET "/" for 127.0.0.1 at 2023-11-13 13:22:48 -0800
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 0.1ms | Allocations: 10)
+  Rendered shared/_navbar.html.erb (Duration: 0.2ms | Allocations: 161)
+  Rendered layout layouts/application.html.erb (Duration: 71.0ms | Allocations: 11234)
+Completed 200 OK in 79ms (Views: 74.0ms | ActiveRecord: 0.0ms | Allocations: 11967)
+
+
+Started GET "/sign_in" for 127.0.0.1 at 2023-11-13 13:22:49 -0800
+Processing by SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (Duration: 1.4ms | Allocations: 2291)
+  Rendered shared/_navbar.html.erb (Duration: 0.2ms | Allocations: 136)
+  Rendered layout layouts/application.html.erb (Duration: 75.1ms | Allocations: 13471)
+Completed 200 OK in 81ms (Views: 77.2ms | ActiveRecord: 0.0ms | Allocations: 14188)
+
+
+Started POST "/sign_in" for 127.0.0.1 at 2023-11-13 13:22:55 -0800
+Processing by SessionsController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "email"=>"boss@gmail.com", "password"=>"[FILTERED]", "commit"=>"Sign In"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "boss@gmail.com"], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:6:in `create'
+Redirected to http://127.0.0.1:3000/home
+Completed 302 Found in 268ms (ActiveRecord: 0.5ms | Allocations: 1031)
+
+
+Started GET "/home" for 127.0.0.1 at 2023-11-13 13:22:55 -0800
+Processing by HomeController#index as HTML
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7:in `set_current_user'
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 0.1ms | Allocations: 7)
+  Rendered shared/_navbar.html.erb (Duration: 1.2ms | Allocations: 580)
+  Rendered layout layouts/application.html.erb (Duration: 129.0ms | Allocations: 11578)
+Completed 200 OK in 139ms (Views: 130.6ms | ActiveRecord: 0.6ms | Allocations: 12580)
+
+
+Started GET "/admin/dashboard" for 127.0.0.1 at 2023-11-13 13:22:57 -0800
+Processing by AdminDashboardController#index as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7:in `set_current_user'
+  Rendering layout layouts/application.html.erb
+  Rendering admin_dashboard/index.html.erb within layouts/application
+  Rendered admin_dashboard/index.html.erb within layouts/application (Duration: 0.7ms | Allocations: 49)
+  Rendered shared/_navbar.html.erb (Duration: 0.6ms | Allocations: 539)
+  Rendered layout layouts/application.html.erb (Duration: 78.0ms | Allocations: 11579)
+Completed 200 OK in 87ms (Views: 79.3ms | ActiveRecord: 0.5ms | Allocations: 12569)
+
+
+Started DELETE "/logout" for 127.0.0.1 at 2023-11-13 13:22:58 -0800
+Processing by SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7:in `set_current_user'
+Redirected to http://127.0.0.1:3000/
+Completed 302 Found in 8ms (ActiveRecord: 0.4ms | Allocations: 910)
+
+
+Started GET "/" for 127.0.0.1 at 2023-11-13 13:22:58 -0800
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 0.1ms | Allocations: 7)
+  Rendered shared/_navbar.html.erb (Duration: 0.2ms | Allocations: 132)
+  Rendered layout layouts/application.html.erb (Duration: 71.1ms | Allocations: 11108)
+Completed 200 OK in 77ms (Views: 72.8ms | ActiveRecord: 0.0ms | Allocations: 11579)
+
+
+Started GET "/sign_in" for 127.0.0.1 at 2023-11-13 13:22:59 -0800
+Processing by SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (Duration: 1.5ms | Allocations: 2235)
+  Rendered shared/_navbar.html.erb (Duration: 0.2ms | Allocations: 123)
+  Rendered layout layouts/application.html.erb (Duration: 74.8ms | Allocations: 13326)
+Completed 200 OK in 80ms (Views: 76.2ms | ActiveRecord: 0.0ms | Allocations: 13778)
+
+
+Started POST "/sign_in" for 127.0.0.1 at 2023-11-13 13:23:07 -0800
+Processing by SessionsController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "email"=>"example@gmail.com", "password"=>"[FILTERED]", "commit"=>"Sign In"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "example@gmail.com"], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:6:in `create'
+Redirected to http://127.0.0.1:3000/home
+Completed 302 Found in 269ms (ActiveRecord: 0.4ms | Allocations: 938)
+
+
+Started GET "/home" for 127.0.0.1 at 2023-11-13 13:23:08 -0800
+Processing by HomeController#index as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7:in `set_current_user'
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 0.1ms | Allocations: 7)
+  Rendered shared/_navbar.html.erb (Duration: 0.6ms | Allocations: 510)
+  Rendered layout layouts/application.html.erb (Duration: 74.7ms | Allocations: 11483)
+Completed 200 OK in 83ms (Views: 75.8ms | ActiveRecord: 0.5ms | Allocations: 12472)
+
+

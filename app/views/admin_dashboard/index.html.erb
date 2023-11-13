@@ -1,11 +1,21 @@
 <!DOCTYPE html>
 <html>
-<head>
-  <title>Admin Dashboard</title>
-</head>
+
+  <div class="d-flex align-items-center justify-content-center">
+      <h1 class="title">Administrator Dashboard<h1> 
+  </div>
+
 <body>
-  <h1>You nerd, you are admin</h1>
   
   <!-- Add your admin dashboard content here -->
+  
+  <nav>
+    <ul>
+      <% if current_user && current_user.admin? %>
+        <li><%= link_to "View All Users", view_all_users_path %></li>
+      <% end %>
+    </ul>
+  </nav>
+
 </body>
 </html>
