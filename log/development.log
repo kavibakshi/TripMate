@@ -19602,3 +19602,1367 @@ Started GET "/Marker.png" for ::1 at 2023-11-11 21:55:33 -0800
   
 ActionController::RoutingError (No route matches [GET] "/Marker.png"):
   
+Started GET "/map" for ::1 at 2023-11-11 22:01:30 -0800
+Processing by MapController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering map/index.html.erb within layouts/application
+  Rendered map/index.html.erb within layouts/application (Duration: 0.1ms | Allocations: 7)
+  Rendered shared/_navbar.html.erb (Duration: 0.3ms | Allocations: 282)
+  Rendered layout layouts/application.html.erb (Duration: 122.2ms | Allocations: 11276)
+Completed 200 OK in 129ms (Views: 123.4ms | ActiveRecord: 0.0ms | Allocations: 11694)
+
+
+Started GET "/map" for ::1 at 2023-11-11 22:04:15 -0800
+Processing by MapController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering map/index.html.erb within layouts/application
+  Rendered map/index.html.erb within layouts/application (Duration: 28.6ms | Allocations: 347)
+  Rendered shared/_navbar.html.erb (Duration: 1.9ms | Allocations: 718)
+  Rendered layout layouts/application.html.erb (Duration: 128.5ms | Allocations: 12480)
+Completed 200 OK in 145ms (Views: 137.2ms | ActiveRecord: 0.0ms | Allocations: 13498)
+
+
+Started GET "/map" for ::1 at 2023-11-11 22:04:37 -0800
+Processing by MapController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering map/index.html.erb within layouts/application
+  Rendered map/index.html.erb within layouts/application (Duration: 24.2ms | Allocations: 377)
+  Rendered shared/_navbar.html.erb (Duration: 2.3ms | Allocations: 718)
+  Rendered layout layouts/application.html.erb (Duration: 140.6ms | Allocations: 12511)
+Completed 200 OK in 156ms (Views: 148.6ms | ActiveRecord: 0.0ms | Allocations: 13499)
+
+
+Started GET "/Marker.png" for ::1 at 2023-11-11 22:04:53 -0800
+  
+ActionController::RoutingError (No route matches [GET] "/Marker.png"):
+  
+Started GET "/Marker.png" for ::1 at 2023-11-11 22:05:15 -0800
+  
+ActionController::RoutingError (No route matches [GET] "/Marker.png"):
+  
+Started GET "/Marker.png" for ::1 at 2023-11-11 22:05:34 -0800
+  
+ActionController::RoutingError (No route matches [GET] "/Marker.png"):
+  
+Started GET "/Marker.png" for ::1 at 2023-11-11 22:11:20 -0800
+  
+ActionController::RoutingError (No route matches [GET] "/Marker.png"):
+  
+Started GET "/Marker.png" for ::1 at 2023-11-11 22:11:21 -0800
+  
+ActionController::RoutingError (No route matches [GET] "/Marker.png"):
+  
+Started GET "/Marker.png" for ::1 at 2023-11-11 22:11:22 -0800
+  
+ActionController::RoutingError (No route matches [GET] "/Marker.png"):
+  
+Started GET "/Marker.png" for ::1 at 2023-11-11 22:11:24 -0800
+  
+ActionController::RoutingError (No route matches [GET] "/Marker.png"):
+  
+Started GET "/Marker.png" for ::1 at 2023-11-11 22:11:32 -0800
+  
+ActionController::RoutingError (No route matches [GET] "/Marker.png"):
+  
+Started GET "/map" for ::1 at 2023-11-11 22:18:10 -0800
+Processing by MapController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering map/index.html.erb within layouts/application
+  Rendered map/index.html.erb within layouts/application (Duration: 27.8ms | Allocations: 368)
+  Rendered shared/_navbar.html.erb (Duration: 46.2ms | Allocations: 721)
+  Rendered layout layouts/application.html.erb (Duration: 226.2ms | Allocations: 12524)
+Completed 200 OK in 241ms (Views: 233.8ms | ActiveRecord: 0.0ms | Allocations: 13506)
+
+
+Started GET "/map" for ::1 at 2023-11-11 22:26:52 -0800
+Processing by MapController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering map/index.html.erb within layouts/application
+  Rendered map/index.html.erb within layouts/application (Duration: 75.8ms | Allocations: 367)
+  Rendered shared/_navbar.html.erb (Duration: 1.8ms | Allocations: 718)
+  Rendered layout layouts/application.html.erb (Duration: 207.7ms | Allocations: 12501)
+Completed 200 OK in 228ms (Views: 221.2ms | ActiveRecord: 0.0ms | Allocations: 13495)
+
+
+Started GET "/map" for ::1 at 2023-11-11 22:28:55 -0800
+Processing by MapController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering map/index.html.erb within layouts/application
+  Rendered map/index.html.erb within layouts/application (Duration: 23.7ms | Allocations: 335)
+  Rendered shared/_navbar.html.erb (Duration: 1.6ms | Allocations: 718)
+  Rendered layout layouts/application.html.erb (Duration: 119.6ms | Allocations: 12468)
+Completed 200 OK in 135ms (Views: 127.5ms | ActiveRecord: 0.0ms | Allocations: 13445)
+
+
+Started GET "/map" for ::1 at 2023-11-11 22:33:21 -0800
+Processing by MapController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering map/index.html.erb within layouts/application
+  Rendered map/index.html.erb within layouts/application (Duration: 27.2ms | Allocations: 335)
+  Rendered shared/_navbar.html.erb (Duration: 1.5ms | Allocations: 718)
+  Rendered layout layouts/application.html.erb (Duration: 129.3ms | Allocations: 12469)
+Completed 200 OK in 145ms (Views: 138.9ms | ActiveRecord: 0.0ms | Allocations: 13464)
+
+
+Started GET "/Marker.png" for ::1 at 2023-11-11 22:33:29 -0800
+  
+ActionController::RoutingError (No route matches [GET] "/Marker.png"):
+  
+Started GET "/map" for ::1 at 2023-11-11 22:39:07 -0800
+Processing by MapController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering map/index.html.erb within layouts/application
+  Rendered map/index.html.erb within layouts/application (Duration: 60.4ms | Allocations: 367)
+  Rendered shared/_navbar.html.erb (Duration: 2.4ms | Allocations: 718)
+  Rendered layout layouts/application.html.erb (Duration: 168.9ms | Allocations: 12719)
+Completed 200 OK in 185ms (Views: 179.6ms | ActiveRecord: 0.0ms | Allocations: 13718)
+
+
+Started GET "/map" for ::1 at 2023-11-11 22:39:26 -0800
+Processing by MapController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering map/index.html.erb within layouts/application
+  Rendered map/index.html.erb within layouts/application (Duration: 2.3ms | Allocations: 334)
+  Rendered shared/_navbar.html.erb (Duration: 1.6ms | Allocations: 718)
+  Rendered layout layouts/application.html.erb (Duration: 101.6ms | Allocations: 12467)
+Completed 200 OK in 119ms (Views: 113.7ms | ActiveRecord: 0.0ms | Allocations: 13447)
+
+
+Started GET "/Marker.png" for ::1 at 2023-11-11 22:45:51 -0800
+  
+ActionController::RoutingError (No route matches [GET] "/Marker.png"):
+  
+Started GET "/Marker.png" for ::1 at 2023-11-11 22:45:52 -0800
+  
+ActionController::RoutingError (No route matches [GET] "/Marker.png"):
+  
+Started GET "/Marker.png" for ::1 at 2023-11-11 22:45:55 -0800
+  
+ActionController::RoutingError (No route matches [GET] "/Marker.png"):
+  
+Started GET "/Marker.png" for ::1 at 2023-11-11 22:47:52 -0800
+  
+ActionController::RoutingError (No route matches [GET] "/Marker.png"):
+  
+Started GET "/Marker.png" for ::1 at 2023-11-11 22:50:39 -0800
+  
+ActionController::RoutingError (No route matches [GET] "/Marker.png"):
+  
+Started GET "/map" for ::1 at 2023-11-11 22:50:40 -0800
+Processing by MapController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering map/index.html.erb within layouts/application
+  Rendered map/index.html.erb within layouts/application (Duration: 0.1ms | Allocations: 7)
+  Rendered shared/_navbar.html.erb (Duration: 0.3ms | Allocations: 282)
+  Rendered layout layouts/application.html.erb (Duration: 97.8ms | Allocations: 11481)
+Completed 200 OK in 103ms (Views: 98.8ms | ActiveRecord: 0.0ms | Allocations: 11936)
+
+
+Started GET "/Marker.png" for ::1 at 2023-11-11 22:51:27 -0800
+  
+ActionController::RoutingError (No route matches [GET] "/Marker.png"):
+  
+Started GET "/map" for ::1 at 2023-11-11 23:05:42 -0800
+Processing by MapController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering map/index.html.erb within layouts/application
+  Rendered map/index.html.erb within layouts/application (Duration: 47.1ms | Allocations: 378)
+  Rendered shared/_navbar.html.erb (Duration: 2.5ms | Allocations: 718)
+  Rendered layout layouts/application.html.erb (Duration: 210.2ms | Allocations: 12730)
+Completed 200 OK in 228ms (Views: 221.0ms | ActiveRecord: 0.0ms | Allocations: 13719)
+
+
+Started GET "/map" for ::1 at 2023-11-11 23:05:54 -0800
+Processing by MapController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering map/index.html.erb within layouts/application
+  Rendered map/index.html.erb within layouts/application (Duration: 2.0ms | Allocations: 334)
+  Rendered shared/_navbar.html.erb (Duration: 1.6ms | Allocations: 718)
+  Rendered layout layouts/application.html.erb (Duration: 118.2ms | Allocations: 12467)
+Completed 200 OK in 134ms (Views: 126.2ms | ActiveRecord: 0.0ms | Allocations: 13456)
+
+
+Started GET "/Marker.png" for ::1 at 2023-11-11 23:06:18 -0800
+  
+ActionController::RoutingError (No route matches [GET] "/Marker.png"):
+  
+Started GET "/Marker.png" for ::1 at 2023-11-11 23:06:19 -0800
+  
+ActionController::RoutingError (No route matches [GET] "/Marker.png"):
+  
+Started GET "/map" for ::1 at 2023-11-11 23:07:09 -0800
+Processing by MapController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering map/index.html.erb within layouts/application
+  Rendered map/index.html.erb within layouts/application (Duration: 24.8ms | Allocations: 338)
+  Rendered shared/_navbar.html.erb (Duration: 1.5ms | Allocations: 718)
+  Rendered layout layouts/application.html.erb (Duration: 116.9ms | Allocations: 12690)
+Completed 200 OK in 131ms (Views: 125.8ms | ActiveRecord: 0.0ms | Allocations: 13683)
+
+
+Started GET "/map" for ::1 at 2023-11-11 23:07:26 -0800
+Processing by MapController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering map/index.html.erb within layouts/application
+  Rendered map/index.html.erb within layouts/application (Duration: 4.2ms | Allocations: 334)
+  Rendered shared/_navbar.html.erb (Duration: 1.7ms | Allocations: 718)
+  Rendered layout layouts/application.html.erb (Duration: 183.6ms | Allocations: 12468)
+Completed 200 OK in 209ms (Views: 200.7ms | ActiveRecord: 0.0ms | Allocations: 13463)
+
+
+Started GET "/map" for ::1 at 2023-11-11 23:08:50 -0800
+Processing by MapController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering map/index.html.erb within layouts/application
+  Rendered map/index.html.erb within layouts/application (Duration: 40.7ms | Allocations: 335)
+  Rendered shared/_navbar.html.erb (Duration: 1.9ms | Allocations: 718)
+  Rendered layout layouts/application.html.erb (Duration: 182.4ms | Allocations: 12468)
+Completed 200 OK in 203ms (Views: 195.0ms | ActiveRecord: 0.0ms | Allocations: 13460)
+
+
+Started GET "/map" for ::1 at 2023-11-11 23:09:01 -0800
+Processing by MapController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering map/index.html.erb within layouts/application
+  Rendered map/index.html.erb within layouts/application (Duration: 4.3ms | Allocations: 337)
+  Rendered shared/_navbar.html.erb (Duration: 1.6ms | Allocations: 719)
+  Rendered layout layouts/application.html.erb (Duration: 145.2ms | Allocations: 12693)
+Completed 200 OK in 163ms (Views: 154.1ms | ActiveRecord: 0.0ms | Allocations: 13674)
+
+
+Started GET "/map" for ::1 at 2023-11-11 23:09:11 -0800
+Processing by MapController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering map/index.html.erb within layouts/application
+  Rendered map/index.html.erb within layouts/application (Duration: 26.1ms | Allocations: 352)
+  Rendered shared/_navbar.html.erb (Duration: 2.1ms | Allocations: 718)
+  Rendered layout layouts/application.html.erb (Duration: 129.6ms | Allocations: 12556)
+Completed 200 OK in 146ms (Views: 140.6ms | ActiveRecord: 0.0ms | Allocations: 13539)
+
+
+Started GET "/Marker.png" for ::1 at 2023-11-11 23:09:14 -0800
+  
+ActionController::RoutingError (No route matches [GET] "/Marker.png"):
+  
+Started GET "/Marker.png" for ::1 at 2023-11-11 23:09:26 -0800
+  
+ActionController::RoutingError (No route matches [GET] "/Marker.png"):
+  
+Started GET "/map" for ::1 at 2023-11-11 23:11:18 -0800
+Processing by MapController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering map/index.html.erb within layouts/application
+  Rendered map/index.html.erb within layouts/application (Duration: 2.4ms | Allocations: 338)
+  Rendered shared/_navbar.html.erb (Duration: 1.9ms | Allocations: 721)
+  Rendered layout layouts/application.html.erb (Duration: 132.1ms | Allocations: 12697)
+Completed 200 OK in 152ms (Views: 144.8ms | ActiveRecord: 0.0ms | Allocations: 13684)
+
+
+Started GET "/map" for ::1 at 2023-11-11 23:11:54 -0800
+Processing by MapController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering map/index.html.erb within layouts/application
+  Rendered map/index.html.erb within layouts/application (Duration: 24.2ms | Allocations: 346)
+  Rendered shared/_navbar.html.erb (Duration: 2.2ms | Allocations: 718)
+  Rendered layout layouts/application.html.erb (Duration: 146.1ms | Allocations: 12479)
+Completed 200 OK in 161ms (Views: 155.7ms | ActiveRecord: 0.0ms | Allocations: 13474)
+
+
+Started GET "/Marker.png" for ::1 at 2023-11-11 23:12:05 -0800
+  
+ActionController::RoutingError (No route matches [GET] "/Marker.png"):
+  
+Started GET "/map" for ::1 at 2023-11-11 23:12:20 -0800
+Processing by MapController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering map/index.html.erb within layouts/application
+  Rendered map/index.html.erb within layouts/application (Duration: 2.0ms | Allocations: 334)
+  Rendered shared/_navbar.html.erb (Duration: 2.6ms | Allocations: 718)
+  Rendered layout layouts/application.html.erb (Duration: 108.2ms | Allocations: 12686)
+Completed 200 OK in 125ms (Views: 116.6ms | ActiveRecord: 0.0ms | Allocations: 13676)
+
+
+Started GET "/map" for ::1 at 2023-11-11 23:14:11 -0800
+Processing by MapController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering map/index.html.erb within layouts/application
+  Rendered map/index.html.erb within layouts/application (Duration: 26.8ms | Allocations: 347)
+  Rendered shared/_navbar.html.erb (Duration: 1.3ms | Allocations: 718)
+  Rendered layout layouts/application.html.erb (Duration: 132.3ms | Allocations: 12480)
+Completed 200 OK in 148ms (Views: 142.6ms | ActiveRecord: 0.0ms | Allocations: 13448)
+
+
+Started GET "/Marker.png" for ::1 at 2023-11-11 23:14:19 -0800
+  
+ActionController::RoutingError (No route matches [GET] "/Marker.png"):
+  
+Started GET "/map" for ::1 at 2023-11-11 23:16:25 -0800
+Processing by MapController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering map/index.html.erb within layouts/application
+  Rendered map/index.html.erb within layouts/application (Duration: 30.2ms | Allocations: 350)
+  Rendered shared/_navbar.html.erb (Duration: 1.4ms | Allocations: 719)
+  Rendered layout layouts/application.html.erb (Duration: 172.0ms | Allocations: 12703)
+Completed 200 OK in 188ms (Views: 181.3ms | ActiveRecord: 0.0ms | Allocations: 13699)
+
+
+Started GET "/Marker.png" for ::1 at 2023-11-11 23:16:32 -0800
+  
+ActionController::RoutingError (No route matches [GET] "/Marker.png"):
+  
+Started GET "/Marker.png" for ::1 at 2023-11-11 23:16:51 -0800
+  
+ActionController::RoutingError (No route matches [GET] "/Marker.png"):
+  
+Started GET "/map" for ::1 at 2023-11-12 10:57:19 -0800
+Processing by MapController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering map/index.html.erb within layouts/application
+  Rendered map/index.html.erb within layouts/application (Duration: 1.0ms | Allocations: 7)
+  Rendered shared/_navbar.html.erb (Duration: 3.5ms | Allocations: 282)
+  Rendered layout layouts/application.html.erb (Duration: 287.5ms | Allocations: 11481)
+Completed 200 OK in 330ms (Views: 305.1ms | ActiveRecord: 0.0ms | Allocations: 11918)
+
+
+Started GET "/itineraries" for ::1 at 2023-11-12 10:57:30 -0800
+Processing by ItinerariesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering itineraries/index.html.erb within layouts/application
+  [1m[36mItinerary Load (4.3ms)[0m  [1m[34mSELECT "itineraries".* FROM "itineraries" ORDER BY "itineraries"."datetime" ASC[0m
+  ↳ app/views/itineraries/index.html.erb:17
+  Rendered itineraries/index.html.erb within layouts/application (Duration: 169.5ms | Allocations: 5481)
+  Rendered shared/_navbar.html.erb (Duration: 0.7ms | Allocations: 296)
+  Rendered layout layouts/application.html.erb (Duration: 458.2ms | Allocations: 16959)
+Completed 200 OK in 834ms (Views: 453.0ms | ActiveRecord: 127.8ms | Allocations: 22039)
+
+
+Started GET "/sign_up" for ::1 at 2023-11-12 10:57:33 -0800
+Processing by RegistrationsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering registrations/new.html.erb within layouts/application
+  Rendered registrations/new.html.erb within layouts/application (Duration: 168.3ms | Allocations: 2317)
+  Rendered shared/_navbar.html.erb (Duration: 0.8ms | Allocations: 298)
+  Rendered layout layouts/application.html.erb (Duration: 378.5ms | Allocations: 13783)
+Completed 200 OK in 483ms (Views: 393.6ms | ActiveRecord: 7.7ms | Allocations: 18492)
+
+
+Started POST "/sign_up" for ::1 at 2023-11-12 10:57:46 -0800
+Processing by RegistrationsController#create as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "user"=>{"email"=>"ssa@sfu.ca", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Sign Up"}
+  [1m[36mTRANSACTION (0.9ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/registrations_controller.rb:8:in `create'
+  [1m[36mUser Exists? (9.3ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "ssa@sfu.ca"], ["LIMIT", 1]]
+  ↳ app/controllers/registrations_controller.rb:8:in `create'
+  [1m[36mUser Create (5.7ms)[0m  [1m[32mINSERT INTO "users" ("email", "password_digest", "admin", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["email", "ssa@sfu.ca"], ["password_digest", "[FILTERED]"], ["admin", false], ["created_at", "2023-11-12 18:57:46.870572"], ["updated_at", "2023-11-12 18:57:46.870572"]]
+  ↳ app/controllers/registrations_controller.rb:8:in `create'
+  [1m[36mTRANSACTION (3.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/registrations_controller.rb:8:in `create'
+Redirected to http://localhost:3000/
+Completed 302 Found in 632ms (ActiveRecord: 19.0ms | Allocations: 6454)
+
+
+Started GET "/" for ::1 at 2023-11-12 10:57:47 -0800
+Processing by HomeController#index as TURBO_STREAM
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7:in `set_current_user'
+Redirected to http://localhost:3000/lists
+Filter chain halted as :set_current_user rendered or redirected
+Completed 302 Found in 23ms (ActiveRecord: 1.7ms | Allocations: 1626)
+
+
+Started GET "/lists" for ::1 at 2023-11-12 10:57:47 -0800
+Processing by ListsController#index as TURBO_STREAM
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7:in `set_current_user'
+  Rendering layout layouts/application.html.erb
+  Rendering lists/index.html.erb within layouts/application
+  [1m[36mList Load (5.0ms)[0m  [1m[34mSELECT "lists".* FROM "lists"[0m
+  ↳ app/views/lists/index.html.erb:15
+  Rendered lists/index.html.erb within layouts/application (Duration: 133.0ms | Allocations: 1244)
+  Rendered shared/_navbar.html.erb (Duration: 1.5ms | Allocations: 462)
+  Rendered layout layouts/application.html.erb (Duration: 342.4ms | Allocations: 12823)
+Completed 200 OK in 439ms (Views: 372.9ms | ActiveRecord: 5.6ms | Allocations: 14708)
+
+
+Started GET "/lists/new" for ::1 at 2023-11-12 10:57:50 -0800
+Processing by ListsController#new as HTML
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7:in `set_current_user'
+  Rendering layout layouts/application.html.erb
+  Rendering lists/new.html.erb within layouts/application
+  Rendered lists/_form.html.erb (Duration: 100.6ms | Allocations: 2015)
+  Rendered lists/new.html.erb within layouts/application (Duration: 121.6ms | Allocations: 2320)
+  Rendered shared/_navbar.html.erb (Duration: 1.2ms | Allocations: 422)
+  Rendered layout layouts/application.html.erb (Duration: 356.7ms | Allocations: 13870)
+Completed 200 OK in 408ms (Views: 359.9ms | ActiveRecord: 7.2ms | Allocations: 17171)
+
+
+Started POST "/lists" for ::1 at 2023-11-12 10:57:53 -0800
+Processing by ListsController#create as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "list"=>{"description"=>"s", "completed"=>"0"}, "commit"=>"Create List"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7:in `set_current_user'
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/lists_controller.rb:27:in `block in create'
+  [1m[36mList Create (5.7ms)[0m  [1m[32mINSERT INTO "lists" ("description", "completed", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["description", "s"], ["completed", false], ["created_at", "2023-11-12 18:57:53.635718"], ["updated_at", "2023-11-12 18:57:53.635718"]]
+  ↳ app/controllers/lists_controller.rb:27:in `block in create'
+  [1m[36mTRANSACTION (0.8ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/lists_controller.rb:27:in `block in create'
+Redirected to http://localhost:3000/lists
+Completed 302 Found in 42ms (ActiveRecord: 7.4ms | Allocations: 3056)
+
+
+Started GET "/lists" for ::1 at 2023-11-12 10:57:53 -0800
+Processing by ListsController#index as TURBO_STREAM
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7:in `set_current_user'
+  Rendering layout layouts/application.html.erb
+  Rendering lists/index.html.erb within layouts/application
+  [1m[36mList Load (1.1ms)[0m  [1m[34mSELECT "lists".* FROM "lists"[0m
+  ↳ app/views/lists/index.html.erb:15
+  Rendered lists/index.html.erb within layouts/application (Duration: 10.6ms | Allocations: 1346)
+  Rendered shared/_navbar.html.erb (Duration: 1.6ms | Allocations: 423)
+  Rendered layout layouts/application.html.erb (Duration: 250.0ms | Allocations: 12902)
+Completed 200 OK in 268ms (Views: 251.3ms | ActiveRecord: 1.7ms | Allocations: 13923)
+
+
+Started GET "/lists/new" for ::1 at 2023-11-12 10:57:56 -0800
+Processing by ListsController#new as HTML
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7:in `set_current_user'
+  Rendering layout layouts/application.html.erb
+  Rendering lists/new.html.erb within layouts/application
+  Rendered lists/_form.html.erb (Duration: 2.9ms | Allocations: 842)
+  Rendered lists/new.html.erb within layouts/application (Duration: 4.1ms | Allocations: 931)
+  Rendered shared/_navbar.html.erb (Duration: 0.9ms | Allocations: 422)
+  Rendered layout layouts/application.html.erb (Duration: 190.5ms | Allocations: 12329)
+Completed 200 OK in 207ms (Views: 192.9ms | ActiveRecord: 0.8ms | Allocations: 13337)
+
+
+Started POST "/lists" for ::1 at 2023-11-12 10:57:59 -0800
+Processing by ListsController#create as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "list"=>{"description"=>"a", "completed"=>"0"}, "commit"=>"Create List"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7:in `set_current_user'
+  [1m[36mTRANSACTION (0.5ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/lists_controller.rb:27:in `block in create'
+  [1m[36mList Create (0.8ms)[0m  [1m[32mINSERT INTO "lists" ("description", "completed", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["description", "a"], ["completed", false], ["created_at", "2023-11-12 18:57:59.243544"], ["updated_at", "2023-11-12 18:57:59.243544"]]
+  ↳ app/controllers/lists_controller.rb:27:in `block in create'
+  [1m[36mTRANSACTION (3.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/lists_controller.rb:27:in `block in create'
+Redirected to http://localhost:3000/lists
+Completed 302 Found in 39ms (ActiveRecord: 5.2ms | Allocations: 2823)
+
+
+Started GET "/lists" for ::1 at 2023-11-12 10:57:59 -0800
+Processing by ListsController#index as TURBO_STREAM
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7:in `set_current_user'
+  Rendering layout layouts/application.html.erb
+  Rendering lists/index.html.erb within layouts/application
+  [1m[36mList Load (0.7ms)[0m  [1m[34mSELECT "lists".* FROM "lists"[0m
+  ↳ app/views/lists/index.html.erb:15
+  Rendered lists/index.html.erb within layouts/application (Duration: 10.7ms | Allocations: 1970)
+  Rendered shared/_navbar.html.erb (Duration: 1.1ms | Allocations: 423)
+  Rendered layout layouts/application.html.erb (Duration: 231.9ms | Allocations: 13566)
+Completed 200 OK in 243ms (Views: 233.5ms | ActiveRecord: 0.9ms | Allocations: 14572)
+
+
+Started GET "/lists" for ::1 at 2023-11-12 10:58:00 -0800
+Processing by ListsController#index as HTML
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7:in `set_current_user'
+  Rendering layout layouts/application.html.erb
+  Rendering lists/index.html.erb within layouts/application
+  [1m[36mList Load (0.9ms)[0m  [1m[34mSELECT "lists".* FROM "lists"[0m
+  ↳ app/views/lists/index.html.erb:15
+  Rendered lists/index.html.erb within layouts/application (Duration: 19.3ms | Allocations: 1969)
+  Rendered shared/_navbar.html.erb (Duration: 1.0ms | Allocations: 423)
+  Rendered layout layouts/application.html.erb (Duration: 252.7ms | Allocations: 13533)
+Completed 200 OK in 272ms (Views: 254.2ms | ActiveRecord: 1.5ms | Allocations: 14534)
+
+
+Started DELETE "/logout" for ::1 at 2023-11-12 10:58:03 -0800
+Processing by SessionsController#destroy as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]"}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7:in `set_current_user'
+Redirected to http://localhost:3000/
+Completed 302 Found in 17ms (ActiveRecord: 0.6ms | Allocations: 972)
+
+
+Started GET "/" for ::1 at 2023-11-12 10:58:03 -0800
+Processing by HomeController#index as TURBO_STREAM
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 20.7ms | Allocations: 110)
+  Rendered shared/_navbar.html.erb (Duration: 1.1ms | Allocations: 317)
+  Rendered layout layouts/application.html.erb (Duration: 214.1ms | Allocations: 11493)
+Completed 200 OK in 246ms (Views: 231.9ms | ActiveRecord: 0.0ms | Allocations: 12304)
+
+
+Started GET "/" for ::1 at 2023-11-12 10:58:06 -0800
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 0.2ms | Allocations: 7)
+  Rendered shared/_navbar.html.erb (Duration: 0.4ms | Allocations: 282)
+  Rendered layout layouts/application.html.erb (Duration: 238.5ms | Allocations: 11272)
+Completed 200 OK in 249ms (Views: 240.1ms | ActiveRecord: 0.0ms | Allocations: 11628)
+
+
+Started GET "/sign_in" for ::1 at 2023-11-12 10:58:10 -0800
+Processing by SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (Duration: 66.3ms | Allocations: 2589)
+  Rendered shared/_navbar.html.erb (Duration: 0.6ms | Allocations: 298)
+  Rendered layout layouts/application.html.erb (Duration: 258.0ms | Allocations: 14047)
+Completed 200 OK in 289ms (Views: 276.1ms | ActiveRecord: 0.0ms | Allocations: 14868)
+
+
+Started POST "/sign_in" for ::1 at 2023-11-12 10:58:19 -0800
+Processing by SessionsController#create as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "email"=>"ssa434@sfu.ca", "password"=>"[FILTERED]", "commit"=>"Sign In"}
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "ssa434@sfu.ca"], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:6:in `create'
+  Rendering layout layouts/application.html.erb
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (Duration: 4.3ms | Allocations: 2230)
+  Rendered shared/_navbar.html.erb (Duration: 0.7ms | Allocations: 273)
+  Rendered layout layouts/application.html.erb (Duration: 212.6ms | Allocations: 13596)
+Completed 422 Unprocessable Entity in 231ms (Views: 214.8ms | ActiveRecord: 0.9ms | Allocations: 14686)
+
+
+Started POST "/sign_in" for ::1 at 2023-11-12 10:58:20 -0800
+Processing by SessionsController#create as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "email"=>"", "password"=>"[FILTERED]", "commit"=>"Sign In"}
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", ""], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:6:in `create'
+  Rendering layout layouts/application.html.erb
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (Duration: 4.3ms | Allocations: 2229)
+  Rendered shared/_navbar.html.erb (Duration: 0.9ms | Allocations: 273)
+  Rendered layout layouts/application.html.erb (Duration: 207.6ms | Allocations: 13644)
+Completed 422 Unprocessable Entity in 227ms (Views: 210.1ms | ActiveRecord: 0.7ms | Allocations: 14632)
+
+
+Started POST "/sign_in" for ::1 at 2023-11-12 10:58:22 -0800
+Processing by SessionsController#create as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "email"=>"", "password"=>"[FILTERED]", "commit"=>"Sign In"}
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", ""], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:6:in `create'
+  Rendering layout layouts/application.html.erb
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (Duration: 4.2ms | Allocations: 2230)
+  Rendered shared/_navbar.html.erb (Duration: 2.5ms | Allocations: 273)
+  Rendered layout layouts/application.html.erb (Duration: 207.1ms | Allocations: 13475)
+Completed 422 Unprocessable Entity in 223ms (Views: 209.5ms | ActiveRecord: 0.7ms | Allocations: 14478)
+
+
+Started POST "/sign_in" for ::1 at 2023-11-12 10:58:28 -0800
+Processing by SessionsController#create as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "email"=>"ssa434@sfu.ca", "password"=>"[FILTERED]", "commit"=>"Sign In"}
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "ssa434@sfu.ca"], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:6:in `create'
+  Rendering layout layouts/application.html.erb
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (Duration: 4.1ms | Allocations: 2231)
+  Rendered shared/_navbar.html.erb (Duration: 0.6ms | Allocations: 273)
+  Rendered layout layouts/application.html.erb (Duration: 197.5ms | Allocations: 13477)
+Completed 422 Unprocessable Entity in 215ms (Views: 199.9ms | ActiveRecord: 0.9ms | Allocations: 14453)
+
+
+Started GET "/sign_up" for ::1 at 2023-11-12 10:58:31 -0800
+Processing by RegistrationsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering registrations/new.html.erb within layouts/application
+  Rendered registrations/new.html.erb within layouts/application (Duration: 4.2ms | Allocations: 963)
+  Rendered shared/_navbar.html.erb (Duration: 1.5ms | Allocations: 273)
+  Rendered layout layouts/application.html.erb (Duration: 194.5ms | Allocations: 12236)
+Completed 200 OK in 208ms (Views: 197.4ms | ActiveRecord: 0.0ms | Allocations: 12708)
+
+
+Started GET "/sign_up" for ::1 at 2023-11-12 10:58:33 -0800
+Processing by RegistrationsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering registrations/new.html.erb within layouts/application
+  Rendered registrations/new.html.erb within layouts/application (Duration: 3.4ms | Allocations: 957)
+  Rendered shared/_navbar.html.erb (Duration: 0.6ms | Allocations: 273)
+  Rendered layout layouts/application.html.erb (Duration: 204.6ms | Allocations: 12393)
+Completed 200 OK in 214ms (Views: 206.6ms | ActiveRecord: 0.0ms | Allocations: 12855)
+
+
+Started GET "/sign_in" for ::1 at 2023-11-12 10:58:37 -0800
+Processing by SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (Duration: 3.4ms | Allocations: 2235)
+  Rendered shared/_navbar.html.erb (Duration: 0.5ms | Allocations: 273)
+  Rendered layout layouts/application.html.erb (Duration: 193.9ms | Allocations: 13482)
+Completed 200 OK in 205ms (Views: 198.1ms | ActiveRecord: 0.0ms | Allocations: 13929)
+
+
+Started POST "/sign_in" for ::1 at 2023-11-12 10:58:47 -0800
+Processing by SessionsController#create as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "email"=>"ssa@sfu.ca", "password"=>"[FILTERED]", "commit"=>"Sign In"}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "ssa@sfu.ca"], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:6:in `create'
+Redirected to http://localhost:3000/lists
+Completed 302 Found in 566ms (ActiveRecord: 0.6ms | Allocations: 942)
+
+
+Started GET "/lists" for ::1 at 2023-11-12 10:58:48 -0800
+Processing by ListsController#index as TURBO_STREAM
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7:in `set_current_user'
+  Rendering layout layouts/application.html.erb
+  Rendering lists/index.html.erb within layouts/application
+  [1m[36mList Load (0.9ms)[0m  [1m[34mSELECT "lists".* FROM "lists"[0m
+  ↳ app/views/lists/index.html.erb:15
+  Rendered lists/index.html.erb within layouts/application (Duration: 14.0ms | Allocations: 1972)
+  Rendered shared/_navbar.html.erb (Duration: 1.1ms | Allocations: 423)
+  Rendered layout layouts/application.html.erb (Duration: 283.3ms | Allocations: 13378)
+Completed 200 OK in 307ms (Views: 284.6ms | ActiveRecord: 1.5ms | Allocations: 14376)
+
+
+  [1m[35m (3.5ms)[0m  [1m[34mSELECT pg_try_advisory_lock(1914711888339706680)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (3.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreateMarkers (20231112190816)
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (91.3ms)[0m  [1m[35mCREATE TABLE "markers" ("id" bigserial primary key, "latitude" float, "longitude" float, "user_id" bigint NOT NULL, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL, CONSTRAINT "fk_rails_a7009bc2b6"
+FOREIGN KEY ("user_id")
+  REFERENCES "users" ("id")
+)[0m
+  [1m[35m (7.3ms)[0m  [1m[35mCREATE INDEX "index_markers_on_user_id" ON "markers" ("user_id")[0m
+  [1m[36mActiveRecord::SchemaMigration Create (1.9ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20231112190816"]]
+  [1m[36mTRANSACTION (1.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (3.7ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT pg_advisory_unlock(1914711888339706680)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (3.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Started GET "/" for ::1 at 2023-11-12 11:30:11 -0800
+  [1m[36mActiveRecord::SchemaMigration Pluck (2.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 8.8ms | Allocations: 111)
+  Rendered shared/_navbar.html.erb (Duration: 226.8ms | Allocations: 725)
+  Rendered layout layouts/application.html.erb (Duration: 717.8ms | Allocations: 25224)
+Completed 200 OK in 764ms (Views: 733.5ms | ActiveRecord: 0.0ms | Allocations: 26498)
+
+
+Started GET "/sign_in" for ::1 at 2023-11-12 11:30:25 -0800
+Processing by SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (Duration: 2.8ms | Allocations: 2523)
+  Rendered shared/_navbar.html.erb (Duration: 0.3ms | Allocations: 298)
+  Rendered layout layouts/application.html.erb (Duration: 75.5ms | Allocations: 13873)
+Completed 200 OK in 90ms (Views: 84.2ms | ActiveRecord: 0.0ms | Allocations: 14730)
+
+
+Started POST "/sign_in" for ::1 at 2023-11-12 11:30:32 -0800
+Processing by SessionsController#create as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "email"=>"ssa@sfu.ca", "password"=>"[FILTERED]", "commit"=>"Sign In"}
+  [1m[36mUser Load (2.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "ssa@sfu.ca"], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:6:in `create'
+  Rendering layout layouts/application.html.erb
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (Duration: 3.4ms | Allocations: 2230)
+  Rendered shared/_navbar.html.erb (Duration: 0.3ms | Allocations: 273)
+  Rendered layout layouts/application.html.erb (Duration: 88.1ms | Allocations: 13686)
+Completed 422 Unprocessable Entity in 350ms (Views: 90.1ms | ActiveRecord: 2.4ms | Allocations: 17383)
+
+
+Started POST "/sign_in" for ::1 at 2023-11-12 11:30:41 -0800
+Processing by SessionsController#create as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "email"=>"ssa@sfu.ca", "password"=>"[FILTERED]", "commit"=>"Sign In"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "ssa@sfu.ca"], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:6:in `create'
+Redirected to http://localhost:3000/lists
+Completed 302 Found in 262ms (ActiveRecord: 0.4ms | Allocations: 935)
+
+
+Started GET "/lists" for ::1 at 2023-11-12 11:30:42 -0800
+  
+SyntaxError (C:/Users/Owner/Desktop/tripmate2/TripMate/app/controllers/lists_controller.rb:31: syntax error, unexpected local variable or method, expecting `do' or '{' or '('
+... { render :new, srails generate controller Markers
+...                       ^~~~~~~~
+):
+  
+app/controllers/lists_controller.rb:31: syntax error, unexpected local variable or method, expecting `do' or '{' or '('
+app/controllers/lists_controller.rb:31: syntax error, unexpected local variable or method, expecting `do' or '{' or '('
+Started GET "/sign_in" for ::1 at 2023-11-12 11:31:52 -0800
+Processing by SessionsController#new as HTML
+  [1m[36mUser Load (3.9ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7:in `set_current_user'
+  Rendering layout layouts/application.html.erb
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (Duration: 30.3ms | Allocations: 2233)
+  Rendered shared/_navbar.html.erb (Duration: 0.9ms | Allocations: 455)
+  Rendered layout layouts/application.html.erb (Duration: 305.4ms | Allocations: 26720)
+Completed 200 OK in 455ms (Views: 316.5ms | ActiveRecord: 29.0ms | Allocations: 31328)
+
+
+Started GET "/sign_in/map" for ::1 at 2023-11-12 11:32:06 -0800
+  
+ActionController::RoutingError (No route matches [GET] "/sign_in/map"):
+  
+Started GET "/map" for ::1 at 2023-11-12 11:32:56 -0800
+Processing by MapController#index as HTML
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7:in `set_current_user'
+  Rendering layout layouts/application.html.erb
+  Rendering map/index.html.erb within layouts/application
+  Rendered map/index.html.erb within layouts/application (Duration: 65.8ms | Allocations: 523)
+  Rendered shared/_navbar.html.erb (Duration: 0.9ms | Allocations: 478)
+  Rendered layout layouts/application.html.erb (Duration: 152.7ms | Allocations: 12281)
+Completed 200 OK in 179ms (Views: 163.5ms | ActiveRecord: 0.6ms | Allocations: 13670)
+
+
+Started GET "/markers" for ::1 at 2023-11-12 11:32:57 -0800
+  
+NameError (undefined local variable or method `current_user' for MarkersController:Class):
+  
+app/controllers/markers_controller.rb:4:in `<class:MarkersController>'
+app/controllers/markers_controller.rb:2:in `<main>'
+Started GET "/Marker.png" for ::1 at 2023-11-12 11:32:58 -0800
+  
+ActionController::RoutingError (No route matches [GET] "/Marker.png"):
+  
+Started GET "/Marker.png" for ::1 at 2023-11-12 11:32:59 -0800
+  
+ActionController::RoutingError (No route matches [GET] "/Marker.png"):
+  
+Started GET "/Marker.png" for ::1 at 2023-11-12 11:33:00 -0800
+  
+ActionController::RoutingError (No route matches [GET] "/Marker.png"):
+  
+Started GET "/Marker.png" for ::1 at 2023-11-12 11:33:01 -0800
+  
+ActionController::RoutingError (No route matches [GET] "/Marker.png"):
+  
+Started GET "/map" for ::1 at 2023-11-12 11:33:09 -0800
+Processing by MapController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7:in `set_current_user'
+  Rendering layout layouts/application.html.erb
+  Rendering map/index.html.erb within layouts/application
+  Rendered map/index.html.erb within layouts/application (Duration: 0.1ms | Allocations: 13)
+  Rendered shared/_navbar.html.erb (Duration: 1.2ms | Allocations: 432)
+  Rendered layout layouts/application.html.erb (Duration: 74.0ms | Allocations: 11631)
+Completed 200 OK in 82ms (Views: 75.1ms | ActiveRecord: 0.3ms | Allocations: 12641)
+
+
+Started GET "/markers" for ::1 at 2023-11-12 11:33:09 -0800
+  
+NameError (undefined local variable or method `current_user' for MarkersController:Class):
+  
+app/controllers/markers_controller.rb:4:in `<class:MarkersController>'
+app/controllers/markers_controller.rb:2:in `<main>'
+Started GET "/Marker.png" for ::1 at 2023-11-12 11:33:12 -0800
+  
+ActionController::RoutingError (No route matches [GET] "/Marker.png"):
+  
+Started GET "/Marker.png" for ::1 at 2023-11-12 11:33:12 -0800
+  
+ActionController::RoutingError (No route matches [GET] "/Marker.png"):
+  
+Started GET "/Marker.png" for ::1 at 2023-11-12 11:33:14 -0800
+  
+ActionController::RoutingError (No route matches [GET] "/Marker.png"):
+  
+Started GET "/Marker.png" for ::1 at 2023-11-12 11:33:14 -0800
+  
+ActionController::RoutingError (No route matches [GET] "/Marker.png"):
+  
+Started GET "/map" for ::1 at 2023-11-12 11:33:20 -0800
+Processing by MapController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7:in `set_current_user'
+  Rendering layout layouts/application.html.erb
+  Rendering map/index.html.erb within layouts/application
+  Rendered map/index.html.erb within layouts/application (Duration: 0.1ms | Allocations: 13)
+  Rendered shared/_navbar.html.erb (Duration: 0.8ms | Allocations: 432)
+  Rendered layout layouts/application.html.erb (Duration: 73.6ms | Allocations: 11630)
+Completed 200 OK in 82ms (Views: 75.0ms | ActiveRecord: 0.3ms | Allocations: 12605)
+
+
+Started GET "/markers" for ::1 at 2023-11-12 11:33:20 -0800
+  
+NameError (undefined local variable or method `current_user' for MarkersController:Class):
+  
+app/controllers/markers_controller.rb:4:in `<class:MarkersController>'
+app/controllers/markers_controller.rb:2:in `<main>'
+Started GET "/map" for ::1 at 2023-11-12 11:41:20 -0800
+Processing by MapController#index as HTML
+  [1m[36mUser Load (3.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7:in `set_current_user'
+  Rendering layout layouts/application.html.erb
+  Rendering map/index.html.erb within layouts/application
+  Rendered map/index.html.erb within layouts/application (Duration: 51.5ms | Allocations: 594)
+  Rendered shared/_navbar.html.erb (Duration: 3.3ms | Allocations: 883)
+  Rendered layout layouts/application.html.erb (Duration: 292.6ms | Allocations: 25871)
+Completed 200 OK in 448ms (Views: 309.1ms | ActiveRecord: 28.4ms | Allocations: 33523)
+
+
+Started GET "/markers" for ::1 at 2023-11-12 11:41:27 -0800
+  
+NameError (undefined local variable or method `current_user' for MarkersController:Class):
+  
+app/controllers/markers_controller.rb:4:in `<class:MarkersController>'
+app/controllers/markers_controller.rb:2:in `<main>'
+Started POST "/markers" for ::1 at 2023-11-12 11:41:32 -0800
+Started GET "/Marker.png" for ::1 at 2023-11-12 11:41:32 -0800
+  
+NameError (undefined local variable or method `current_user' for MarkersController:Class):
+  
+app/controllers/markers_controller.rb:4:in `<class:MarkersController>'
+app/controllers/markers_controller.rb:2:in `<main>'
+  
+ActionController::RoutingError (No route matches [GET] "/Marker.png"):
+  
+Started POST "/markers" for ::1 at 2023-11-12 11:41:33 -0800
+Started GET "/Marker.png" for ::1 at 2023-11-12 11:41:33 -0800
+  
+NameError (undefined local variable or method `current_user' for MarkersController:Class):
+  
+app/controllers/markers_controller.rb:4:in `<class:MarkersController>'
+app/controllers/markers_controller.rb:2:in `<main>'
+  
+ActionController::RoutingError (No route matches [GET] "/Marker.png"):
+  
+Started POST "/markers" for ::1 at 2023-11-12 11:41:35 -0800
+Started GET "/Marker.png" for ::1 at 2023-11-12 11:41:35 -0800
+  
+NameError (undefined local variable or method `current_user' for MarkersController:Class):
+  
+app/controllers/markers_controller.rb:4:in `<class:MarkersController>'
+app/controllers/markers_controller.rb:2:in `<main>'
+  
+ActionController::RoutingError (No route matches [GET] "/Marker.png"):
+  
+Started POST "/markers" for ::1 at 2023-11-12 11:41:39 -0800
+Started GET "/Marker.png" for ::1 at 2023-11-12 11:41:40 -0800
+  
+NameError (undefined local variable or method `current_user' for MarkersController:Class):
+  
+app/controllers/markers_controller.rb:4:in `<class:MarkersController>'
+app/controllers/markers_controller.rb:2:in `<main>'
+  
+ActionController::RoutingError (No route matches [GET] "/Marker.png"):
+  
+Started POST "/markers" for ::1 at 2023-11-12 11:41:42 -0800
+Started GET "/Marker.png" for ::1 at 2023-11-12 11:41:42 -0800
+  
+NameError (undefined local variable or method `current_user' for MarkersController:Class):
+  
+app/controllers/markers_controller.rb:4:in `<class:MarkersController>'
+app/controllers/markers_controller.rb:2:in `<main>'
+  
+ActionController::RoutingError (No route matches [GET] "/Marker.png"):
+  
+Started GET "/map" for ::1 at 2023-11-12 11:41:53 -0800
+Processing by MapController#index as HTML
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7:in `set_current_user'
+  Rendering layout layouts/application.html.erb
+  Rendering map/index.html.erb within layouts/application
+  Rendered map/index.html.erb within layouts/application (Duration: 0.6ms | Allocations: 33)
+  Rendered shared/_navbar.html.erb (Duration: 1.3ms | Allocations: 432)
+  Rendered layout layouts/application.html.erb (Duration: 210.7ms | Allocations: 11660)
+Completed 200 OK in 233ms (Views: 213.3ms | ActiveRecord: 1.0ms | Allocations: 12645)
+
+
+Started GET "/markers" for ::1 at 2023-11-12 11:41:54 -0800
+  
+NameError (undefined local variable or method `current_user' for MarkersController:Class):
+  
+app/controllers/markers_controller.rb:4:in `<class:MarkersController>'
+app/controllers/markers_controller.rb:2:in `<main>'
+Started GET "/map" for ::1 at 2023-11-12 11:42:43 -0800
+Processing by MapController#index as HTML
+  [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7:in `set_current_user'
+  Rendering layout layouts/application.html.erb
+  Rendering map/index.html.erb within layouts/application
+  Rendered map/index.html.erb within layouts/application (Duration: 51.2ms | Allocations: 518)
+  Rendered shared/_navbar.html.erb (Duration: 4.2ms | Allocations: 875)
+  Rendered layout layouts/application.html.erb (Duration: 233.8ms | Allocations: 13027)
+Completed 200 OK in 272ms (Views: 253.4ms | ActiveRecord: 1.1ms | Allocations: 14569)
+
+
+Started GET "/markers" for ::1 at 2023-11-12 11:42:44 -0800
+  
+NameError (undefined local variable or method `current_user' for MarkersController:Class):
+  
+app/controllers/markers_controller.rb:4:in `<class:MarkersController>'
+app/controllers/markers_controller.rb:2:in `<main>'
+Started POST "/markers" for ::1 at 2023-11-12 11:42:46 -0800
+Started GET "/Marker.png" for ::1 at 2023-11-12 11:42:46 -0800
+  
+NameError (undefined local variable or method `current_user' for MarkersController:Class):
+  
+app/controllers/markers_controller.rb:4:in `<class:MarkersController>'
+app/controllers/markers_controller.rb:2:in `<main>'
+  
+ActionController::RoutingError (No route matches [GET] "/Marker.png"):
+  
+Started POST "/markers" for ::1 at 2023-11-12 11:42:48 -0800
+Started GET "/Marker.png" for ::1 at 2023-11-12 11:42:48 -0800
+  
+NameError (undefined local variable or method `current_user' for MarkersController:Class):
+  
+app/controllers/markers_controller.rb:4:in `<class:MarkersController>'
+app/controllers/markers_controller.rb:2:in `<main>'
+  
+ActionController::RoutingError (No route matches [GET] "/Marker.png"):
+  
+Started GET "/map" for ::1 at 2023-11-12 11:42:51 -0800
+Processing by MapController#index as HTML
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7:in `set_current_user'
+  Rendering layout layouts/application.html.erb
+  Rendering map/index.html.erb within layouts/application
+  Rendered map/index.html.erb within layouts/application (Duration: 0.1ms | Allocations: 13)
+  Rendered shared/_navbar.html.erb (Duration: 1.3ms | Allocations: 432)
+  Rendered layout layouts/application.html.erb (Duration: 169.1ms | Allocations: 11640)
+Completed 200 OK in 186ms (Views: 171.1ms | ActiveRecord: 0.6ms | Allocations: 12638)
+
+
+Started GET "/markers" for ::1 at 2023-11-12 11:42:52 -0800
+  
+NameError (undefined local variable or method `current_user' for MarkersController:Class):
+  
+app/controllers/markers_controller.rb:4:in `<class:MarkersController>'
+app/controllers/markers_controller.rb:2:in `<main>'
+Started GET "/map" for ::1 at 2023-11-12 11:45:04 -0800
+Processing by MapController#index as HTML
+  [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7:in `set_current_user'
+  Rendering layout layouts/application.html.erb
+  Rendering map/index.html.erb within layouts/application
+  Rendered map/index.html.erb within layouts/application (Duration: 57.4ms | Allocations: 517)
+  Rendered shared/_navbar.html.erb (Duration: 3.3ms | Allocations: 872)
+  Rendered layout layouts/application.html.erb (Duration: 237.6ms | Allocations: 13023)
+Completed 200 OK in 276ms (Views: 257.2ms | ActiveRecord: 1.1ms | Allocations: 14565)
+
+
+Started GET "/markers" for ::1 at 2023-11-12 11:45:05 -0800
+  
+NameError (undefined local variable or method `current_user' for MarkersController:Class):
+  
+app/controllers/markers_controller.rb:4:in `<class:MarkersController>'
+app/controllers/markers_controller.rb:2:in `<main>'
+Started GET "/Marker.png" for ::1 at 2023-11-12 11:45:05 -0800
+  
+ActionController::RoutingError (No route matches [GET] "/Marker.png"):
+  
+Started GET "/Marker.png" for ::1 at 2023-11-12 11:45:07 -0800
+  
+ActionController::RoutingError (No route matches [GET] "/Marker.png"):
+  
+Started GET "/map" for ::1 at 2023-11-12 11:45:27 -0800
+Processing by MapController#index as HTML
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7:in `set_current_user'
+  Rendering layout layouts/application.html.erb
+  Rendering map/index.html.erb within layouts/application
+  Rendered map/index.html.erb within layouts/application (Duration: 4.3ms | Allocations: 519)
+  Rendered shared/_navbar.html.erb (Duration: 4.4ms | Allocations: 872)
+  Rendered layout layouts/application.html.erb (Duration: 188.6ms | Allocations: 13025)
+Completed 200 OK in 229ms (Views: 209.5ms | ActiveRecord: 0.6ms | Allocations: 14547)
+
+
+Started GET "/markers" for ::1 at 2023-11-12 11:45:28 -0800
+  
+NameError (undefined local variable or method `current_user' for MarkersController:Class):
+  
+app/controllers/markers_controller.rb:4:in `<class:MarkersController>'
+app/controllers/markers_controller.rb:2:in `<main>'
+Started GET "/Marker.png" for ::1 at 2023-11-12 11:45:28 -0800
+  
+ActionController::RoutingError (No route matches [GET] "/Marker.png"):
+  
+Started GET "/Marker.png" for ::1 at 2023-11-12 11:45:30 -0800
+  
+ActionController::RoutingError (No route matches [GET] "/Marker.png"):
+  
+Started GET "/" for ::1 at 2023-11-12 11:45:35 -0800
+Processing by HomeController#index as HTML
+  [1m[36mUser Load (1.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7:in `set_current_user'
+Redirected to http://localhost:3000/lists
+Filter chain halted as :set_current_user rendered or redirected
+Completed 302 Found in 21ms (ActiveRecord: 1.2ms | Allocations: 916)
+
+
+Started GET "/lists" for ::1 at 2023-11-12 11:45:35 -0800
+Processing by ListsController#index as HTML
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7:in `set_current_user'
+  Rendering layout layouts/application.html.erb
+  Rendering lists/index.html.erb within layouts/application
+  [1m[36mList Load (2.4ms)[0m  [1m[34mSELECT "lists".* FROM "lists"[0m
+  ↳ app/views/lists/index.html.erb:15
+  Rendered lists/index.html.erb within layouts/application (Duration: 37.1ms | Allocations: 4130)
+  Rendered shared/_navbar.html.erb (Duration: 1.1ms | Allocations: 445)
+  Rendered layout layouts/application.html.erb (Duration: 227.9ms | Allocations: 15850)
+Completed 200 OK in 280ms (Views: 221.9ms | ActiveRecord: 24.4ms | Allocations: 17671)
+
+
+Started GET "/map" for ::1 at 2023-11-12 11:45:42 -0800
+Processing by MapController#index as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7:in `set_current_user'
+  Rendering layout layouts/application.html.erb
+  Rendering map/index.html.erb within layouts/application
+  Rendered map/index.html.erb within layouts/application (Duration: 0.2ms | Allocations: 13)
+  Rendered shared/_navbar.html.erb (Duration: 1.2ms | Allocations: 432)
+  Rendered layout layouts/application.html.erb (Duration: 184.1ms | Allocations: 11421)
+Completed 200 OK in 200ms (Views: 185.9ms | ActiveRecord: 0.5ms | Allocations: 12399)
+
+
+Started GET "/markers" for ::1 at 2023-11-12 11:45:43 -0800
+  
+NameError (undefined local variable or method `current_user' for MarkersController:Class):
+  
+app/controllers/markers_controller.rb:4:in `<class:MarkersController>'
+app/controllers/markers_controller.rb:2:in `<main>'
+Started GET "/Marker.png" for ::1 at 2023-11-12 11:45:44 -0800
+  
+ActionController::RoutingError (No route matches [GET] "/Marker.png"):
+  
+Started GET "/Marker.png" for ::1 at 2023-11-12 11:45:46 -0800
+  
+ActionController::RoutingError (No route matches [GET] "/Marker.png"):
+  
+Started GET "/Marker.png" for ::1 at 2023-11-12 11:45:54 -0800
+  
+ActionController::RoutingError (No route matches [GET] "/Marker.png"):
+  
+Started GET "/Marker.png" for ::1 at 2023-11-12 11:45:55 -0800
+  
+ActionController::RoutingError (No route matches [GET] "/Marker.png"):
+  
+Started GET "/Marker.png" for ::1 at 2023-11-12 11:45:57 -0800
+  
+ActionController::RoutingError (No route matches [GET] "/Marker.png"):
+  
+Started GET "/map" for ::1 at 2023-11-12 11:46:01 -0800
+Processing by MapController#index as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7:in `set_current_user'
+  Rendering layout layouts/application.html.erb
+  Rendering map/index.html.erb within layouts/application
+  Rendered map/index.html.erb within layouts/application (Duration: 0.2ms | Allocations: 13)
+  Rendered shared/_navbar.html.erb (Duration: 1.8ms | Allocations: 432)
+  Rendered layout layouts/application.html.erb (Duration: 468.2ms | Allocations: 11643)
+Completed 200 OK in 491ms (Views: 470.2ms | ActiveRecord: 0.4ms | Allocations: 12618)
+
+
+Started GET "/markers" for ::1 at 2023-11-12 11:46:03 -0800
+  
+NameError (undefined local variable or method `current_user' for MarkersController:Class):
+  
+app/controllers/markers_controller.rb:4:in `<class:MarkersController>'
+app/controllers/markers_controller.rb:2:in `<main>'
+Started GET "/map" for ::1 at 2023-11-12 11:46:20 -0800
+Processing by MapController#index as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7:in `set_current_user'
+  Rendering layout layouts/application.html.erb
+  Rendering map/index.html.erb within layouts/application
+  Rendered map/index.html.erb within layouts/application (Duration: 5.8ms | Allocations: 515)
+  Rendered shared/_navbar.html.erb (Duration: 4.5ms | Allocations: 872)
+  Rendered layout layouts/application.html.erb (Duration: 189.6ms | Allocations: 13020)
+Completed 200 OK in 234ms (Views: 213.0ms | ActiveRecord: 0.4ms | Allocations: 14546)
+
+
+Started GET "/Marker.png" for ::1 at 2023-11-12 11:46:22 -0800
+  
+ActionController::RoutingError (No route matches [GET] "/Marker.png"):
+  
+Started GET "/map" for ::1 at 2023-11-12 11:46:43 -0800
+Processing by MapController#index as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7:in `set_current_user'
+  Rendering layout layouts/application.html.erb
+  Rendering map/index.html.erb within layouts/application
+  Rendered map/index.html.erb within layouts/application (Duration: 51.1ms | Allocations: 436)
+  Rendered shared/_navbar.html.erb (Duration: 2.3ms | Allocations: 872)
+  Rendered layout layouts/application.html.erb (Duration: 213.6ms | Allocations: 12941)
+Completed 200 OK in 253ms (Views: 233.1ms | ActiveRecord: 0.5ms | Allocations: 14468)
+
+
+Started GET "/Marker.png" for ::1 at 2023-11-12 11:46:45 -0800
+  
+ActionController::RoutingError (No route matches [GET] "/Marker.png"):
+  
+Started GET "/map" for ::1 at 2023-11-12 11:47:17 -0800
+Processing by MapController#index as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7:in `set_current_user'
+  Rendering layout layouts/application.html.erb
+  Rendering map/index.html.erb within layouts/application
+  Rendered map/index.html.erb within layouts/application (Duration: 55.0ms | Allocations: 515)
+  Rendered shared/_navbar.html.erb (Duration: 4.4ms | Allocations: 875)
+  Rendered layout layouts/application.html.erb (Duration: 236.5ms | Allocations: 13024)
+Completed 200 OK in 273ms (Views: 254.6ms | ActiveRecord: 0.4ms | Allocations: 14554)
+
+
+Started GET "/markers" for ::1 at 2023-11-12 11:47:18 -0800
+  
+NameError (undefined local variable or method `current_user' for MarkersController:Class):
+  
+app/controllers/markers_controller.rb:4:in `<class:MarkersController>'
+app/controllers/markers_controller.rb:2:in `<main>'
+Started GET "/Marker.png" for ::1 at 2023-11-12 11:47:19 -0800
+  
+ActionController::RoutingError (No route matches [GET] "/Marker.png"):
+  
+Started GET "/map" for ::1 at 2023-11-12 11:47:34 -0800
+Processing by MapController#index as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7:in `set_current_user'
+  Rendering layout layouts/application.html.erb
+  Rendering map/index.html.erb within layouts/application
+  Rendered map/index.html.erb within layouts/application (Duration: 0.2ms | Allocations: 13)
+  Rendered shared/_navbar.html.erb (Duration: 1.1ms | Allocations: 432)
+  Rendered layout layouts/application.html.erb (Duration: 175.1ms | Allocations: 11640)
+Completed 200 OK in 193ms (Views: 177.0ms | ActiveRecord: 0.5ms | Allocations: 12610)
+
+
+Started GET "/markers" for ::1 at 2023-11-12 11:47:35 -0800
+  
+NameError (undefined local variable or method `current_user' for MarkersController:Class):
+  
+app/controllers/markers_controller.rb:4:in `<class:MarkersController>'
+app/controllers/markers_controller.rb:2:in `<main>'
+Started GET "/Marker.png" for ::1 at 2023-11-12 11:57:26 -0800
+  
+ActionController::RoutingError (No route matches [GET] "/Marker.png"):
+  
+Started GET "/map" for ::1 at 2023-11-12 11:58:13 -0800
+Processing by MapController#index as HTML
+  [1m[36mUser Load (1.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7:in `set_current_user'
+  Rendering layout layouts/application.html.erb
+  Rendering map/index.html.erb within layouts/application
+  Rendered map/index.html.erb within layouts/application (Duration: 68.5ms | Allocations: 513)
+  Rendered shared/_navbar.html.erb (Duration: 3.0ms | Allocations: 872)
+  Rendered layout layouts/application.html.erb (Duration: 199.6ms | Allocations: 13018)
+Completed 200 OK in 314ms (Views: 209.4ms | ActiveRecord: 18.1ms | Allocations: 17500)
+
+
+Started GET "/map" for ::1 at 2023-11-12 11:58:42 -0800
+Processing by MapController#index as HTML
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7:in `set_current_user'
+  Rendering layout layouts/application.html.erb
+  Rendering map/index.html.erb within layouts/application
+  Rendered map/index.html.erb within layouts/application (Duration: 51.0ms | Allocations: 415)
+  Rendered shared/_navbar.html.erb (Duration: 3.5ms | Allocations: 872)
+  Rendered layout layouts/application.html.erb (Duration: 226.6ms | Allocations: 12701)
+Completed 200 OK in 265ms (Views: 246.6ms | ActiveRecord: 0.6ms | Allocations: 14230)
+
+
+Started GET "/Marker.png" for ::1 at 2023-11-12 11:58:44 -0800
+  
+ActionController::RoutingError (No route matches [GET] "/Marker.png"):
+  
+Started GET "/Marker.png" for ::1 at 2023-11-12 11:58:48 -0800
+  
+ActionController::RoutingError (No route matches [GET] "/Marker.png"):
+  
+Started GET "/" for ::1 at 2023-11-13 11:17:26 -0800
+Processing by HomeController#index as HTML
+  [1m[36mUser Load (5.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7:in `set_current_user'
+Redirected to http://localhost:3000/lists
+Filter chain halted as :set_current_user rendered or redirected
+Completed 302 Found in 336ms (ActiveRecord: 89.6ms | Allocations: 3832)
+
+
+Started GET "/lists" for ::1 at 2023-11-13 11:17:27 -0800
+Processing by ListsController#index as HTML
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7:in `set_current_user'
+  Rendering layout layouts/application.html.erb
+  Rendering lists/index.html.erb within layouts/application
+  [1m[36mList Load (3.9ms)[0m  [1m[34mSELECT "lists".* FROM "lists"[0m
+  ↳ app/views/lists/index.html.erb:15
+  Rendered lists/index.html.erb within layouts/application (Duration: 170.6ms | Allocations: 2586)
+  Rendered shared/_navbar.html.erb (Duration: 10.6ms | Allocations: 847)
+  Rendered layout layouts/application.html.erb (Duration: 616.4ms | Allocations: 15064)
+Completed 200 OK in 688ms (Views: 646.7ms | ActiveRecord: 4.5ms | Allocations: 16631)
+
+
+Started GET "/lists/map" for ::1 at 2023-11-13 11:17:33 -0800
+Processing by ListsController#show as HTML
+  Parameters: {"id"=>"map"}
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7:in `set_current_user'
+  [1m[36mList Load (0.6ms)[0m  [1m[34mSELECT "lists".* FROM "lists" WHERE "lists"."id" = $1 LIMIT $2[0m  [["id", nil], ["LIMIT", 1]]
+  ↳ app/controllers/lists_controller.rb:63:in `set_list'
+Completed 404 Not Found in 51ms (ActiveRecord: 1.3ms | Allocations: 2192)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find List with 'id'=map):
+  
+app/controllers/lists_controller.rb:63:in `set_list'
+Started GET "/lists/map" for ::1 at 2023-11-13 11:20:49 -0800
+Processing by ListsController#show as HTML
+  Parameters: {"id"=>"map"}
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7:in `set_current_user'
+  [1m[36mList Load (0.7ms)[0m  [1m[34mSELECT "lists".* FROM "lists" WHERE "lists"."id" = $1 LIMIT $2[0m  [["id", nil], ["LIMIT", 1]]
+  ↳ app/controllers/lists_controller.rb:63:in `set_list'
+Completed 404 Not Found in 234ms (ActiveRecord: 95.9ms | Allocations: 6270)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find List with 'id'=map):
+  
+app/controllers/lists_controller.rb:63:in `set_list'
+Started GET "/map" for ::1 at 2023-11-13 11:21:52 -0800
+Processing by MapController#index as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7:in `set_current_user'
+  Rendering layout layouts/application.html.erb
+  Rendering map/index.html.erb within layouts/application
+  Rendered map/index.html.erb within layouts/application (Duration: 65.3ms | Allocations: 518)
+  Rendered shared/_navbar.html.erb (Duration: 2.0ms | Allocations: 483)
+  Rendered layout layouts/application.html.erb (Duration: 295.4ms | Allocations: 25064)
+Completed 200 OK in 340ms (Views: 305.8ms | ActiveRecord: 4.9ms | Allocations: 29748)
+
+
+Started GET "/markers" for ::1 at 2023-11-13 11:21:56 -0800
+  
+NameError (undefined local variable or method `current_user' for MarkersController:Class):
+  
+app/controllers/markers_controller.rb:4:in `<class:MarkersController>'
+app/controllers/markers_controller.rb:2:in `<main>'
+Started GET "/Marker.png" for ::1 at 2023-11-13 11:22:19 -0800
+  
+ActionController::RoutingError (No route matches [GET] "/Marker.png"):
+  
+Started GET "/Marker.png" for ::1 at 2023-11-13 11:22:20 -0800
+  
+ActionController::RoutingError (No route matches [GET] "/Marker.png"):
+  
+Started GET "/Marker.png" for ::1 at 2023-11-13 11:22:21 -0800
+  
+ActionController::RoutingError (No route matches [GET] "/Marker.png"):
+  
+Started GET "/Marker.png" for ::1 at 2023-11-13 11:22:23 -0800
+  
+ActionController::RoutingError (No route matches [GET] "/Marker.png"):
+  
+Started GET "/Marker.png" for ::1 at 2023-11-13 11:22:29 -0800
+  
+ActionController::RoutingError (No route matches [GET] "/Marker.png"):
+  
+Started GET "/Marker.png" for ::1 at 2023-11-13 11:22:42 -0800
+  
+ActionController::RoutingError (No route matches [GET] "/Marker.png"):
+  
+Started GET "/Marker.png" for ::1 at 2023-11-13 11:22:44 -0800
+  
+ActionController::RoutingError (No route matches [GET] "/Marker.png"):
+  
+Started GET "/map" for ::1 at 2023-11-13 11:25:29 -0800
+Processing by MapController#index as HTML
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7:in `set_current_user'
+  Rendering layout layouts/application.html.erb
+  Rendering map/index.html.erb within layouts/application
+  Rendered map/index.html.erb within layouts/application (Duration: 60.8ms | Allocations: 514)
+  Rendered shared/_navbar.html.erb (Duration: 78.4ms | Allocations: 872)
+  Rendered layout layouts/application.html.erb (Duration: 406.3ms | Allocations: 13019)
+Completed 200 OK in 452ms (Views: 429.0ms | ActiveRecord: 0.9ms | Allocations: 14542)
+
+
+Started GET "/markers" for ::1 at 2023-11-13 11:25:30 -0800
+  
+NameError (undefined local variable or method `current_user' for MarkersController:Class):
+  
+app/controllers/markers_controller.rb:4:in `<class:MarkersController>'
+app/controllers/markers_controller.rb:2:in `<main>'
+Started POST "/markers" for ::1 at 2023-11-13 11:25:31 -0800
+Started GET "/Marker.png" for ::1 at 2023-11-13 11:25:31 -0800
+  
+NameError (undefined local variable or method `current_user' for MarkersController:Class):
+  
+app/controllers/markers_controller.rb:4:in `<class:MarkersController>'
+app/controllers/markers_controller.rb:2:in `<main>'
+  
+ActionController::RoutingError (No route matches [GET] "/Marker.png"):
+  
+Started GET "/map" for ::1 at 2023-11-13 11:26:37 -0800
+Processing by MapController#index as HTML
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7:in `set_current_user'
+  Rendering layout layouts/application.html.erb
+  Rendering map/index.html.erb within layouts/application
+  Rendered map/index.html.erb within layouts/application (Duration: 71.0ms | Allocations: 527)
+  Rendered shared/_navbar.html.erb (Duration: 2.8ms | Allocations: 872)
+  Rendered layout layouts/application.html.erb (Duration: 251.8ms | Allocations: 13033)
+Completed 200 OK in 297ms (Views: 274.8ms | ActiveRecord: 0.8ms | Allocations: 14572)
+
+
+Started GET "/markers" for ::1 at 2023-11-13 11:26:38 -0800
+Started POST "/markers" for ::1 at 2023-11-13 11:26:38 -0800
+Started GET "/Marker.png" for ::1 at 2023-11-13 11:26:39 -0800
+  
+ActionController::RoutingError (No route matches [GET] "/Marker.png"):
+  
+  
+NameError (undefined local variable or method `current_user' for MarkersController:Class):
+  
+app/controllers/markers_controller.rb:4:in `<class:MarkersController>'
+app/controllers/markers_controller.rb:2:in `<main>'
+  
+NameError (undefined local variable or method `current_user' for MarkersController:Class):
+  
+app/controllers/markers_controller.rb:4:in `<class:MarkersController>'
+app/controllers/markers_controller.rb:2:in `<main>'
+Started POST "/markers" for ::1 at 2023-11-13 11:26:41 -0800
+Started GET "/Marker.png" for ::1 at 2023-11-13 11:26:42 -0800
+  
+NameError (undefined local variable or method `current_user' for MarkersController:Class):
+  
+app/controllers/markers_controller.rb:4:in `<class:MarkersController>'
+app/controllers/markers_controller.rb:2:in `<main>'
+  
+ActionController::RoutingError (No route matches [GET] "/Marker.png"):
+  
+Started GET "/map" for ::1 at 2023-11-13 11:29:09 -0800
+Processing by MapController#index as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7:in `set_current_user'
+  Rendering layout layouts/application.html.erb
+  Rendering map/index.html.erb within layouts/application
+  Rendered map/index.html.erb within layouts/application (Duration: 60.3ms | Allocations: 539)
+  Rendered shared/_navbar.html.erb (Duration: 4.0ms | Allocations: 872)
+  Rendered layout layouts/application.html.erb (Duration: 263.2ms | Allocations: 13044)
+Completed 200 OK in 311ms (Views: 283.2ms | ActiveRecord: 0.4ms | Allocations: 14559)
+
+
+Started GET "/markers" for ::1 at 2023-11-13 11:29:10 -0800
+Started POST "/markers" for ::1 at 2023-11-13 11:29:11 -0800
+  
+NameError (undefined local variable or method `current_user' for MarkersController:Class):
+  
+app/controllers/markers_controller.rb:4:in `<class:MarkersController>'
+app/controllers/markers_controller.rb:2:in `<main>'
+Started GET "/Marker.png" for ::1 at 2023-11-13 11:29:12 -0800
+  
+NameError (undefined local variable or method `current_user' for MarkersController:Class):
+  
+app/controllers/markers_controller.rb:4:in `<class:MarkersController>'
+app/controllers/markers_controller.rb:2:in `<main>'
+  
+ActionController::RoutingError (No route matches [GET] "/Marker.png"):
+  

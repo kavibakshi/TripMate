@@ -12,6 +12,8 @@
     <link rel="stylesheet" href="https://unpkg.com/leaflet-control-geocoder/dist/Control.Geocoder.css" />
     <script src="https://unpkg.com/leaflet-control-geocoder/dist/Control.Geocoder.js"></script>
     
+    <meta name="current-user-id" content="<%= current_user.id if current_user %>">
+    
     <style>
         #map { height: 350px; }
         #add-to-itinerary-button { font-weight: normal; color: gray; }
@@ -56,10 +58,14 @@
     
     document.addEventListener("DOMContentLoaded", function () {
         navigator.geolocation.getCurrentPosition(success, error);
+        loadMarkersFromBackend();
     });
 
     let marker, circle, zoomed;
 
+    function getCurrentUserId() {
+        return document.querySelector('meta[name="current-user-id"]').getAttribute('content');
+      }
     function success(pos){
         const lat = pos.coords.latitude;
         const lng = pos.coords.longitude;
@@ -95,7 +101,6 @@
             .then(data => {
                 const country = data.address && data.address.country ? data.address.country : '';
                 console.log('Current Country:', country);
-                // Update geocoder options with the current country
                 updateGeocoderCountry(country);
             })
             .catch(error => {
@@ -116,22 +121,23 @@
     var selectedMarker = null;
 
     function addMarker(lat, lng) {
-        const newMarker = L.marker([lat, lng], {icon: myIcon}).addTo(map);
-
+        const newMarker = L.marker([lat, lng], { icon: myIcon }).addTo(map);
+    
         newMarker.on('click', function () {
             selectedMarker = newMarker;
             updateButtonStyle();
         });
-
+    
         chosen_markers.push(newMarker);
+        saveMarkerToBackend(lat, lng); 
     }
-
     map.on('click', function (e) {
         const lat = e.latlng.lat;
         const lng = e.latlng.lng;
-
+    
         addMarker(lat, lng);
     });
+    
 
     function removeFromMap() {
         if (selectedMarker) {
@@ -161,6 +167,41 @@
             removeButton.classList.remove('active');
         }
     }
+
+    function saveMarkerToBackend(lat, lng) {
+        const userId = getCurrentUserId();
+        const data = { marker: { latitude: lat, longitude: lng }, user_id: userId };
+      
+        fetch('/markers', {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+          },
+          body: JSON.stringify(data),
+        })
+        .then(response => response.json())
+        .then(data => {
+          console.log('Marker saved successfully:', data);
+        })
+        .catch(error => {
+          console.error('Error saving marker:', error);
+        });
+      }
+      function loadMarkersFromBackend() {
+        fetch('/markers')
+          .then(response => response.json())
+          .then(data => {
+            data.forEach(marker => {
+              addMarker(marker.latitude, marker.longitude);
+            });
+          })
+          .catch(error => {
+            console.error('Error loading markers:', error);
+          });
+      }
+      
+      
+      
 </script>
 
 </html>
