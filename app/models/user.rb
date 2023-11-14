@@ -15,6 +15,4 @@ class User < ApplicationRecord
     validates :email, presence: true, format: { with: /\A[^@\s]+@[^@\s]+\z/, message: "Input in the email field must be a valid email address."}
     validates :email, uniqueness: { message: "You already have an account" }
 
-    has_many :markers
-
 end

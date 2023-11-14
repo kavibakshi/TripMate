@@ -5,7 +5,6 @@ Rails.application.routes.draw do
   resources :itineraries
   resources :lists
   resources :notes
-  resources :markers, only: [:index, :create, :destroy]
   resources :expense_tracker
   resources :users
 

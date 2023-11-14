@@ -24,8 +24,6 @@
 <body>
 
     <button onclick="liveLocation()">Current Location</button>
-    <button id="add-to-itinerary-button" onclick="addToItinerary()">Add to Itinerary</button>
-    <button id="remove-from-map-button" onclick="removeFromMap()">Remove Marker</button>
     <div id="map"></div>
 </body>
 
@@ -49,7 +47,6 @@
 
     document.addEventListener('DOMContentLoaded', function () {
         navigator.geolocation.watchPosition(success, error);
-        fetchMarkersFromBackend();
     })
 
     let marker, circle, zoomed;
@@ -117,102 +114,5 @@
         }
     }
 
-    var selectedMarker = null;
-
-    function addMarker(lat, lng) {
-        const newMarker = L.marker([lat, lng]).addTo(map);
-
-        newMarker.on('click', function () {
-            selectedMarker = newMarker;
-            updateButtonStyle();
-        });
-
-        saveMarkerToBackend(lat, lng);
-
-    }
-    function saveMarkerToBackend(lat, lng) {
-        $.ajax({
-            type: 'POST',
-            url: '/markers',  // Update the URL according to your routes
-            data: { marker: { latitude: lat, longitude: lng } },
-            success: function (data) {
-                console.log('Marker saved successfully:', data);
-            },
-            error: function (error) {
-                console.error('Error saving marker:', error);
-            }
-        });
-    }
-    function fetchMarkersFromBackend() {
-        $.ajax({
-            type: 'GET',
-            url: '/markers',  // Update the URL according to your routes
-            success: function (data) {
-                data.forEach(marker => {
-                    addMarker(marker.latitude, marker.longitude);
-                });
-            },
-            error: function (error) {
-                console.error('Error fetching markers:', error);
-            }
-        });
-    }
-
-    map.on('click', function (e) {
-        const lat = e.latlng.lat;
-        const lng = e.latlng.lng;
-
-        addMarker(lat, lng);
-    });
-
-    function addToItinerary() {
-        if (selectedMarker) {
-            const lat = selectedMarker.getLatLng().lat;
-            const lng = selectedMarker.getLatLng().lng;
-            console.log(`Adding marker to itinerary: Lat ${lat}, Lng ${lng}`);
-            selectedMarker = null;
-            updateButtonStyle();
-        } else {
-            alert('Please select a marker.');
-        }
-    }
-
-    function removeFromMap() {
-        if (selectedMarker) {
-            const markerId = selectedMarker.options.id;
-    
-            // Send a request to delete the marker from the backend
-            $.ajax({
-                type: 'DELETE',
-                url: `/markers/${markerId}`,  // Update the URL according to your routes
-                success: function () {
-                    map.removeLayer(selectedMarker);
-                    selectedMarker = null;
-                    updateButtonStyle();
-                },
-                error: function (error) {
-                    console.error('Error removing marker:', error);
-                }
-            });
-        } else {
-            alert('Please select a marker to remove.');
-        }
-    }
-    
-
-    function updateButtonStyle() {
-        const addButton = document.getElementById('add-to-itinerary-button');
-        const removeButton = document.getElementById('remove-from-map-button');
-
-        if (selectedMarker) {
-            addButton.classList.add('active');
-            removeButton.classList.add('active');
-        } else {
-            addButton.classList.remove('active');
-            removeButton.classList.remove('active');
-        }
-    }
-
 </script>
-
 </html>

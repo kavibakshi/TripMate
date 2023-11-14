@@ -29,15 +29,6 @@ ActiveRecord::Schema[7.0].define(version: 2023_11_12_190816) do
     t.datetime "updated_at", null: false
   end
 
-  create_table "markers", force: :cascade do |t|
-    t.float "latitude"
-    t.float "longitude"
-    t.bigint "user_id", null: false
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-    t.index ["user_id"], name: "index_markers_on_user_id"
-  end
-
   create_table "notes", force: :cascade do |t|
     t.string "title"
     t.text "content"
@@ -52,6 +43,4 @@ ActiveRecord::Schema[7.0].define(version: 2023_11_12_190816) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
-
-  add_foreign_key "markers", "users"
 end
