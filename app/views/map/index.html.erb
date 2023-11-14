@@ -1,90 +1,118 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
-        integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY="
-        crossorigin=""/>
-        
-        <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
-        integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo="
-        crossorigin=""></script>
+<head>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+    integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY="
+    crossorigin=""/>
+    
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+    integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo="
+    crossorigin=""></script>
 
-        <style>
-            #map { height: 350px; }
-        </style>
-    </head>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet-control-geocoder/dist/Control.Geocoder.css" />
+    <script src="https://unpkg.com/leaflet-control-geocoder/dist/Control.Geocoder.js"></script>
 
-    <body>
+    <style>
+        #map { height: 350px; }
+        #add-to-itinerary-button { font-weight: normal; color: gray; }
+        #add-to-itinerary-button.active { font-weight: bold; color: green; }
+        #remove-from-map-button {font-weight: normal; color: gray}
+        #remove-from-map-button.active {font-weight: normal; color: red}
+    </style>
+</head>
 
-        <input type="text" id="locationInput" placeholder="Search for a location">
-        <button onclick="searchLocation()">Search</button>
-        <button onclick="liveLocation">Current Location</button>
+<body>
 
+    <button onclick="liveLocation()">Current Location</button>
+    <div id="map"></div>
+</body>
 
-        <div id="map"></div>
-        
-    </body>
+<script>
+    var map = L.map('map');
+    map.setView([51.505, -0.09], 13);
 
-    <script>
-        
-        var map = L.map('map');
-        map.setView([51.505, -0.09], 13);
-
-        L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
+    L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
         maxZoom: 19,
         attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
-        }).addTo(map);
+    }).addTo(map);
 
+    var geocoder = L.Control.geocoder({
+        defaultMarkGeocode: true,
+        collapsed: false,
+        placeholder: "Search for a location",
+        geocoder: L.Control.Geocoder.nominatim({
+            autoComplete: true,
+        }),
+    }).addTo(map);
 
+    document.addEventListener('DOMContentLoaded', function () {
         navigator.geolocation.watchPosition(success, error);
+    })
 
-        let marker, circle, zoomed; 
+    let marker, circle, zoomed;
 
-        function success(pos){
+    function success(pos){
+        const lat = pos.coords.latitude;
+        const lng = pos.coords.longitude;
+        const accuracy = pos.coords.accuracy;
+        if(marker){
+            map.removeLayer(marker);
+            map.removeLayer(circle);
+        }
+        
+        marker = L.marker([lat,lng]).addTo(map);
+        circle = L.circle([lat,lng],{radius:accuracy}).addTo(map);
+        
+        map.fitBounds(circle.getBounds());
+    }
 
-            const lat = pos.coords.latitude;
-            const lng = pos.coords.longitude;
-            const accuracy = pos.coords.accuracy;
+    function error(err){
+        if(err.code ===1){
+            alert("Please Allow Geolocation Access")
+        } else {
+            alert("Can not get Current Location")
+        }
+    }
 
-            let marker = L.marker([lat,lng]).addTo(map);
-            let circle = L.circle([lat,lng],{radius:accuracy}).addTo(map);
-            
+    map.on('moveend', function() {
+        const center = map.getCenter();
+        getCurrentCountry(center.lat, center.lng);
+    });
+
+    geocoder.on('markgeocode', function (e) {
+        const latlng = e.geocode.center;
+        map.setView(latlng, 13);
+    });
+
+    function getCurrentCountry(lat, lng) {
+        fetch(`https://nominatim.openstreetmap.org/reverse?format=json&lat=${lat}&lon=${lng}`)
+            .then(response => response.json())
+            .then(data => {
+                const country = data.address && data.address.country ? data.address.country : '';
+                console.log('Current Country:', country);
+                updateGeocoderCountry(country);
+            })
+            .catch(error => {
+                console.error('Error fetching country data:', error);
+            });
+    }
+
+    function updateGeocoderCountry(country) {
+        geocoder.options.geocoder.geocodingQueryParams.countrycodes = country;
+    }
+
+    function searchLocation() {
+        const locationInput = document.getElementById('locationInput').value;
+        geocoder.geocode(locationInput);
+    }
+
+    function liveLocation() {
+        if (circle) {
             map.fitBounds(circle.getBounds());
-
+        } else {
+            alert('Current location not available.');
         }
+    }
 
-        function error(err){
-
-            if(err.code ===1){
-                alert("Please Allow Geoloaction Access")
-            }else{
-                alert("Can not get Current Location")
-            }
-        }
-
-        function searchLocation() {
-            const locationInput = document.getElementById('locationInput').value;
-          
-            fetch(`https://nominatim.openstreetmap.org/search?format=json&q=${locationInput}`)
-              .then(response => response.json())
-              .then(data => {
-                if (data && data.length > 0) {
-                  const result = data[0];
-                  const lat = result.lat;
-                  const lon = result.lon;
-          
-                  map.setView([lat, lon], 13);
-                } else {
-                  alert('Location not found');
-                }
-              })
-              .catch(error => {
-                console.error('Error fetching location data:', error);
-              });
-          }
-          
-
-
-    </script>
-
+</script>
 </html>
