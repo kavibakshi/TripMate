@@ -1,0 +1,24 @@
+<div>Expense Details</div>
+
+<%#= render "form", new_expense_tuple: @new_expense_tuple %>
+
+<div>
+    <div>My total budget for this trip is: </div>
+        <%= number_to_currency(@expense_tuple.total_budget)%>
+    <div>Accommodations:</div>
+        <%= number_to_currency(@expense_tuple.accommodation)%>
+    <div>Transportation:</div>
+        <%= number_to_currency(@expense_tuple.transportation)%>
+    <div>Meal:</div>
+        <%= number_to_currency(@expense_tuple.meal)%>
+    <div>Other:</div>
+        <%= number_to_currency(@expense_tuple.other)%>
+    <div>My remaining budget: $</div>
+        <%= number_to_currency(@expense_tuple.remaining_budget)%>
+</div></br>
+
+<div>
+    <%= link_to " Edit this expense", edit_expense_tracker_path(@expense_tuple), class: "bi bi-pencil-square btn btn-primary btn" %> &nbsp
+    <%= link_to " Back to Expense List", expense_trackers_path, class: "bi bi-backspace btn btn-secondary btn"%>
+</div>
+

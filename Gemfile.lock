@@ -78,6 +78,8 @@ GEM
       autoprefixer-rails (>= 9.1.0)
       popper_js (>= 2.11.8, < 3)
       sassc-rails (>= 2.0.0)
+    bootstrap-icons (1.0.13)
+      nokogiri (~> 1)
     builder (3.2.4)
     bulma-rails (0.9.4)
       sassc (~> 2.0)
@@ -254,6 +256,7 @@ DEPENDENCIES
   bcrypt (~> 3.1.7)
   bootsnap
   bootstrap (~> 5.3, >= 5.3.1)
+  bootstrap-icons (~> 1.0)
   bulma-rails (~> 0.9.4)
   capybara
   debug

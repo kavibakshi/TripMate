@@ -10,9 +10,22 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2023_10_30_095226) do
+ActiveRecord::Schema[7.0].define(version: 2023_11_06_110804) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "expense_trackers", force: :cascade do |t|
+    t.decimal "total_budget"
+    t.bigint "itineraries_id", null: false
+    t.decimal "accommodation"
+    t.decimal "transportation"
+    t.decimal "meal"
+    t.decimal "other"
+    t.decimal "remaining_budget"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["itineraries_id"], name: "index_expense_trackers_on_itineraries_id"
+  end
 
   create_table "itineraries", force: :cascade do |t|
     t.string "description"
@@ -44,4 +57,5 @@ ActiveRecord::Schema[7.0].define(version: 2023_10_30_095226) do
     t.datetime "updated_at", null: false
   end
 
+  add_foreign_key "expense_trackers", "itineraries", column: "itineraries_id"
 end

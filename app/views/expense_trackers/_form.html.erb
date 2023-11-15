@@ -1,3 +1,60 @@
-<% @form do |form| %>
-    put "aaaaaaaa"
-<%end %>
+<%= form_with model: @expense_tuple do |form| %>
+    <div class="mb-3">
+        <%= form.label :itineraries_id, "This Expense is for:" %>
+        <%= form.select :itineraries_id , @itineraries_tuple.pluck('id'), class: "form-control", prompt: 'Please select one...' %>
+    </div>
+
+    <div class="mb-3">
+        <%= form.label :total_budget, "My total budget for this trip is:" %>
+        <div class="input-group mb-3">
+            <span class="input-group-text">$</span>
+            <%= form.number_field :total_budget, step: 0.01, class:"form-control", placeholder:"Amount"%>
+        </div>
+    </div>
+
+    <div class="mb-3">
+        <%= form.label :accommodation, "Accommodations:" %>
+        <div class="input-group mb-3">
+            <span class="input-group-text">$</span>
+            <%= form.number_field :accommodation, step: 0.01, class:"form-control", placeholder:"Amount"%>
+        </div>
+    </div>
+
+    <div class="mb-3">
+        <%= form.label :transportation, "Transportation:" %>
+        <div class="input-group mb-3">
+            <span class="input-group-text">$</span>
+            <%= form.number_field :transportation, step: 0.01, class:"form-control", placeholder:"Amount"%>
+        </div>
+    </div>
+
+    <div class="mb-3">
+        <%= form.label :meal, "Meal:" %>
+        <div class="input-group mb-3">
+            <span class="input-group-text">$</span>
+            <%= form.number_field :meal, step: 0.01, class:"form-control", placeholder:"Amount"%>
+        </div>
+    </div>
+
+    <div class="mb-3">
+        <%= form.label :other, "Other:" %>
+        <div class="input-group mb-3">
+            <span class="input-group-text">$</span>
+            <%= form.number_field :other, step: 0.01, class:"form-control", placeholder:"Amount"%>
+        </div>
+    </div>
+
+    <div class="mb-3">
+        <%= form.label :remaining_budget, "My remaining budget: $" %>
+        <div class="input-group mb-3">
+            <span class="input-group-text">$</span>
+            <%= form.number_field :remaining_budget, step: 0.01, class:"form-control", placeholder:"Amount"%>
+        </div>
+    </div>
+
+    </br></br>
+    <div>
+        <%= form.submit "Save", class: "button"%>
+    </div>
+        
+<% end %>

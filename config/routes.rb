@@ -4,7 +4,7 @@ Rails.application.routes.draw do
   resources :itineraries
   resources :lists
   resources :notes
-  resources :expense_tracker
+  resources :expense_trackers
 
   get "about", to:"about#index", as: :about
   get "lists", to:"lists#index"
