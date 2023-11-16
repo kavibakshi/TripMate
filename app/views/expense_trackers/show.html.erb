@@ -1,0 +1,21 @@
+<div>Expense Details</div>
+
+<div>
+    <div>My total budget for this trip is: </div>
+        <%= number_to_currency(@expense_lists.total_budget)%>
+    <div>Accommodations:</div>
+        <%= number_to_currency(@expense_lists.accommodation)%>
+    <div>Transportation:</div>
+        <%= number_to_currency(@expense_lists.transportation)%>
+    <div>Meal:</div>
+        <%= number_to_currency(@expense_lists.meal)%>
+    <div>Other:</div>
+        <%= number_to_currency(@expense_lists.other)%>
+    <div>My remaining budget:</div>
+        <%= number_to_currency(@expense_lists.total_budget - @expense_lists.accommodation - @expense_lists.transportation - @expense_lists.meal - @expense_lists.other)%>
+</div></br>
+
+<div>
+    <%= link_to " Edit this Expense", edit_expense_tracker_path(@expense_lists), class: "bi bi-pencil-square btn btn-primary btn" %> </br></br>
+    <%= link_to " Back to Expense List", expense_trackers_path, class: "bi bi-backspace btn btn-secondary btn"%>
+</div>
