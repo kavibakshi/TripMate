@@ -1,0 +1,51 @@
+<section class="section">
+  <div class="container">
+    <div class="box">
+      <h1 class="title is-3 has-text-centered">Currency Converter</h1>
+      <%= form_with url: convert_currency_path, method: :get, local: true do |form| %>
+        <div class="field">
+          <%= form.label :amount, 'Amount', class: 'label' %>
+          <div class="control">
+            <%= form.number_field :amount, class: 'input', placeholder: 'Enter amount' %>
+          </div>
+        </div>
+
+        <div class="field">
+          <%= form.label :from_currency, 'From Currency (e.g., CAD)', class: 'label' %>
+          <div class="control">
+            <%= form.text_field :from_currency, class: 'input', list: 'currency-list', placeholder: 'From currency' %>
+          </div>
+        </div>
+    
+        <div class="field">
+          <%= form.label :to_currency, 'To Currency (e.g., USD)', class: 'label' %>
+          <div class="control">
+            <%= form.text_field :to_currency, class: 'input', list: 'currency-list', placeholder: 'To currency' %>
+          </div>
+        </div>
+
+        <div class="field">
+          <div class="control">
+            <%= form.submit 'Convert', class: 'button is-primary' %>
+          </div>
+        </div>
+      <% end %>
+
+    <% if defined?(@converted_amount) %>
+      <div class="notification is-primary" style="margin-top: 1rem;">
+        <p class="subtitle">Converted Amount: <%= @converted_amount %> <%= params[:to_currency] %></p>
+      </div>
+    <% elsif defined?(@error) %>
+      <div class="notification is-danger" style="margin-top: 1rem;">
+        <p class="subtitle">Error: <%= @error %></p>
+      </div>
+    <% end %>
+
+    <datalist id="currency-list">
+    <% @currencies.each do |currency| %>
+      <option value="<%= currency[:code] %>"><%= currency[:name] %></option>
+    <% end %>
+  </datalist>
+  </div>
+  
+</section>

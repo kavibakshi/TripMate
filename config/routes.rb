@@ -15,6 +15,7 @@ Rails.application.routes.draw do
   get "expense_trackers", to: "expense_trackers#index"
   get "map", to: "map#index"
   get 'weather', to:"weather#index"
+  get "convert_currency", to: "currency_converter#convert"
 
   get "sign_up", to: "registrations#new"
   post "sign_up", to: "registrations#create"
