@@ -1,34 +1,28 @@
-<!--temp = %{}-->
-
 <div class="d-flex align-items-center justify-content-center">
-    <h1 class="title">My Expense Tracker<h1> 
-    
+  <h1 class="title ">My Expense Tracker</h1>     
 </div>
 
-<form class="" oninput="remaining.value=(budget.value)-(accommodation.value)-(transportation.value)-(meal.value)">
-  <label for="budget" class="form-label">My total budget for this trip is:</label>
-  <div class="input-group mb-3">
-    <span class="input-group-text">$</span>
-    <input type="number" class="form-control" id="budget" placeholder="Amount" required>
+<div><%= link_to "+ Add New Expense Details", new_expense_tracker_path, class: "btn btn-warning" %></div></br>
+<div class="container">
+  <div class="row">
+    <div class="col-12" style="">
+      <table class="table caption-top table-hover">
+        <thead>
+          <tr>
+            <th style="text-align: center">Itinerary ID</th>
+            <th style="text-align: center">Itinerary Name</th>
+            <th style="text-align: center">Expense ID</th>
+            <th style="text-align: center">Actions</th>
+          </tr>
+        </thead>
+        <tbody>
+        <% if @expense_lists.exists? %>
+          <%= render "expense_list" %>
+        <% else %>
+          <tr style="text-align: center"><td>Sorry, there's no itinerary found...</td></tr>
+        <% end %>
+        </tbody>
+      </table>
+    </div>
   </div>
-  <label for="accommodation" class="form-label">Accommodations</label>
-  <div class="input-group mb-3">
-    <span class="input-group-text">$</span>
-    <input type="number" class="form-control" id="accommodation" placeholder="Amount">
-  </div>
-  <label for="transportation" class="form-label">Transportation</label>
-  <div class="input-group mb-3">  
-    <span class="input-group-text">$</span>
-    <input type="number" class="form-control" id="transportation" placeholder="Amount">
-  </div>
-  <label for="meal" class="form-label">Meal</label>
-  <div class="input-group mb-3">
-    <span class="input-group-text">$</span>
-    <input type="number" class="form-control" id="meal" placeholder="Amount">
-  </div><br>
-  <div class="input-group mb-3">
-    <label for="remaining" class="">My remaining budget: $&nbsp</label>
-    <output type="number" class="" id="remaining">0</output>
-  </div>
-</form>
-
+</div>

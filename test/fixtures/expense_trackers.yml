@@ -1,0 +1,19 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  total_budget: 9.99
+  itinerary_id: 1
+  itinerary_description: MyString
+  accommodation: 9.99
+  transportation: 9.99
+  meal: 9.99
+  other: 9.99
+
+two:
+  total_budget: 9.99
+  itinerary_id: 1
+  itinerary_description: MyString
+  accommodation: 9.99
+  transportation: 9.99
+  meal: 9.99
+  other: 9.99

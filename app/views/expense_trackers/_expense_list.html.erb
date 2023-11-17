@@ -1,0 +1,12 @@
+<% @expense_lists.each do |el| %>
+    <tr>
+        <td class="col-2" style="text-align: center"><%= el.itinerary_id %></td>
+        <td class="col-3" style="text-align: center"><%= link_to el.description, expense_tracker_path(el) %></td>
+        <td class="col-2" style="text-align: center"><%= el.id %></td>
+        <td class="col-4"><div style="display: flex">
+            <%= button_to " Show Details", expense_tracker_path(el), method: :get, class: "bi bi-eye btn btn-outline-success btn-sm" %> &nbsp
+            <%= button_to " Edit", edit_expense_tracker_path(el), method: :get, class: "bi bi-pencil-square btn btn-outline-primary btn-sm" %> &nbsp
+            <%= button_to " Delete", el, method: :delete, class: "bi bi-trash btn btn-outline-danger btn-sm" %>
+        </div></td>
+    </tr>
+<% end %>

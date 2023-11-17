@@ -5,7 +5,7 @@ Rails.application.routes.draw do
   resources :itineraries
   resources :lists
   resources :notes
-  resources :expense_tracker
+  resources :expense_trackers
   resources :users
 
   get "home", to:"home#index", as: :home

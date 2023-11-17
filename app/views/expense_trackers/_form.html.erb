@@ -1,3 +1,62 @@
-<% @form do |form| %>
-    put "aaaaaaaa"
-<%end %>
+<%= form_with model: @expense_lists do |form| %>
+    
+    <% if !@expense_lists.id %>
+    <div class="mb-4">
+        <%= form.label :itinerary_id, "This Expense is for:" %>
+        <%= form.select :itinerary_id , @itineraries_tuple.pluck('id'), class: "form-control", prompt: 'Please select one...' %>
+    </div>
+    <% end %>
+
+    <div class="mb-3">
+        <%= form.label :total_budget, "My total budget for this trip is:" %>
+        <div class="input-group mb-3">
+            <span class="input-group-text">$</span>
+            <%= form.number_field :total_budget, step: 0.01, class:"form-control", placeholder:"Amount"%>
+        </div>
+    </div>
+
+    <div class="mb-3">
+        <%= form.label :accommodation, "Accommodation:" %>
+        <div class="input-group mb-3">
+            <span class="input-group-text">$</span>
+            <%= form.number_field :accommodation, step: 0.01, class:"form-control", placeholder:"Amount"%>
+        </div>
+    </div>
+
+    <div class="mb-3">
+        <%= form.label :transportation, "Transportation:" %>
+        <div class="input-group mb-3">
+            <span class="input-group-text">$</span>
+            <%= form.number_field :transportation, step: 0.01, class:"form-control", placeholder:"Amount"%>
+        </div>
+    </div>
+
+    <div class="mb-3">
+        <%= form.label :meal, "Meal:" %>
+        <div class="input-group mb-3">
+            <span class="input-group-text">$</span>
+            <%= form.number_field :meal, step: 0.01, class:"form-control", placeholder:"Amount"%>
+        </div>
+    </div>
+
+    <div class="mb-3">
+        <%= form.label :other, "Other:" %>
+        <div class="input-group mb-3">
+            <span class="input-group-text">$</span>
+            <%= form.number_field :other, step: 0.01, class:"form-control", placeholder:"Amount"%>
+        </div>
+    </div>
+
+    </br>
+    <div class="mb-3">
+        <div class="input-group">
+            <i class="bi bi-check-lg btn btn-success" style="padding-right:0px"></i>
+            <%= form.submit 'Save', class: "bi bi-backspace btn btn-success"%>
+        </div>
+    </div>
+<% end %>
+
+
+<script>
+
+</script>
