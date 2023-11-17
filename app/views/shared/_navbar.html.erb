@@ -1,6 +1,8 @@
 <nav class="navbar navbar-expand-lg navbar-light bg-light">
   <div class="container-fluid">
-    <%= link_to "TripMate", home_path, class:"navbar-brand"%>
+  <%= link_to home_path, class: "navbar-brand" do %>
+    <%= image_tag('tripmate-logo.png', alt: 'TripMate logo', size: "200x200") %>
+  <% end %>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
@@ -25,6 +27,10 @@
         <li class="nav-item">
           <%= link_to "Weather", weather_path, class:"nav-link"%>
         </li>
+        <li class="nav-item">
+          <%= link_to "Currency Converter", convert_currency_path, class:"nav-link"%>
+        </li>
+        
           <% if Current.user.admin == true %>
           <li class="nav-item">
           <%= link_to "Admin", users_path, class:"nav-link"%>
