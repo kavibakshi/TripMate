@@ -1,0 +1,2 @@
+class ExpenseTracker < ApplicationRecord
+end

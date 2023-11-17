@@ -10,9 +10,21 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2023_11_12_190816) do
+ActiveRecord::Schema[7.0].define(version: 2023_11_16_113150) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "expense_trackers", force: :cascade do |t|
+    t.decimal "total_budget"
+    t.integer "itinerary_id"
+    t.string "itinerary_description"
+    t.decimal "accommodation"
+    t.decimal "transportation"
+    t.decimal "meal"
+    t.decimal "other"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
 
   create_table "itineraries", force: :cascade do |t|
     t.string "description"
@@ -43,4 +55,5 @@ ActiveRecord::Schema[7.0].define(version: 2023_11_12_190816) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
+
 end
